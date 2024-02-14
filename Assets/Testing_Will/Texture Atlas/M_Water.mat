@@ -21,6 +21,7 @@ Material:
   - _MK_RECEIVE_SHADOWS
   - _MK_RIM_SPLIT
   - _MK_SPECULAR_ISOTROPIC
+  - _MK_THRESHOLD_MAP
   - _MK_VERTEX_ANIMATION_SINE
   - _MK_WRAPPED_DIFFUSE
   m_InvalidKeywords:
@@ -167,7 +168,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ThresholdMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 49ae84ca6217403468e1d82e12a4337f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VertexAnimationMap:
@@ -212,7 +213,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _Diffuse: 0
     - _DiffuseSmoothness: 0.1
-    - _DiffuseThresholdOffset: 0.25
+    - _DiffuseThresholdOffset: 0.077
     - _Dissolve: 0
     - _DissolveAmount: 0.5
     - _DissolveBorderSize: 0.25
@@ -238,7 +239,7 @@ Material:
     - _Light: 2
     - _LightBands: 3
     - _LightBandsScale: 0.557
-    - _LightThreshold: 0.3
+    - _LightThreshold: 0.2
     - _LightTransmission: 0
     - _LightTransmissionDistortion: 0.25
     - _LightTransmissionIntensity: 1
