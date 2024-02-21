@@ -25,24 +25,26 @@ public class PlayerCollisionInteraction : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+    
 
-    private void OnCollisionEnter(Collision other)
+    protected void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        print("colliision " + other.gameObject.name);
+        if (other.gameObject.CompareTag("Player"))
         {
             TriggerInteraction();
         }
     }
 
-    private void OnCollisionStay(Collision other)
+    protected void OnCollisionStay(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             TriggerInteraction();
         }
     }
 
-    private void Update()
+    protected void Update()
     {
         if(Input.GetKey(KeyCode.P))
         {
