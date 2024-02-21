@@ -13,7 +13,7 @@ public class PCI_Explode : PlayerCollisionInteraction
 
     protected override void PlayEffect()
     {
-        //regularStateGO?.SetActive(false);
+        regularStateGO.SetActive(false);
         explosionStateGO.SetActive(true);
         Explode();
     }

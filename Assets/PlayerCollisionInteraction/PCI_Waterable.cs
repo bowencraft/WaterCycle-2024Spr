@@ -7,18 +7,20 @@ public class PCI_Waterable : PlayerCollisionInteraction
     [SerializeField] private GameObject beforeWateringGameObject;
     [SerializeField] private GameObject afterWateringGameObject;
     [SerializeField] private ParticleSystem transitionParticleSystem;
-    [SerializeField] private float animationDelay = 1f;
+    [SerializeField] private float animationDuration = 2f;
 
     protected override void PlayEffect()
     {
-        transitionParticleSystem.Play();
+        StartCoroutine(DelayTransition(animationDuration));
     }
 
     IEnumerator DelayTransition(float delayTime)
     {
+        transitionParticleSystem.Play();
         yield return new WaitForSeconds(delayTime);
         beforeWateringGameObject.SetActive(false);
         afterWateringGameObject.SetActive(true);
+        transitionParticleSystem.Stop();
     }
     
 }
