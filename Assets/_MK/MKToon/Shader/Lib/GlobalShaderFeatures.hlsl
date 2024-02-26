@@ -9,22 +9,22 @@
 #ifndef MK_TOON_GLOBAL_SHADER_FEATURES
 	//Enable vertex colors be combined with the albedo map
 	//%%MK_COMBINE_VERTEX_COLOR_WITH_ALBEDO_MAP
-	/*!!
+	//!!
 	#ifndef MK_COMBINE_VERTEX_COLOR_WITH_ALBEDO_MAP
 		#define MK_COMBINE_VERTEX_COLOR_WITH_ALBEDO_MAP
 	#endif
-	$$*/
+	//$$
 	
 	//Enable outline distance based fading
 	//Also set compile directive on project window: MK_TOON_OUTLINE_FADING
 	// Customize the outline fading style (linear by default)
 	// Outline Fade has to be enabled
 	//%%MK_OUTLINE_FADING_LINEAR
-	/*!!
+	//!!
 	#ifndef MK_OUTLINE_FADING_LINEAR
 		#define MK_OUTLINE_FADING_LINEAR
 	#endif
-	$$*/
+	//$$
 	
 	//%%MK_OUTLINE_FADING_EXPONENTIAL
 	/*!!
@@ -75,19 +75,19 @@
 
 	//Enable stylized shadows
 	//%%MK_STYLIZE_SYSTEM_SHADOWS
-	/*!!
+	//!!
 	#ifndef MK_STYLIZE_SYSTEM_SHADOWS
 		#define MK_STYLIZE_SYSTEM_SHADOWS
 	#endif
-	$$*/
+	//$$
 
 	//Enable Albedo Map Intensity
 	//%%MK_ALBEDO_MAP_INTENSITY
-	/*!!
+	//!!
 	#ifndef MK_ALBEDO_MAP_INTENSITY
 		#define MK_ALBEDO_MAP_INTENSITY
 	#endif
-	$$*/
+	//$$
 	
 	//Enable Legacy Screen Spaced Scaling
 	//%%MK_LEGACY_SCREEN_SCALING
