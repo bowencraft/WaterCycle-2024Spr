@@ -6,8 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class PlayerCollisionInteraction : MonoBehaviour
 {
+    public float playerSpeedRequirement = 0f;
     [Header("READ ONLY DO NOT EDIT")] public bool hasTriggered = false;
-    
+
     public void TriggerInteraction()
     {
         if (hasTriggered) return;
@@ -21,6 +22,11 @@ public class PlayerCollisionInteraction : MonoBehaviour
         return true;
     }
 
+    public float GetPlayerSpeed()
+    {
+        return 1;
+    }
+
     protected virtual void PlayEffect()
     {
         throw new NotImplementedException();
@@ -30,7 +36,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     protected void OnCollisionEnter(Collision other)
     {
         print("colliision " + other.gameObject.name);
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement)
         {
             TriggerInteraction();
         }
