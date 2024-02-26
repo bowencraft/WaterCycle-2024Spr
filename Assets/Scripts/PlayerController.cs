@@ -23,16 +23,26 @@ public class PlayerController : MonoBehaviour
     public enum PlayerForm{Drop, Ice, Wave, Cloud}
     [SerializeField] private PlayerForm playerForm = PlayerForm.Drop;
 
-    public float playerSpeedDisplay = 0;
+    [SerializeField] private float playerSpeed = 0;
     
-    private void Update()
+    private Vector3 lastPosition;
+    void Start()
     {
-        playerSpeedDisplay = GetPlayerSpeed();
+        lastPosition = ballRigidBody.transform.position;
+    }
+
+    void FixedUpdate()
+    {
+        float distanceMoved = Vector3.Distance(ballRigidBody.transform.position, lastPosition);
+        
+        playerSpeed = distanceMoved / Time.deltaTime;
+        
+        lastPosition = ballRigidBody.transform.position;
     }
 
     public float GetPlayerSpeed()
     {
-        return ballRigidBody.velocity.magnitude;
+        return playerSpeed; //ballRigidBody.velocity.magnitude;
     }
 
     public PlayerForm GetPlayerForm()
