@@ -24,7 +24,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
 
     public float GetPlayerSpeed()
     {
-        return 1;
+        return PlayerController.i.GetPlayerSpeed();
     }
 
     protected virtual void PlayEffect()
@@ -44,7 +44,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
 
     protected void OnCollisionStay(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement)
         {
             TriggerInteraction();
         }
