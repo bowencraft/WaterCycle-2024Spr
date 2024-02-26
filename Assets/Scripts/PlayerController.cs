@@ -42,11 +42,16 @@ public class PlayerController : MonoBehaviour
 
     public float GetPlayerSpeed()
     {
-        return playerSpeed; //ballRigidBody.velocity.magnitude;
+        return playerSpeed;
     }
 
     public PlayerForm GetPlayerForm()
     {
         return playerForm;
+    }
+
+    public void ChangePlayerForm(PlayerForm targetForm)
+    {
+        //implement this
     }
 }
