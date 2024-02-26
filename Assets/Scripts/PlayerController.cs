@@ -52,6 +52,23 @@ public class PlayerController : MonoBehaviour
 
     public void ChangePlayerForm(PlayerForm targetForm)
     {
-        //implement this
+        playerForm = targetForm;
+        string export = "Change Form To: ";
+        switch (targetForm)
+        {
+            case PlayerForm.Cloud:
+                export += "Cloud";
+                break;
+            case PlayerForm.Drop:
+                export += "Drop";
+                break;
+            case PlayerForm.Ice:
+                export += "Ice";
+                break;
+            case PlayerForm.Wave:
+                export += "Wave";
+                break;
+        }
+        print(export);
     }
 }
