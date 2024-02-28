@@ -21,7 +21,7 @@ public class CloudsController : MonoBehaviour
     void Update()
     {
         Move();
-        rb.AddForce(9.81f * Vector3.up);
+        rb.AddForce(9.81f * Vector3.up   * Time.deltaTime* 60);
         CheckHoverHeight();
             
         if (Input.GetKey(KeyCode.Q))
@@ -43,7 +43,7 @@ public class CloudsController : MonoBehaviour
             if (heightAboveGround > hoverHeight + 0.1) // 如果高于指定高度
             {
                 // 施加向下的力
-                rb.AddForce(-Vector3.up * 0.1f * (heightAboveGround - hoverHeight)   * Time.deltaTime);
+                rb.AddForce(-Vector3.up * 0.1f * (heightAboveGround - hoverHeight) * Time.deltaTime);
             }
             else if (heightAboveGround < hoverHeight - 0.1) // 如果低于指定高度
             {
