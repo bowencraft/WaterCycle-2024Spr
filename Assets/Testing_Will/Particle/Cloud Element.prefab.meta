@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Testing_Will/Particle/Cloud Element.prefab.meta
 guid: ce1144d0004f2c040ac7dd4b274e3b1c
 PrefabImporter:
+========
+guid: 13f2ba231f0c80240aec621362540d6e
+DefaultImporter:
+>>>>>>>> origin/main:Assets/Test/Ben/Cloud Scene.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

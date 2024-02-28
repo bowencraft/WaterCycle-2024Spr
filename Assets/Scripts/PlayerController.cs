@@ -42,11 +42,33 @@ public class PlayerController : MonoBehaviour
 
     public float GetPlayerSpeed()
     {
-        return playerSpeed; //ballRigidBody.velocity.magnitude;
+        return playerSpeed;
     }
 
     public PlayerForm GetPlayerForm()
     {
         return playerForm;
+    }
+
+    public void ChangePlayerForm(PlayerForm targetForm)
+    {
+        playerForm = targetForm;
+        string export = "Change Form To: ";
+        switch (targetForm)
+        {
+            case PlayerForm.Cloud:
+                export += "Cloud";
+                break;
+            case PlayerForm.Drop:
+                export += "Drop";
+                break;
+            case PlayerForm.Ice:
+                export += "Ice";
+                break;
+            case PlayerForm.Wave:
+                export += "Wave";
+                break;
+        }
+        print(export);
     }
 }
