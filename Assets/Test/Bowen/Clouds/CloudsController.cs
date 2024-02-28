@@ -43,12 +43,12 @@ public class CloudsController : MonoBehaviour
             if (heightAboveGround > hoverHeight + 0.1) // 如果高于指定高度
             {
                 // 施加向下的力
-                rb.AddForce(-Vector3.up * 0.1f * (heightAboveGround - hoverHeight));
+                rb.AddForce(-Vector3.up * 0.1f * (heightAboveGround - hoverHeight)   * Time.deltaTime* 60);
             }
             else if (heightAboveGround < hoverHeight - 0.1) // 如果低于指定高度
             {
                 // 施加向上的力
-                rb.AddForce(Vector3.up * 0.1f * (hoverHeight - heightAboveGround));
+                rb.AddForce(Vector3.up * 0.1f * (hoverHeight - heightAboveGround)  * Time.deltaTime* 60);
             }
         }
     }
