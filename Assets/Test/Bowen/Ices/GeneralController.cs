@@ -63,12 +63,12 @@ public class GeneralController : MonoBehaviour
             if (heightAboveGround > hoverHeight + 0.1) // 如果高于指定高度
             {
                 // 施加向下的力
-                rb.AddForce(-Vector3.up * floatSpeed * (heightAboveGround - hoverHeight));
+                rb.AddForce(-Vector3.up * floatSpeed * (heightAboveGround - hoverHeight)  * Time.deltaTime* 60);
             }
             else if (heightAboveGround < hoverHeight - 0.1) // 如果低于指定高度
             {
                 // 施加向上的力
-                rb.AddForce(Vector3.up * floatSpeed * (hoverHeight - heightAboveGround));
+                rb.AddForce(Vector3.up * floatSpeed * (hoverHeight - heightAboveGround)  * Time.deltaTime* 60);
             }
         }
     }
@@ -86,7 +86,7 @@ public class GeneralController : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized;
+        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized  * Time.deltaTime* 60;
 
         rb.AddForce(movement * moveSpeed);
     }
@@ -94,13 +94,13 @@ public class GeneralController : MonoBehaviour
     void Jump()
     {
         Debug.Log("Jumped");
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * jumpForce * Time.deltaTime * 60, ForceMode.Impulse );
         isGrounded = false;
     }
 
     void VerticalMove(float direction)
     {
-        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z)  * Time.deltaTime * 60;
     }
 
     void ToggleGravity()

@@ -66,15 +66,15 @@ public class CloudsController : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized;
+        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized ;
 
-        rb.AddForce(movement * moveSpeed);
+        rb.AddForce(movement * moveSpeed * Time.deltaTime * 60);
     }
 
 
     void VerticalMove(float direction)
     {
-        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z)  * Time.deltaTime* 60;
     }
     
 }
