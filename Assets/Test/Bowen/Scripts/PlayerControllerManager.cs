@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using Random = System.Random;
 
 public class PlayerControllerManager : MonoBehaviour
 {
@@ -157,6 +158,7 @@ public class PlayerControllerManager : MonoBehaviour
             {
                 Vector3 dropPos = dropController.transform.position + new Vector3(0, 2f, 0f);
                 dropController.transform.position = dropPos;
+                
                 return dropController.transform.parent.gameObject;
             }
             case PlayerController.PlayerForm.Ice: return iceController;
