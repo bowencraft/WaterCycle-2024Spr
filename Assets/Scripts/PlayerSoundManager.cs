@@ -26,6 +26,7 @@ public class PlayerSoundManager : MonoBehaviour
 {
     public enum SoundType
     {
+        NO_SOUND,
         Move_Cloud,
         Move_Water,
         Move_Wave,
@@ -87,7 +88,7 @@ public class PlayerSoundManager : MonoBehaviour
     {
         if (soundMap.TryGetValue(soundType, out List<Sound> soundList))
         {
-            soundList[random.NextInt(0, soundList.Count)].source.Play();
+            soundList[(int)(UnityEngine.Random.value * soundList.Count - 0.001f)].source.Play();
         }
     }
 
@@ -95,7 +96,7 @@ public class PlayerSoundManager : MonoBehaviour
     {
         if (soundMap.TryGetValue(soundType, out List<Sound> soundList))
         {
-            soundList[random.NextInt(0, soundList.Count)].source.Play();
+            soundList[(int)(UnityEngine.Random.value * soundList.Count - 0.001f)].source.Play();
         }
     }
 }

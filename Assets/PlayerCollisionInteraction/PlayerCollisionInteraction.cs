@@ -14,12 +14,17 @@ public class PlayerCollisionInteraction : MonoBehaviour
         PlayerController.PlayerForm.Wave
     };
     public float playerSpeedRequirement = 0f;
+    public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
     [Header("READ ONLY DO NOT EDIT")] public bool hasTriggered = false;
 
     public void TriggerInteraction()
     {
         if (hasTriggered) return;
         PlayEffect();
+        if (soundToPlay != PlayerSoundManager.SoundType.NO_SOUND)
+        {
+            PlayerSoundManager.Instance.PlaySound(soundToPlay);
+        }
         hasTriggered = true;
     }
 
@@ -41,7 +46,6 @@ public class PlayerCollisionInteraction : MonoBehaviour
 
     protected void OnCollisionEnter(Collision other)
     {
-        print("colliision " + other.gameObject.name);
         if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             TriggerInteraction();
