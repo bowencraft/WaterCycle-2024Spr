@@ -115,7 +115,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height: 0
+    - _Height: 3
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -138,7 +138,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - Color_1139F668: {r: 0, g: 0.6439421, b: 0.9921569, a: 0.8156863}
-    - Color_198818EE: {r: 0.341151, g: 0.5477178, b: 0.9245283, a: 0.9647059}
+    - Color_198818EE: {r: 0, g: 0.08221479, b: 0.23113209, a: 0.9647059}
     - Color_626750DD: {r: 2, g: 2, b: 2, a: 1}
     - Color_77A2EDE9: {r: 32, g: 32, b: 32, a: 1}
     - Vector2_1E1B6943: {r: 1, g: 5, b: 0, a: 0}

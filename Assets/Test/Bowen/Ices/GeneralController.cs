@@ -1,15 +1,20 @@
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class GeneralController : MonoBehaviour
 {
     public float moveSpeed = 5f; // 控制移动速度
     public float jumpForce = 5f; // 控制跳跃力度
     public float verticalSpeed = 2f; // 控制上升和下降的速度
+    public float floatSpeed = 10f;
+    
     private Rigidbody rb;
     private bool isGrounded;
+    [SerializeField]
     private bool isGravityEnabled = true; // 是否受重力影响的开关
     [SerializeField]
     public Transform cameraTransform; // 主相机的Transform
+    public float hoverHeight = 10.0f; // 悬浮的目标高度
+    public LayerMask groundLayer; // 用于射线检测的地面层
 
     void Start()
     {
@@ -29,6 +34,9 @@ public class CharacterController : MonoBehaviour
         }
         else
         {
+            rb.AddForce(16.4f * Vector3.up);
+            CheckHoverHeight();
+            
             if (Input.GetKey(KeyCode.Q))
             {
                 VerticalMove(verticalSpeed); // 上升
@@ -46,16 +54,33 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    void CheckHoverHeight()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, groundLayer))
+        {
+            float heightAboveGround = hit.distance;
+            if (heightAboveGround > hoverHeight + 0.1) // 如果高于指定高度
+            {
+                // 施加向下的力
+                rb.AddForce(-Vector3.up * floatSpeed * (heightAboveGround - hoverHeight));
+            }
+            else if (heightAboveGround < hoverHeight - 0.1) // 如果低于指定高度
+            {
+                // 施加向上的力
+                rb.AddForce(Vector3.up * floatSpeed * (hoverHeight - heightAboveGround));
+            }
+        }
+    }
+
     void Move()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        // 使用相机的方向来确定移动方向
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
 
-        // 忽略相机的Y轴，防止角色向上或向下移动
         camForward.y = 0;
         camRight.y = 0;
         camForward.Normalize();
@@ -69,7 +94,6 @@ public class CharacterController : MonoBehaviour
     void Jump()
     {
         Debug.Log("Jumped");
-        
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
     }
@@ -82,7 +106,8 @@ public class CharacterController : MonoBehaviour
     void ToggleGravity()
     {
         isGravityEnabled = !isGravityEnabled;
-        rb.useGravity = isGravityEnabled; // 启用或禁用 Rigidbody 的重力
+        // 注意：我们在这里不直接使用rb.useGravity来切换重力，
+        // 因为我们通过CheckHoverHeight来控制悬浮逻辑
     }
 
     void OnCollisionEnter(Collision other)
