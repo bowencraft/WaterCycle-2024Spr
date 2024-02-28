@@ -7,8 +7,9 @@ public class CharacterController : MonoBehaviour
     public float verticalSpeed = 2f; // 控制上升和下降的速度
     private Rigidbody rb;
     private bool isGrounded;
+    private bool isGravityEnabled = true; // 是否受重力影响的开关
     [SerializeField]
-    private bool isGravityEnabled = true; // 控制是否受重力影响的开关
+    public Transform cameraTransform; // 主相机的Transform
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class CharacterController : MonoBehaviour
 
         if (isGravityEnabled)
         {
-            if (Input.GetButtonDown("Jump") && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 Jump();
             }
@@ -50,13 +51,25 @@ public class CharacterController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        // 使用相机的方向来确定移动方向
+        Vector3 camForward = cameraTransform.forward;
+        Vector3 camRight = cameraTransform.right;
+
+        // 忽略相机的Y轴，防止角色向上或向下移动
+        camForward.y = 0;
+        camRight.y = 0;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized;
 
         rb.AddForce(movement * moveSpeed);
     }
 
     void Jump()
     {
+        Debug.Log("Jumped");
+        
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isGrounded = false;
     }
@@ -69,12 +82,12 @@ public class CharacterController : MonoBehaviour
     void ToggleGravity()
     {
         isGravityEnabled = !isGravityEnabled;
-        rb.useGravity = isGravityEnabled; // 启用或禁用Rigidbody的重力
+        rb.useGravity = isGravityEnabled; // 启用或禁用 Rigidbody 的重力
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Dirt"))
         {
             isGrounded = true;
         }
