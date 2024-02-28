@@ -21,7 +21,7 @@ public class CloudsController : MonoBehaviour
     void Update()
     {
         Move();
-        rb.AddForce(16.4f * Vector3.up);
+        rb.AddForce(9.81f * Vector3.up);
         CheckHoverHeight();
             
         if (Input.GetKey(KeyCode.Q))
