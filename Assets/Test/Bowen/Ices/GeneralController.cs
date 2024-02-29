@@ -21,7 +21,7 @@ public class GeneralController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
 
