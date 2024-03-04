@@ -264,7 +264,7 @@ PrefabInstance:
     - target: {fileID: 7947152151245914011, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8733005282815020911, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
@@ -2801,10 +2801,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFormRequirement: 03000000000000000100000002000000
-  interactionReward: 0
   playerSpeedRequirement: 0
+  interactionAmountRequired: 1
   soundToPlay: 0
+  interactionReward: 0
   hasTriggered: 0
+  canTriggerNewInteractionCount: 1
   collectibleGameObject: {fileID: 1260449494}
 --- !u!65 &1260449491
 BoxCollider:

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6498655623577545129}
   - component: {fileID: 3670696427082314676}
   - component: {fileID: 7089975031769823550}
+  - component: {fileID: 4806209334043330720}
   m_Layer: 8
   m_Name: WaterDrop_New
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,18 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   simplyfy: 1
-  radius: 0.05
+  radius: 0.1
   autoSpring: 1
   springFactor: 0.001
   UseMeshCollider: 0
   softbodyLayer: 30
   physicsVertexRadius: 0.05
-  colliderMaterial: {fileID: 13400000, guid: 35846a0f0dde41b4ab6c576f7f0a6169, type: 2}
+  colliderMaterial: {fileID: 0}
   tuning:
     TransTraget: {fileID: 0}
     Tensor: {x: 0.1, y: 0.1, z: 0.1}
-    PositionProportional: 50
-    PositionDerivative: 20
+    PositionProportional: 500
+    PositionDerivative: 10
     RotationProportional: 1
     RotationDerivative: 0.1
     maxDepenetrationVelocity: 1
@@ -168,6 +169,27 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2149047927
+--- !u!135 &4806209334043330720
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539567064073577365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3012101688485901008
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21817c0e5beee45ffa9b43028dcc3928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballRigidBody: {fileID: 0}
+  ballRigidBody: {fileID: 6498655623577545129}
   playerForm: 0
   playerSpeed: 0
 --- !u!114 &5304679200300527713
