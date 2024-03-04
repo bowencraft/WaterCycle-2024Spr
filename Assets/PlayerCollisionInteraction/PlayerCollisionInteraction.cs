@@ -13,13 +13,21 @@ public class PlayerCollisionInteraction : MonoBehaviour
         PlayerController.PlayerForm.Ice,
         PlayerController.PlayerForm.Wave
     };
+
+    public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
+    
     public float playerSpeedRequirement = 0f;
+    public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
     [Header("READ ONLY DO NOT EDIT")] public bool hasTriggered = false;
 
-    public void TriggerInteraction()
+    public virtual void TriggerInteraction()
     {
         if (hasTriggered) return;
         PlayEffect();
+        if (soundToPlay != PlayerSoundManager.SoundType.NO_SOUND)
+        {
+            PlayerSoundManager.Instance.PlaySound(soundToPlay);
+        }
         hasTriggered = true;
     }
 
@@ -33,15 +41,17 @@ public class PlayerCollisionInteraction : MonoBehaviour
         return PlayerController.i.GetPlayerSpeed();
     }
 
+    /// <summary>
+    /// When overriding, call base.PlayEffect() at the end of new method.
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
     protected virtual void PlayEffect()
     {
-        throw new NotImplementedException();
+        LevelManager.i.GainReward(interactionReward);
     }
-    
 
     protected void OnCollisionEnter(Collision other)
     {
-        print("colliision " + other.gameObject.name);
         if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             TriggerInteraction();
