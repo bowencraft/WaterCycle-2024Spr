@@ -10,7 +10,9 @@ public class PCI_Explode : PlayerCollisionInteraction
     [SerializeField] private float explosionForce = 50;
     [SerializeField] private float explosionRadius = 20;
     [SerializeField] private float fragmentMass = 0.1f;
-
+    [SerializeField,Header("Average disappear time")] private float fragmentDisappearTime = 10f;
+    [SerializeField,Header("Difference between max and min disappear time")] private float fragmentDisappearTimeVariation = 1f;
+    
     protected override void PlayEffect()
     {
         regularStateGO.SetActive(false);
@@ -27,20 +29,13 @@ public class PCI_Explode : PlayerCollisionInteraction
             rb.mass = fragmentMass * Random.Range(0.8f,1.2f);
             rb.AddExplosionForce(explosionForce, explosionOrigion.position,explosionRadius);
             go.gameObject.AddComponent<BoxCollider>();
+            StartCoroutine(DelayAddCollider(go.gameObject));
         }
-
-        //StartCoroutine(DelayAddCollider());
-
     }
-
-    /*
-    IEnumerator DelayAddCollider()
+    
+    IEnumerator DelayAddCollider(GameObject targetGO)
     {
-        yield return new WaitForSeconds(.7f);
-
-        foreach (Transform go in explosionStateGO.transform)
-        {
-            go.gameObject.AddComponent<BoxCollider>();
-        }
-    }*/
+        yield return new WaitForSeconds(fragmentDisappearTime += fragmentDisappearTime* Random.Range(-0.5f,0.5f));
+        targetGO.SetActive(false);
+    }
 }
