@@ -14,11 +14,7 @@ public class PCI_Explode : PlayerCollisionInteraction
     [SerializeField] private GameObject regularStateGO  = null;
     [SerializeField] private GameObject explosionStateGO = null;
     [SerializeField] private Transform explosionOrigion;
-    
-    [Header("Building Health Related")]
-    [SerializeField] private int buildingHealth = 2;
-    [SerializeField] private float playerSpeedLowerLimit = 1f;
-    
+
     [Header("Explosion Effect")]
     [SerializeField] private float explosionForce = 50;
     [SerializeField] private float explosionRadius = 20;

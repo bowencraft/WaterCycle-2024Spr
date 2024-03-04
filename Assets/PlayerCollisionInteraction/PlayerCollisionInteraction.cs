@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class PlayerCollisionInteraction : MonoBehaviour
 {
+    //SERIALIZED VARIABLES
+    [Header("Player Requirement")]
     public List<PlayerController.PlayerForm> playerFormRequirement = new List<PlayerController.PlayerForm>()
     {
         PlayerController.PlayerForm.Cloud,
@@ -13,13 +15,20 @@ public class PlayerCollisionInteraction : MonoBehaviour
         PlayerController.PlayerForm.Ice,
         PlayerController.PlayerForm.Wave
     };
-
-    public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
-    
     public float playerSpeedRequirement = 0f;
+    
+    [Header("Building Health Related")]
+    [SerializeField] private int interactionAmountRequired = 1;
+    
+    [Header("Trigger Related")]
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
-    [Header("READ ONLY DO NOT EDIT")] public bool hasTriggered = false;
+    public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
 
+    [Header("READ ONLY - DO NOT EDIT")] public bool hasTriggered = false;
+
+    // PRIVATE VARIABLES
+    public bool canTriggerNewInteractionCount = true;
+    
     public virtual void TriggerInteraction()
     {
         if (hasTriggered) return;
@@ -50,21 +59,82 @@ public class PlayerCollisionInteraction : MonoBehaviour
         LevelManager.i.GainReward(interactionReward);
     }
 
-    protected void OnCollisionEnter(Collision other)
+    protected void OnTriggerEnter(Collider other)
     {
+        print(other.gameObject.name + " ENTERED" );
+        if(!canTriggerNewInteractionCount) return;
         if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
-            TriggerInteraction();
+            interactionAmountRequired--;
+            canTriggerNewInteractionCount = false;
+            if (interactionAmountRequired == 0)
+            {
+                TriggerInteraction();
+            }
+        }
+    }
+
+    IEnumerator DelayBeforeAllowTrigger(float DelayTime)
+    {
+        yield return new WaitForSeconds(DelayTime);
+        canTriggerNewInteractionCount = true;
+    }
+
+    protected void OnTriggerStay(Collider other)
+    {
+        /*
+        print(other.gameObject.name + " ENTERED" );
+        if(!canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
+        {
+            interactionAmountRequired--;
+            canTriggerNewInteractionCount = false;
+            if (interactionAmountRequired == 0)
+            {
+                TriggerInteraction();
+            }
+        }*/
+    }
+
+    protected void OnTriggerExit(Collider other)
+    {
+        StartCoroutine(DelayBeforeAllowTrigger(0.5f));
+    }
+
+    /*
+    protected void OnCollisionEnter(Collision other)
+    {
+        print(other.gameObject.name + " ENTERED" );
+        if(!canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
+        {
+            interactionAmountRequired--;
+            canTriggerNewInteractionCount = false;
+            if (playerSpeedRequirement == 0)
+            {
+                TriggerInteraction();
+            }
         }
     }
 
     protected void OnCollisionStay(Collision other)
     {
+        if(!canTriggerNewInteractionCount) return;
         if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
-            TriggerInteraction();
+            interactionAmountRequired--;
+            canTriggerNewInteractionCount = false;
+            if (playerSpeedRequirement == 0)
+            {
+                TriggerInteraction();
+            }
         }
     }
+
+    private void OnCollisionExit(Collision other)
+    {
+        canTriggerNewInteractionCount = true;
+    }*/
 
     protected void Update()
     {
