@@ -2801,9 +2801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFormRequirement: 03000000000000000100000002000000
-  interactionReward: 0
   playerSpeedRequirement: 0
-  soundToPlay: 0
   hasTriggered: 0
   collectibleGameObject: {fileID: 1260449494}
 --- !u!65 &1260449491
