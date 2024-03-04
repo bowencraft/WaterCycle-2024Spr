@@ -417,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFormRequirement: 03000000000000000100000002000000
+  interactionReward: 1
   playerSpeedRequirement: 0
   soundToPlay: 5
   hasTriggered: 0

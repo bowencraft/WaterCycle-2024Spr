@@ -9,5 +9,6 @@ public class PCI_Fire : PlayerCollisionInteraction
     protected override void PlayEffect()
     {
         fireParticleSystem.Stop();
+        base.PlayEffect();
     }
 }

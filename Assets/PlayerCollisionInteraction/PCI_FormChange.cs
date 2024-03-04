@@ -9,5 +9,6 @@ public class PCI_FormChange : PlayerCollisionInteraction
     protected override void PlayEffect()
     {
         PlayerController.i.ChangePlayerForm(changeFormTo);
+        base.PlayEffect();
     }
 }

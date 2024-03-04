@@ -24,6 +24,12 @@ public class LevelManager : MonoBehaviour
 
     public UnityEvent<int> OnCollectiblesAmountChange = new UnityEvent<int>();
 
+    public enum RewardType
+    {
+        InteractionPoint,
+        Collectible
+    }
+
     private void Awake()
     {
         foreach (var VARIABLE in allLevels)
@@ -32,10 +38,22 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void ObtainCollectible()
+    private void ObtainCollectible()
     {
         collectiblesGained++;
         OnCollectiblesAmountChange.Invoke(collectiblesGained);
+    }
+
+    public void GainReward(RewardType rewardType)
+    {
+        switch (rewardType)
+        {
+            case RewardType.InteractionPoint:
+                break;
+            case RewardType.Collectible:
+                ObtainCollectible();
+                break;
+        }
     }
 
 }

@@ -18,6 +18,7 @@ public class PCI_Explode : PlayerCollisionInteraction
         regularStateGO.SetActive(false);
         explosionStateGO.SetActive(true);
         Explode();
+        base.PlayEffect();
     }
 
     private void Explode()

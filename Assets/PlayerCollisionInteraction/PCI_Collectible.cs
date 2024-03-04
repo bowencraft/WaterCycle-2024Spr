@@ -8,6 +8,6 @@ public class PCI_Collectible : PlayerCollisionInteraction
     protected override void PlayEffect()
     {
         collectibleGameObject.gameObject.SetActive(false);
-        LevelManager.i.ObtainCollectible();
+        base.PlayEffect();
     }
 }

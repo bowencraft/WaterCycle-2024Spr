@@ -21,6 +21,7 @@ public class PCI_Waterable : PlayerCollisionInteraction
         beforeWateringGameObject.SetActive(false);
         afterWateringGameObject.SetActive(true);
         transitionParticleSystem.Stop();
+        base.PlayEffect();
     }
     
 }
