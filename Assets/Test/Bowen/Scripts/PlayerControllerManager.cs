@@ -75,11 +75,6 @@ public class PlayerControllerManager : MonoBehaviour
 
     public void ChangePlayerForm(PlayerController.PlayerForm form)
     {
-        // Deactivate all controllers
-        iceController.SetActive(false);
-        dropController.SetActive(false);
-        waveController.SetActive(false);
-        cloudController.SetActive(false);
 
         // Variable to hold the new active controller
         GameObject newController = null;
@@ -109,8 +104,10 @@ public class PlayerControllerManager : MonoBehaviour
                 newController = dropController;
                 break;
             case PlayerController.PlayerForm.Ice:
+            {
                 newController = iceController;
                 break;
+            }
             case PlayerController.PlayerForm.Wave:
                 newController = waveController;
                 break;
@@ -122,9 +119,18 @@ public class PlayerControllerManager : MonoBehaviour
         if(newController != null)
         {
             // Activate the new controller
-            newController.SetActive(true);
-
+            // Deactivate all controllers
             newController.transform.position = previousController.transform.position;
+            
+            
+            iceController.SetActive(false);
+            dropController.SetActive(false);
+            waveController.SetActive(false);
+            cloudController.SetActive(false);
+            
+            newController.SetActive(true);
+            newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
+
             // If there is a previous active controller, set the new one's position to match it
             // This is just a placeholder, adjust according to your game's logic
             // e.g., newController.transform.position = previousController.transform.position;
@@ -138,7 +144,7 @@ public class PlayerControllerManager : MonoBehaviour
         }
     }
     
-    private void AdjustScale(float increment)
+    public void AdjustScale(float increment)
     {
         GameObject activeController = GetActiveController();
         if(activeController != null)
@@ -154,13 +160,15 @@ public class PlayerControllerManager : MonoBehaviour
         // 根据当前的 playerForm 返回相应的controller
         switch(playerForm)
         {
-            case PlayerController.PlayerForm.Drop:
-            {
-                Vector3 dropPos = dropController.transform.position + new Vector3(0, 2f, 0f);
-                dropController.transform.position = dropPos;
-                
-                return dropController.transform.parent.gameObject;
-            }
+            // case PlayerController.PlayerForm.Drop:
+            // {
+            //     Vector3 dropPos = dropController.transform.position + new Vector3(0, 2f, 0f);
+            //     dropController.transform.position = dropPos;
+            //     
+            //     return dropController.transform.gameObject;
+            // }
+            
+            case PlayerController.PlayerForm.Drop: return dropController;
             case PlayerController.PlayerForm.Ice: return iceController;
             case PlayerController.PlayerForm.Wave: return waveController;
             case PlayerController.PlayerForm.Cloud: return cloudController;
