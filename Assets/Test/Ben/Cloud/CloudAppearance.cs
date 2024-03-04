@@ -30,6 +30,7 @@ public class CloudAppearance : MonoBehaviour
             elementOffset.y = Mathf.Abs(elementOffset.y) * verticalSpreadFactor * elementCount;
 
             CloudElement newElement = Instantiate(elementPrefab, transform.position, Quaternion.identity);
+            newElement.transform.parent = transform;
             newElement.Setup(this, controller.rb, elementOffset);
             elements.Add(newElement);
         }

@@ -55,8 +55,8 @@ public class CloudElement : MonoBehaviour
         UpdateMovement();
         UpdateParticles();
 
-        if (appearance != null && Vector3.Distance(target.position, self.position) > breakDistance)
-            appearance.RemoveElement(this);
+        // if (appearance != null && Vector3.Distance(target.position, self.position) > breakDistance)
+        //     appearance.RemoveElement(this);
     }
 
     private void UpdateMovement()

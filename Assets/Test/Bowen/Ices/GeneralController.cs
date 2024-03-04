@@ -21,14 +21,15 @@ public class GeneralController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
 
         if (isGravityEnabled)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("Space pressed");
                 Jump();
             }
         }
@@ -94,8 +95,18 @@ public class GeneralController : MonoBehaviour
     void Jump()
     {
         Debug.Log("Jumped");
-        rb.AddForce(Vector3.up * jumpForce * Time.deltaTime * 60, ForceMode.Impulse );
-        isGrounded = false;
+        
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + new Vector3(0,1,0), -Vector3.up, out hit, Mathf.Infinity, groundLayer))
+        {
+            float heightAboveGround = hit.distance;
+            if (heightAboveGround < 2f)
+            {
+                rb.AddForce(Vector3.up * jumpForce * Time.deltaTime * 60, ForceMode.Impulse);
+            }
+        }
+        //
+        // isGrounded = false;
     }
 
     void VerticalMove(float direction)
