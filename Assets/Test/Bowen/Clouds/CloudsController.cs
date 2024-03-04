@@ -21,7 +21,8 @@ public class CloudsController : MonoBehaviour
     void Update()
     {
         Move();
-        rb.AddForce(16.4f * Vector3.up);
+        Debug.Log(Time.deltaTime);
+        rb.AddForce(9.81f * Vector3.up   * Time.deltaTime* 60);
         CheckHoverHeight();
             
         if (Input.GetKey(KeyCode.Q))
@@ -43,12 +44,12 @@ public class CloudsController : MonoBehaviour
             if (heightAboveGround > hoverHeight + 0.1) // 如果高于指定高度
             {
                 // 施加向下的力
-                rb.AddForce(-Vector3.up * 0.1f * (heightAboveGround - hoverHeight));
+                rb.AddForce(-Vector3.up  * (heightAboveGround - hoverHeight) * Time.deltaTime * 60);
             }
             else if (heightAboveGround < hoverHeight - 0.1) // 如果低于指定高度
             {
                 // 施加向上的力
-                rb.AddForce(Vector3.up * 0.1f * (hoverHeight - heightAboveGround));
+                rb.AddForce(Vector3.up * (hoverHeight - heightAboveGround)  * Time.deltaTime * 60);
             }
         }
     }
@@ -66,15 +67,15 @@ public class CloudsController : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized;
+        Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized ;
 
-        rb.AddForce(movement * moveSpeed);
+        rb.AddForce(movement * moveSpeed * Time.deltaTime * 60);
     }
 
 
     void VerticalMove(float direction)
     {
-        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z)  * Time.deltaTime * 60;
     }
     
 }

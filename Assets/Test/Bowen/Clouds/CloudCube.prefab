@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  floatSpeed: 2
+  floatSpeed: 5
   cameraTransform: {fileID: 0}
-  hoverHeight: 10
+  hoverHeight: 20
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
