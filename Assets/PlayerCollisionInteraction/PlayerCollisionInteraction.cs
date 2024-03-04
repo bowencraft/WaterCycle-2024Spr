@@ -20,7 +20,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
     [Header("READ ONLY DO NOT EDIT")] public bool hasTriggered = false;
 
-    public void TriggerInteraction()
+    public virtual void TriggerInteraction()
     {
         if (hasTriggered) return;
         PlayEffect();
