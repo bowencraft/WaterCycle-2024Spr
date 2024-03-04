@@ -18,7 +18,7 @@ public class CloudsController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
         // Debug.Log(Time.deltaTime);

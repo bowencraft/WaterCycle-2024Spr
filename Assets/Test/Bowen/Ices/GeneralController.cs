@@ -21,14 +21,15 @@ public class GeneralController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
 
         if (isGravityEnabled)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("Space pressed");
                 Jump();
             }
         }
