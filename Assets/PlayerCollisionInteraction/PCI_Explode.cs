@@ -35,7 +35,7 @@ public class PCI_Explode : PlayerCollisionInteraction
     
     IEnumerator DelayAddCollider(GameObject targetGO)
     {
-        yield return new WaitForSeconds(fragmentDisappearTime += fragmentDisappearTime* Random.Range(-0.5f,0.5f));
+        yield return new WaitForSeconds(fragmentDisappearTime += fragmentDisappearTimeVariation* Random.Range(-0.5f,0.5f));
         targetGO.SetActive(false);
     }
 }
