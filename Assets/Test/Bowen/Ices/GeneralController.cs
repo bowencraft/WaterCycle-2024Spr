@@ -27,8 +27,9 @@ public class GeneralController : MonoBehaviour
 
         if (isGravityEnabled)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("Space pressed");
                 Jump();
             }
         }
