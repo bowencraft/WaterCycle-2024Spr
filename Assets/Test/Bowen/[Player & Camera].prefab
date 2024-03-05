@@ -482,7 +482,6 @@ GameObject:
   - component: {fileID: 3438729519141114594}
   - component: {fileID: 8291818554702286256}
   - component: {fileID: 5640206567571118997}
-  - component: {fileID: 2883920884594665096}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -538,7 +537,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 80
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -664,14 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fa0ec831b1fae4db0b812499dac94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &2883920884594665096
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4198118343476406922}
-  m_Enabled: 1
 --- !u!1 &5123020735564193538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1237,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2244728842276618784, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 3285383469233229486, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1296,6 +1292,11 @@ PrefabInstance:
       propertyPath: m_FollowOffset.z
       value: -14.05
       objectReference: {fileID: 0}
+    - target: {fileID: 6770329737098860423, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_YAxis.Value
@@ -1304,7 +1305,7 @@ PrefabInstance:
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 40
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1355,6 +1356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RecenterToTargetHeading.m_enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379861343418203916, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
