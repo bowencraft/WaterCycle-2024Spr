@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5324700269018624091}
-  elementPrefab: {fileID: 6101309419321916677, guid: ce1144d0004f2c040ac7dd4b274e3b1c,
+  elementPrefab: {fileID: 6101309419321916677, guid: 2d5206c9eb9c4b24498b3a849d66c99c,
     type: 3}
   elementCount: 30
   horizontalSpreadFactor: 0.1
