@@ -25,10 +25,11 @@ public class PlayerControllerManager : MonoBehaviour
     [Header("State & Size")]
     public int size;
     [SerializeField] private float scaleIncrement = 0.1f; // Scale变化的增量
+    [SerializeField] private float initialScale = 1f; // 新的Scale值
     [SerializeField] private float minScale = 0.5f; // 最小Scale值
     [SerializeField] private float maxScale = 3f; // 最大Scale值
 
-    
+    private GameObject currentController;
     [SerializeField] private PlayerController.PlayerForm playerForm = PlayerController.PlayerForm.Drop;
 
     static PlayerControllerManager instance;
@@ -69,6 +70,21 @@ public class PlayerControllerManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightBracket)) // 按下"]"
         {
             AdjustScale(scaleIncrement); // 增加scale
+        }
+
+        if (currentController.transform.localScale.x <= minScale)
+        {
+            currentController.transform.localScale = new Vector3(initialScale, initialScale, initialScale); // 应用新的scale
+            switch (playerForm)
+            {
+                case PlayerController.PlayerForm.Cloud:
+                    ChangePlayerForm(PlayerController.PlayerForm.Drop);
+                    break;
+                case PlayerController.PlayerForm.Ice:
+                    ChangePlayerForm(PlayerController.PlayerForm.Drop);
+                    break;
+            }
+            
         }
     }
 
@@ -131,6 +147,9 @@ public class PlayerControllerManager : MonoBehaviour
             newController.SetActive(true);
             newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
 
+
+            currentController = newController;
+
             // If there is a previous active controller, set the new one's position to match it
             // This is just a placeholder, adjust according to your game's logic
             // e.g., newController.transform.position = previousController.transform.position;
@@ -158,21 +177,22 @@ public class PlayerControllerManager : MonoBehaviour
     private GameObject GetActiveController()
     {
         // 根据当前的 playerForm 返回相应的controller
-        switch(playerForm)
-        {
-            // case PlayerController.PlayerForm.Drop:
-            // {
-            //     Vector3 dropPos = dropController.transform.position + new Vector3(0, 2f, 0f);
-            //     dropController.transform.position = dropPos;
-            //     
-            //     return dropController.transform.gameObject;
-            // }
-            
-            case PlayerController.PlayerForm.Drop: return dropController;
-            case PlayerController.PlayerForm.Ice: return iceController;
-            case PlayerController.PlayerForm.Wave: return waveController;
-            case PlayerController.PlayerForm.Cloud: return cloudController;
-            default: return null;
-        }
+        // switch(playerForm)
+        // {
+        //     // case PlayerController.PlayerForm.Drop:
+        //     // {
+        //     //     Vector3 dropPos = dropController.transform.position + new Vector3(0, 2f, 0f);
+        //     //     dropController.transform.position = dropPos;
+        //     //     
+        //     //     return dropController.transform.gameObject;
+        //     // }
+        //     
+        //     case PlayerController.PlayerForm.Drop: return dropController;
+        //     case PlayerController.PlayerForm.Ice: return iceController;
+        //     case PlayerController.PlayerForm.Wave: return waveController;
+        //     case PlayerController.PlayerForm.Cloud: return cloudController;
+        //     default: return null;
+        // }
+        return currentController;
     }
 }
