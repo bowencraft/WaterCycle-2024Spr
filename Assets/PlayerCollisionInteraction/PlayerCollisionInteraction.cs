@@ -19,6 +19,8 @@ public class PlayerCollisionInteraction : MonoBehaviour
     
     [Header("Building Health Related")]
     [SerializeField] private int interactionAmountRequired = 1;
+    [SerializeField] private bool unlimitedAmountInteraction = false;
+    [SerializeField] private bool onStayInteraction = false;
     
     [Header("Trigger Related")]
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
@@ -31,7 +33,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     
     public virtual void TriggerInteraction()
     {
-        if (hasTriggered) return;
+        if (hasTriggered && !unlimitedAmountInteraction) return;
         PlayEffect();
         if (soundToPlay != PlayerSoundManager.SoundType.NO_SOUND)
         {
@@ -61,13 +63,12 @@ public class PlayerCollisionInteraction : MonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
-        print(other.gameObject.name + " ENTERED" );
-        if(!canTriggerNewInteractionCount) return;
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
         if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             interactionAmountRequired--;
             canTriggerNewInteractionCount = false;
-            if (interactionAmountRequired == 0)
+            if (interactionAmountRequired == 0 || unlimitedAmountInteraction)
             {
                 TriggerInteraction();
             }
@@ -80,20 +81,24 @@ public class PlayerCollisionInteraction : MonoBehaviour
         canTriggerNewInteractionCount = true;
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        throw new NotImplementedException();
+    }
+
     protected void OnTriggerStay(Collider other)
     {
-        /*
-        print(other.gameObject.name + " ENTERED" );
-        if(!canTriggerNewInteractionCount) return;
+        if(!onStayInteraction) return;
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
         if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             interactionAmountRequired--;
             canTriggerNewInteractionCount = false;
-            if (interactionAmountRequired == 0)
+            if (interactionAmountRequired == 0 || unlimitedAmountInteraction)
             {
                 TriggerInteraction();
             }
-        }*/
+        }
     }
 
     protected void OnTriggerExit(Collider other)
