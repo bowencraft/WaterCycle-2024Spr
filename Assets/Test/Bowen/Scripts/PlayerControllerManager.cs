@@ -143,12 +143,19 @@ public class PlayerControllerManager : MonoBehaviour
             cameraFreeLook.LookAt = newController.transform;
         }
     }
-    
-    public void AdjustScale(float increment)
+
+    public void AdjustScale(float increment, float growingSizeMax = -1)
     {
+        if (growingSizeMax != -1)
+        {
+            maxScale = growingSizeMax;
+        }
+        
         GameObject activeController = GetActiveController();
         if(activeController != null)
         {
+            if(activeController.transform.localScale.x > maxScale) return;
+            
             Vector3 currentScale = activeController.transform.localScale;
             float newScale = Mathf.Clamp(currentScale.x + increment, minScale, maxScale); // 计算新的scale值，确保它在限定范围内
             activeController.transform.localScale = new Vector3(newScale, newScale, newScale); // 应用新的scale

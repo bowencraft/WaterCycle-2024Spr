@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class PCI_FormChange : PlayerCollisionInteraction
 {
-    [Header("Select Effect One")] public bool directlyChangeForm = false;
+    [Header("Select Effect One")] 
+    public bool directlyChangeForm = false;
     public PlayerController.PlayerForm changeFormTo = PlayerController.PlayerForm.Drop;
 
-    [Header("Or Select Effect Two")] public bool changeSize = false;
-    public float sizeChangePerSecond = 1f;
+    [Header("Or Select Effect Two")] 
+    [SerializeField] private bool changeSize = false;
+    [SerializeField] private float sizeChangePerSecond = 1f;
+    [SerializeField] private float sizeGrowMax = 5f;
 
     private void Awake()
     {
@@ -32,7 +35,7 @@ public class PCI_FormChange : PlayerCollisionInteraction
         }
         else
         {
-            PlayerControllerManager.Instance.AdjustScale(sizeChangePerSecond*Time.deltaTime);
+            PlayerControllerManager.Instance.AdjustScale(sizeChangePerSecond*Time.deltaTime, sizeGrowMax);
         }
         base.PlayEffect();
     }
