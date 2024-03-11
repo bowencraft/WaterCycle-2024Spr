@@ -89,7 +89,7 @@ public class GeneralController : MonoBehaviour
 
         Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized  * Time.deltaTime* 60;
 
-        rb.AddForce(movement * moveSpeed);
+        rb.AddForce(movement * moveSpeed, ForceMode.Acceleration);
     }
 
     void Jump()
