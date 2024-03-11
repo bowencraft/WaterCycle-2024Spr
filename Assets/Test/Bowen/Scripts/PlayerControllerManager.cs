@@ -159,6 +159,7 @@ public class PlayerControllerManager : MonoBehaviour
 
             // Update the player form
             playerForm = form;
+            PlayerController.i.ChangePlayerForm(form);
 
             // Set cameraFreeLook's follow target to the new controller's transform
             cameraFreeLook.Follow = newController.transform;
