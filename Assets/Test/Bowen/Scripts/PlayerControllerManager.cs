@@ -55,9 +55,6 @@ public class PlayerControllerManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             ChangePlayerForm(PlayerController.PlayerForm.Drop);
-        } else if (Input.GetKeyDown(KeyCode.I))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Ice);
         } else if (Input.GetKeyDown(KeyCode.O))
         {
             ChangePlayerForm(PlayerController.PlayerForm.Cloud);
