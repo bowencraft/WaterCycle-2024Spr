@@ -135,7 +135,7 @@ MonoBehaviour:
   UseMeshCollider: 0
   softbodyLayer: 30
   physicsVertexRadius: 0.05
-  colliderMaterial: {fileID: 0}
+  colliderMaterial: {fileID: 13400000, guid: 7ea7e21589fd29d40ae2723191a336e7, type: 2}
   tuning:
     TransTraget: {fileID: 0}
     Tensor: {x: 0.1, y: 0.1, z: 0.1}
@@ -261,6 +261,7 @@ MonoBehaviour:
   cloudController: {fileID: 3190048508070103360}
   size: 3
   scaleIncrement: 0.1
+  initialScale: 1
   minScale: 0.5
   maxScale: 3
   playerForm: 0
@@ -497,8 +498,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198118343476406922}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17616792, y: 0.000000008468637, z: -0.0000000015156058, w: 0.98436016}
-  m_LocalPosition: {x: -2.78, y: -6.630001, z: 10.35}
+  m_LocalRotation: {x: 0.17081636, y: 0.44903976, z: -0.08790045, w: 0.872616}
+  m_LocalPosition: {x: -1.8999023, y: -15.700302, z: 15.959002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1324,6 +1325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
+      propertyPath: m_YAxis.m_InvertInput
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
       propertyPath: m_Orbits.Array.data[0].m_Height
       value: 6.75
       objectReference: {fileID: 0}
@@ -1361,6 +1367,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869191011017519645, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_IgnoreTag
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869191011017519645, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_TransparentLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
