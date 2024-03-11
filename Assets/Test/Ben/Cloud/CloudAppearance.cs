@@ -51,7 +51,7 @@ public class CloudAppearance : MonoBehaviour
         UpdateCloud();
 
         if (elementCount <= 0)
-            CloudController.TransitionToRaindrop(element.self.position, element.self.velocity);
+            ;
     }
 
     private void RemoveFurthestElement()
