@@ -30,6 +30,12 @@ public class PlayerControllerManager : MonoBehaviour
     [SerializeField] private float maxScale = 3f; // 最大Scale值
 
     private GameObject currentController;
+
+    public Rigidbody getCurrentControllerRigidbody()
+    {
+        return currentController.GetComponent<Rigidbody>();
+    }
+    
     [SerializeField] private PlayerController.PlayerForm playerForm = PlayerController.PlayerForm.Drop;
 
     static PlayerControllerManager instance;
