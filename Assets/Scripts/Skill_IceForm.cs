@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Skill_IceForm : MonoBehaviour, ISkill
 {
-    private bool isLocked = false;
+    private bool isUnlocked = false;
     private bool canUse = false;
     public float coolDownTime = 10f;
 
     private void Update()
     {
-        if (!isLocked && canUse && Input.GetKeyDown(KeyCode.I))
+        if (isUnlocked && canUse && Input.GetKeyDown(KeyCode.I))
         {
             UseSkill();
         }
@@ -32,7 +32,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
 
     public void UnlockSkill()
     {
-        isLocked = true;
+        isUnlocked = true;
         canUse = true;
     }
     
@@ -43,6 +43,6 @@ public class Skill_IceForm : MonoBehaviour, ISkill
     
     public bool IsSkillUnlocked()
     {
-        return isLocked;
+        return isUnlocked;
     }
 }
