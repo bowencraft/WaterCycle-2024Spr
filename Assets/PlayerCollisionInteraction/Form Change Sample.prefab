@@ -99,7 +99,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -133,7 +133,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.2791, y: 1, z: 4.5593}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1975320571025788965}
@@ -154,7 +154,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -174,5 +174,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFormRequirement: 03000000000000000100000002000000
   playerSpeedRequirement: 0
+  interactionAmountRequired: 1
+  unlimitedAmountInteraction: 1
+  onStayInteraction: 1
+  soundToPlay: 0
+  interactionReward: 0
   hasTriggered: 0
+  canTriggerNewInteractionCount: 1
+  directlyChangeForm: 0
   changeFormTo: 0
+  changeSize: 0
+  sizeChangePerSecond: 1
+  sizeGrowMax: 5
