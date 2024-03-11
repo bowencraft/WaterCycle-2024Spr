@@ -30,7 +30,9 @@ public class LevelManager : MonoBehaviour
     public int ipNeedToGetSkill = 10;
 
     public List<Level> allLevels = new List<Level>();
-
+    public List<MonoBehaviour> allISkillsMonobehaviour = new List<MonoBehaviour>();
+    private List<ISkill> allSkills = new List<ISkill>();
+    private int skillAmount = 0;
 
     public enum RewardType
     {
@@ -43,6 +45,19 @@ public class LevelManager : MonoBehaviour
         foreach (var VARIABLE in allLevels)
         {
             VARIABLE.SetUp();
+        }
+
+        foreach (var VARIABLE in allISkillsMonobehaviour)
+        {
+            ISkill testISkill = (ISkill)VARIABLE;
+            if (testISkill == null)
+            {
+                Debug.LogError("NO ISkill in assigned monobehaviour");
+            }
+            else
+            {
+                allSkills.Add((ISkill)VARIABLE);
+            }
         }
     }
 
@@ -63,6 +78,9 @@ public class LevelManager : MonoBehaviour
         UI_PlayerStats.i.UpdateExperienceDisplay(((float)interactionPoint)/((float)ipNeedToGetSkill));
     }
 
+    /// <summary>
+    /// Collectibles unlocks new levels
+    /// </summary>
     private void ObtainCollectible()
     {
         collectiblesGained++;
@@ -70,12 +88,20 @@ public class LevelManager : MonoBehaviour
         OnCollectiblesAmountChange.Invoke(collectiblesGained);
     }
 
+    /// <summary>
+    /// Interaction points unlock new skills
+    /// </summary>
     private void ObtainInteractionPoint()
     {
         interactionPoint++;
-        if (interactionPoint > ipNeedToGetSkill)
+        if (interactionPoint > ipNeedToGetSkill) //Get New Skill
         {
             interactionPoint = 0;
+            if (allSkills.Count > skillAmount)
+            {
+                allSkills[skillAmount].UnlockSkill();
+                skillAmount++;
+            }
         }
         UI_PlayerStats.i.UpdateExperienceDisplay(((float)interactionPoint)/((float)ipNeedToGetSkill));
     }
