@@ -44,7 +44,7 @@ namespace YuetilitySoftbody
         [HideInInspector]
         public bool UseMeshCollider = false;
         [HideInInspector]
-        public int softbodyLayer = 30;
+        public int softbodyLayer = 8;
         [HideInInspector]
         public float physicsVertexRadius = 0.05f;
 
@@ -97,7 +97,7 @@ namespace YuetilitySoftbody
 
             // Create OffsetTransform
             Offset = new GameObject("SoftbodyPhysics").transform;
-            Offset.tag = "Player";
+            Offset.gameObject.layer = LayerMask.NameToLayer("Player");
 
             Offset.parent = transform;
             Offset.position = transform.position;
@@ -296,11 +296,13 @@ namespace YuetilitySoftbody
             target.transform.position = Position;
             target.transform.rotation = Quaternion.Euler(0, 0, 0);
             target.transform.parent = Offset;
+            target.gameObject.layer = LayerMask.NameToLayer("Player");
 
             GameObject phyVertex = new GameObject("PhysicsVertex");
 
             // Position
             phyVertex.transform.position = Position;
+            // phyVertex.gameObject.layer = LayerMask.NameToLayer("Player");;
             phyVertex.transform.rotation = Quaternion.Euler(0, 0, 0);
             phyVertex.transform.parent = Offset;
 

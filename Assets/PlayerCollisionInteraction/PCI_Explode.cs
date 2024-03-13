@@ -41,6 +41,15 @@ public class PCI_Explode : PlayerCollisionInteraction
                 VARIABLE.OnExplosionTrigger.AddListener(CheckExplosion);
             }
         }
+        
+    }
+
+    private void Start()
+    {
+        foreach (Transform go in explosionStateGO.transform)
+        {
+            go.gameObject.layer = LayerMask.NameToLayer("Explodable"); //"Explodable";
+        }
     }
 
     public void CheckExplosion(PCI_Explode orgExplosion)
@@ -60,6 +69,7 @@ public class PCI_Explode : PlayerCollisionInteraction
     {
         regularStateGO.SetActive(false);
         explosionStateGO.SetActive(true);
+        GetComponent<BoxCollider>().enabled = false;
         Explode();
         OnExplosionTrigger.Invoke(this);
         base.PlayEffect();
@@ -85,3 +95,9 @@ public class PCI_Explode : PlayerCollisionInteraction
         targetGO.SetActive(false);
     }
 }
+
+
+/*
+ * 1. origional collider still here after playeffect
+ * 2. diable fragments collider with player
+ */

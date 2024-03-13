@@ -1,5 +1,83 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1277614570737896746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3859549702812808683}
+  m_Layer: 0
+  m_Name: Skills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3859549702812808683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277614570737896746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8444284205406208242}
+  - {fileID: 4453901566090408580}
+  m_Father: {fileID: 115651511241026072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2133457520109253026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8444284205406208242}
+  - component: {fileID: 4575403216055897183}
+  m_Layer: 0
+  m_Name: Skill - 0 - Ice Form
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8444284205406208242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133457520109253026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3859549702812808683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4575403216055897183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133457520109253026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d9444d3ab2f4aa7ac8eca8a5f79b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDownTime: 10
 --- !u!1 &2539567064073577365
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,9 +208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simplyfy: 1
   radius: 0.1
-  autoSpring: 1
+  autoSpring: 0
   springFactor: 0.001
-  UseMeshCollider: 1
+  UseMeshCollider: 0
   softbodyLayer: 30
   physicsVertexRadius: 0.05
   colliderMaterial: {fileID: 13400000, guid: 35846a0f0dde41b4ab6c576f7f0a6169, type: 2}
@@ -140,7 +218,7 @@ MonoBehaviour:
     TransTraget: {fileID: 0}
     Tensor: {x: 0.1, y: 0.1, z: 0.1}
     PositionProportional: 500
-    PositionDerivative: 10
+    PositionDerivative: 20
     RotationProportional: 1
     RotationDerivative: 0.1
     maxDepenetrationVelocity: 1
@@ -201,6 +279,7 @@ GameObject:
   - component: {fileID: 115651511241026072}
   - component: {fileID: 962635781557523373}
   - component: {fileID: 5304679200300527713}
+  - component: {fileID: 2064661921497404448}
   m_Layer: 0
   m_Name: '[PlayerController]'
   m_TagString: Untagged
@@ -225,6 +304,7 @@ Transform:
   - {fileID: 4280887641218900493}
   - {fileID: 1655087557476033413}
   - {fileID: 2919535800737306626}
+  - {fileID: 3859549702812808683}
   m_Father: {fileID: 9089349217899515546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &962635781557523373
@@ -265,6 +345,21 @@ MonoBehaviour:
   minScale: 0.5
   maxScale: 3
   playerForm: 0
+--- !u!114 &2064661921497404448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3012101688485901008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a3648bd64fc476b811157cce54d1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSkillsList:
+  - {fileID: 4575403216055897183}
+  - {fileID: 4934360022622398703}
 --- !u!1 &3190048508070103360
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +759,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fa0ec831b1fae4db0b812499dac94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomSpeed: 1
+  minSize: 5
+  maxSize: 20
+  _camera: {fileID: 0}
 --- !u!1 &5123020735564193538
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +952,56 @@ Transform:
   - {fileID: 7908360348163474381}
   m_Father: {fileID: 9089349217899515546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6674528841669606869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4453901566090408580}
+  - component: {fileID: 4934360022622398703}
+  m_Layer: 0
+  m_Name: Skill - 1 - Super Jump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4453901566090408580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674528841669606869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3859549702812808683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4934360022622398703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674528841669606869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd73805ee0b9749ee87360201705d566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUnlocked: 0
+  canUse: 0
+  coolDownTime: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8522515159117818493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,12 +1280,12 @@ PrefabInstance:
     - target: {fileID: 366861943789816374, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008698255
+      value: 0.0000000030845226
       objectReference: {fileID: 0}
     - target: {fileID: 366861943789816374, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000020274342
+      value: -7.189569e-10
       objectReference: {fileID: 0}
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1161,17 +1310,17 @@ PrefabInstance:
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15002945
+      value: 0.15002947
       objectReference: {fileID: 0}
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008505818
+      value: -0.000000020073035
       objectReference: {fileID: 0}
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000012907323
+      value: 0.000000003046023
       objectReference: {fileID: 0}
     - target: {fileID: 445510659816618742, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1337,16 +1486,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_XAxis.m_MaxSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_YAxis.m_MaxSpeed
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
