@@ -29,6 +29,7 @@ public class PCI_Collectible : PlayerCollisionInteraction
     protected override void PlayEffect()
     {
         collectibleGameObject.gameObject.SetActive(false);
+        SkillManager.i.UnlockSkill(skillIndex);
         //((ISkill)ISkillMonobehaviour).UnlockSkill();
         base.PlayEffect();
     }
