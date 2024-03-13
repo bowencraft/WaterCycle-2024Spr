@@ -63,17 +63,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - type: 0
     soundType: 5
-    clip: {fileID: 8300000, guid: ab1836e98cd2949fe9dece589b829c6c, type: 3}
-    volume: 0.5
-    source: {fileID: 0}
-  - type: 0
-    soundType: 5
-    clip: {fileID: 8300000, guid: 6c92e6c662d134eb798829aedf4b93d3, type: 3}
-    volume: 0.5
-    source: {fileID: 0}
-  - type: 0
-    soundType: 5
-    clip: {fileID: 8300000, guid: aef80ef32a4cc44f4911f0082bea0d76, type: 3}
+    clip: {fileID: 8300000, guid: 7a9d845b85d6e174cbc9581fd5182d25, type: 3}
     volume: 0.5
     source: {fileID: 0}
   - type: 0
