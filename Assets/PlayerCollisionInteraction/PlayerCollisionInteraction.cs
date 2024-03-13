@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -24,7 +25,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     
     [Header("Trigger Related")]
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
-    public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
+    //public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
 
     [Header("READ ONLY - DO NOT EDIT")] public bool hasTriggered = false;
 
@@ -58,19 +59,42 @@ public class PlayerCollisionInteraction : MonoBehaviour
     /// <exception cref="NotImplementedException"></exception>
     protected virtual void PlayEffect()
     {
-        LevelManager.i.GainReward(interactionReward);
+        //LevelManager.i.GainReward(interactionReward);
     }
 
     protected void OnTriggerEnter(Collider other)
     {
         if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
-        if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckTriggerInteraction();
+        }
+    }
+    
+    protected void OnTriggerStay(Collider other)
+    {
+        if(!onStayInteraction) return;
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckTriggerInteraction();
+        }
+    }
+
+    protected void CheckTriggerInteraction()
+    {
+        if (GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             interactionAmountRequired--;
             canTriggerNewInteractionCount = false;
             if (interactionAmountRequired == 0 || unlimitedAmountInteraction)
             {
                 TriggerInteraction();
+            }
+            else
+            {
+                //transform.DOShakeRotation(0.5f, new Vector3(0, 50, 0),20,90f,false);
+                //transform.DOShakePosition(0.5f, new Vector3(.5f,0,.5f));
             }
         }
     }
@@ -84,21 +108,6 @@ public class PlayerCollisionInteraction : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         throw new NotImplementedException();
-    }
-
-    protected void OnTriggerStay(Collider other)
-    {
-        if(!onStayInteraction) return;
-        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
-        if (other.gameObject.CompareTag("Player") && GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
-        {
-            interactionAmountRequired--;
-            canTriggerNewInteractionCount = false;
-            if (interactionAmountRequired == 0 || unlimitedAmountInteraction)
-            {
-                TriggerInteraction();
-            }
-        }
     }
 
     protected void OnTriggerExit(Collider other)
