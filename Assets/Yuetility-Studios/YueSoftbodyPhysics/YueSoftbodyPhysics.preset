@@ -47,7 +47,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: softbodyLayer
-    value: 30
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: physicsVertexRadius

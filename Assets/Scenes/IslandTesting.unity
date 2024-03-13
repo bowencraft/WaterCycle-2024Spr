@@ -1134,6 +1134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fa0ec831b1fae4db0b812499dac94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomSpeed: 1
+  minSize: 5
+  maxSize: 20
+  _camera: {fileID: 0}
 --- !u!4 &624035094
 Transform:
   m_ObjectHideFlags: 0
@@ -5078,18 +5082,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3670696427082314676, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
+      propertyPath: softbodyLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670696427082314676, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
       propertyPath: UseMeshCollider
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3670696427082314676, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: tuning.PositionDerivative
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3670696427082314676, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: tuning.PositionProportional
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8746999199255119393, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
@@ -5149,12 +5158,12 @@ PrefabInstance:
     - target: {fileID: 9159641320719040593, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000083779845
+      value: 0.000000008378604
       objectReference: {fileID: 0}
     - target: {fileID: 9159641320719040593, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000019527837
+      value: -0.0000000019529283
       objectReference: {fileID: 0}
     - target: {fileID: 9208707386983483932, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
