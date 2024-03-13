@@ -120,7 +120,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2378902219116277235}
-  - component: {fileID: 5138406364857151991}
   - component: {fileID: 8440856357346911872}
   - component: {fileID: 1655661121299966245}
   m_Layer: 6
@@ -145,18 +144,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5688770301540318835}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &5138406364857151991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4058950729274659353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b395981a09549458baa0592559a054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &8440856357346911872
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -3861,7 +3848,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4901,7 +4888,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7616fdb89c708e4f8544ed0f0a7ae8d, type: 2}
+  - {fileID: 2100000, guid: 89d6f6c6cf3cc5f4d88edb17f00048bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
