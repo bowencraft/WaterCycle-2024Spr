@@ -97,7 +97,7 @@ namespace YuetilitySoftbody
 
             // Create OffsetTransform
             Offset = new GameObject("SoftbodyPhysics").transform;
-            Offset.tag = "Player";
+            Offset.gameObject.layer = LayerMask.NameToLayer("Player");
 
             Offset.parent = transform;
             Offset.position = transform.position;
@@ -296,7 +296,7 @@ namespace YuetilitySoftbody
             target.transform.position = Position;
             target.transform.rotation = Quaternion.Euler(0, 0, 0);
             target.transform.parent = Offset;
-            target.tag = "Player";
+            target.gameObject.layer = LayerMask.NameToLayer("Player");
 
             GameObject phyVertex = new GameObject("PhysicsVertex");
 
@@ -304,7 +304,7 @@ namespace YuetilitySoftbody
             phyVertex.transform.position = Position;
             phyVertex.transform.rotation = Quaternion.Euler(0, 0, 0);
             phyVertex.transform.parent = Offset;
-            phyVertex.tag = "Player";
+            phyVertex.gameObject.layer = LayerMask.NameToLayer("Player");
 
             // Rigidbody
             Rigidbody rigidBody = phyVertex.AddComponent<Rigidbody>();
