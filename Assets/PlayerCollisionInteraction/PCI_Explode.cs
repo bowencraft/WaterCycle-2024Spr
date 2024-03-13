@@ -48,7 +48,7 @@ public class PCI_Explode : PlayerCollisionInteraction
     {
         foreach (Transform go in explosionStateGO.transform)
         {
-            go.gameObject.tag = "Explodable";
+            go.gameObject.layer = LayerMask.NameToLayer("Explodable"); //"Explodable";
         }
     }
 
