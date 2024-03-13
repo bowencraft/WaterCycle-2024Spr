@@ -1,4 +1,4 @@
-//  Written by Marcel Remmers © for Yuetility 10.06.22
+//  Written by Marcel Remmers ï¿½ for Yuetility 10.06.22
 
 using System.Collections;
 using System.Collections.Generic;
@@ -97,6 +97,7 @@ namespace YuetilitySoftbody
 
             // Create OffsetTransform
             Offset = new GameObject("SoftbodyPhysics").transform;
+            Offset.tag = "Player";
 
             Offset.parent = transform;
             Offset.position = transform.position;
