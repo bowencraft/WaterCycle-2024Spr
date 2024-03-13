@@ -25,7 +25,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     
     [Header("Trigger Related")]
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
-    public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
+    //public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
 
     [Header("READ ONLY - DO NOT EDIT")] public bool hasTriggered = false;
 
@@ -59,7 +59,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     /// <exception cref="NotImplementedException"></exception>
     protected virtual void PlayEffect()
     {
-        LevelManager.i.GainReward(interactionReward);
+        //LevelManager.i.GainReward(interactionReward);
     }
 
     protected void OnTriggerEnter(Collider other)

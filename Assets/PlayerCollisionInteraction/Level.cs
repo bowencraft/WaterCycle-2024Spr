@@ -7,23 +7,28 @@ using UnityEngine.Playables;
 [Serializable]
 public class Level
 {
-    [SerializeField] private int requiredCollectiblesAmount = 10;
+    // Serialized Private Variables
+    [SerializeField] private int levelID = -1;
+    [SerializeField] private int amountInteractionPointToUnlockNext = 10;
     [SerializeField] private PlayableDirector playableDirectorToQue = null;
     [SerializeField] private GameObject levelMapGameObject = null;
 
+    // Private Variables
+    private Level nextLevel;
     private bool levelUnlocked = false;
-        
-    public void SetUp()
+    private int amountInteractionPointGained = 0;
+    
+    public void SetUp(Level nextLevel)
     {
-        LevelManager.i.OnCollectiblesAmountChange.AddListener(UponCollectiblesChange);
+        this.nextLevel = nextLevel;
     }
 
-    public void UponCollectiblesChange(int newCollectiblesAmount)
+    public void UponInteractionPointGained(int newInteractionPoint)
     {
-        if (newCollectiblesAmount >= requiredCollectiblesAmount)
+        amountInteractionPointGained += newInteractionPoint;
+        if (amountInteractionPointGained >= amountInteractionPointToUnlockNext)
         {
             levelUnlocked = true;
-            LevelManager.i.OnCollectiblesAmountChange.RemoveListener(UponCollectiblesChange);
             if(playableDirectorToQue != null) playableDirectorToQue.Play();
             if(levelMapGameObject != null) levelMapGameObject.SetActive(true);
         }

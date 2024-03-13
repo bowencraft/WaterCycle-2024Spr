@@ -38,8 +38,8 @@ public class UI_PlayerStats : MonoBehaviour
             0);
     }
     
-    public void UpdateCollectibleCount(int gainedAmount, int totalAmount)
+    public void UpdateInteractionProgressCount(int gainedAmount, int totalAmount)
     {
-        collectibleCountTMPText.text = "Collectibles: " + gainedAmount + "/" + totalAmount;
+        collectibleCountTMPText.text = "Interactions: " + gainedAmount + "/" + totalAmount;
     }
 }

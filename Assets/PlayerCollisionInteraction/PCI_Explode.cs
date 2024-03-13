@@ -85,3 +85,9 @@ public class PCI_Explode : PlayerCollisionInteraction
         targetGO.SetActive(false);
     }
 }
+
+
+/*
+ * 1. origional collider still here after playeffect
+ * 2. diable fragments collider with player
+ */

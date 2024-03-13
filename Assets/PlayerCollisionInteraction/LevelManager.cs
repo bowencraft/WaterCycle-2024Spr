@@ -20,33 +20,25 @@ public class LevelManager : MonoBehaviour
         }
     }
     
-    
-
-    public int collectiblesGained = 0;
-    public float totalCollectibles = 0;
-    public UnityEvent<int> OnCollectiblesAmountChange = new UnityEvent<int>();
-
-    public int interactionPoint = 0;
-    public int ipNeedToGetSkill = 10;
-
+    //public UnityEvent<int> OnCollectiblesAmountChange = new UnityEvent<int>();
     public List<Level> allLevels = new List<Level>();
-    public List<MonoBehaviour> allISkillsMonobehaviour = new List<MonoBehaviour>();
-    private List<ISkill> allSkills = new List<ISkill>();
-    private int skillAmount = 0;
-
+    
+    /*
     public enum RewardType
     {
         InteractionPoint,
         Collectible
-    }
+    }*/
 
     private void Awake()
     {
-        foreach (var VARIABLE in allLevels)
+        for (int j = 0; j < allLevels.Count; j++)
         {
-            VARIABLE.SetUp();
+            if(j!=allLevels.Count-1) allLevels[j].SetUp(allLevels[j+1]);
+            else allLevels[j].SetUp(null);
         }
 
+        /*
         foreach (var VARIABLE in allISkillsMonobehaviour)
         {
             ISkill testISkill = (ISkill)VARIABLE;
@@ -58,11 +50,12 @@ public class LevelManager : MonoBehaviour
             {
                 allSkills.Add((ISkill)VARIABLE);
             }
-        }
+        }*/
     }
 
     private void Start()
     {
+        /*
         int totalCollectiblesCount = 0;
         foreach (var VARIABLE in FindObjectsOfType<PlayerCollisionInteraction>())
         {
@@ -70,12 +63,11 @@ public class LevelManager : MonoBehaviour
             {
                 totalCollectiblesCount++;
             }
-        }
+        }*/
 
-        totalCollectibles = totalCollectiblesCount;
-        UI_PlayerStats.i.UpdateCollectibleCount(0,(int)totalCollectibles);
+        //UI_PlayerStats.i.UpdateCollectibleCount(0,(int)totalCollectibles);
         
-        UI_PlayerStats.i.UpdateExperienceDisplay(((float)interactionPoint)/((float)ipNeedToGetSkill));
+        //UI_PlayerStats.i.UpdateExperienceDisplay(((float)interactionPoint)/((float)ipNeedToGetSkill));
     }
 
     /// <summary>
@@ -83,11 +75,11 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     private void ObtainCollectible()
     {
-        collectiblesGained++;
-        UI_PlayerStats.i.UpdateCollectibleCount(collectiblesGained,(int)totalCollectibles);
-        OnCollectiblesAmountChange.Invoke(collectiblesGained);
+        //UI_PlayerStats.i.UpdateInteractionProgressCount(collectiblesGained,(int)totalCollectibles);
+        //OnCollectiblesAmountChange.Invoke(collectiblesGained);
     }
 
+    /*
     /// <summary>
     /// Interaction points unlock new skills
     /// </summary>
@@ -104,19 +96,21 @@ public class LevelManager : MonoBehaviour
             }
         }
         UI_PlayerStats.i.UpdateExperienceDisplay(((float)interactionPoint)/((float)ipNeedToGetSkill));
-    }
+    }*/
+    
+    /*
 
     public void GainReward(RewardType rewardType)
     {
         switch (rewardType)
         {
             case RewardType.InteractionPoint:
-                ObtainInteractionPoint();
+                //ObtainInteractionPoint();
                 break;
             case RewardType.Collectible:
-                ObtainCollectible();
+                //ObtainCollectible();
                 break;
         }
-    }
+    }*/
 
 }
