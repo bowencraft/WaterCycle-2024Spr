@@ -296,6 +296,7 @@ namespace YuetilitySoftbody
             target.transform.position = Position;
             target.transform.rotation = Quaternion.Euler(0, 0, 0);
             target.transform.parent = Offset;
+            target.tag = "Player";
 
             GameObject phyVertex = new GameObject("PhysicsVertex");
 
@@ -303,6 +304,7 @@ namespace YuetilitySoftbody
             phyVertex.transform.position = Position;
             phyVertex.transform.rotation = Quaternion.Euler(0, 0, 0);
             phyVertex.transform.parent = Offset;
+            phyVertex.tag = "Player";
 
             // Rigidbody
             Rigidbody rigidBody = phyVertex.AddComponent<Rigidbody>();

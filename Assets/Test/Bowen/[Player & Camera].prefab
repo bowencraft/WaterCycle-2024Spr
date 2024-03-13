@@ -130,9 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simplyfy: 1
   radius: 0.1
-  autoSpring: 1
+  autoSpring: 0
   springFactor: 0.001
-  UseMeshCollider: 1
+  UseMeshCollider: 0
   softbodyLayer: 30
   physicsVertexRadius: 0.05
   colliderMaterial: {fileID: 13400000, guid: 35846a0f0dde41b4ab6c576f7f0a6169, type: 2}
@@ -140,7 +140,7 @@ MonoBehaviour:
     TransTraget: {fileID: 0}
     Tensor: {x: 0.1, y: 0.1, z: 0.1}
     PositionProportional: 500
-    PositionDerivative: 10
+    PositionDerivative: 20
     RotationProportional: 1
     RotationDerivative: 0.1
     maxDepenetrationVelocity: 1
@@ -1131,12 +1131,12 @@ PrefabInstance:
     - target: {fileID: 366861943789816374, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008698255
+      value: -0.0000000030845226
       objectReference: {fileID: 0}
     - target: {fileID: 366861943789816374, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000020274342
+      value: 7.189569e-10
       objectReference: {fileID: 0}
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1166,12 +1166,12 @@ PrefabInstance:
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008505818
+      value: 0.0000000085058005
       objectReference: {fileID: 0}
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000012907323
+      value: -0.00000000129073
       objectReference: {fileID: 0}
     - target: {fileID: 445510659816618742, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1337,16 +1337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_XAxis.m_MaxSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_YAxis.m_MaxSpeed
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
