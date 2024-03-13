@@ -7,6 +7,7 @@ public class PCI_Collectible : PlayerCollisionInteraction
 {
     [SerializeField] private Transform collectibleGameObject;
     //[SerializeField] private MonoBehaviour ISkillMonobehaviour = null;
+    [Header("ASSIGN THE SKILL HERE")]
     [SerializeField] private int skillIndex = -1;
     
     private void Awake()
