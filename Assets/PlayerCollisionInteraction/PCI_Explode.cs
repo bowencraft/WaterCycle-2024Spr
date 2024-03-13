@@ -41,6 +41,15 @@ public class PCI_Explode : PlayerCollisionInteraction
                 VARIABLE.OnExplosionTrigger.AddListener(CheckExplosion);
             }
         }
+        
+    }
+
+    private void Start()
+    {
+        foreach (Transform go in explosionStateGO.transform)
+        {
+            go.gameObject.tag = "Explodable";
+        }
     }
 
     public void CheckExplosion(PCI_Explode orgExplosion)
@@ -60,6 +69,7 @@ public class PCI_Explode : PlayerCollisionInteraction
     {
         regularStateGO.SetActive(false);
         explosionStateGO.SetActive(true);
+        GetComponent<BoxCollider>().enabled = false;
         Explode();
         OnExplosionTrigger.Invoke(this);
         base.PlayEffect();
