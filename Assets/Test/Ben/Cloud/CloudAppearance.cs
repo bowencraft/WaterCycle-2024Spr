@@ -56,21 +56,30 @@ public class CloudAppearance : MonoBehaviour
 
     private void RemoveFurthestElement()
     {
-        CloudElement furthestElement = elements[0];
-        float furthestDistance = Vector3.Distance(transform.position, furthestElement.transform.position);
-
-        foreach (CloudElement element in elements)
+        if (elements != null && elements.Count > 0)
         {
-            float distance = Vector3.Distance(transform.position, element.transform.position);
+            CloudElement furthestElement = elements[0];
+            float furthestDistance = Vector3.Distance(transform.position, furthestElement.transform.position);
 
-            if (distance > furthestDistance)
+            foreach (CloudElement element in elements)
             {
-                furthestElement = element;
-                furthestDistance = distance;
-            }
-        }
+                float distance = Vector3.Distance(transform.position, element.transform.position);
 
-        RemoveElement(furthestElement);
+                if (distance > furthestDistance)
+                {
+                    furthestElement = element;
+                    furthestDistance = distance;
+                }
+            }
+
+            RemoveElement(furthestElement);
+        }
+        else
+        {
+            PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Drop);
+        }
+        
+
     }
 
     public void UpdateCloud()
