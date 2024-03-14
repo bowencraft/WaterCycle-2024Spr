@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolDownTime: 10
+  duration: 10
 --- !u!1 &2599228664328740781
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd73805ee0b9749ee87360201705d566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 0
+  canUse: 0
   coolDownTime: 10
   groundLayer:
     serializedVersion: 2
@@ -593,7 +596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1500242637163697060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -879,13 +882,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f0a0b79196746ca93067517e736917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectiblesGained: 0
-  totalCollectibles: 0
-  OnCollectiblesAmountChange:
-    m_PersistentCalls:
-      m_Calls: []
-  interactionPoint: 0
-  ipNeedToGetSkill: 2
   allLevels: []
-  allISkillsMonobehaviour:
-  - {fileID: 2903008198433638892}

@@ -179,6 +179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981265101584054494, guid: ad01695e182df473b9192775c6494ac0,
         type: 3}
+      propertyPath: soundToPlay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981265101584054494, guid: ad01695e182df473b9192775c6494ac0,
+        type: 3}
       propertyPath: changeFormTo
       value: 3
       objectReference: {fileID: 0}
