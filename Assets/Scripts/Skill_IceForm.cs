@@ -8,10 +8,11 @@ public class Skill_IceForm : MonoBehaviour, ISkill
     private bool isUnlocked = false;
     private bool canUse = false;
     public float coolDownTime = 10f;
+    public float duration = 10f;
 
     private void Update()
     {
-        if (isUnlocked && canUse && Input.GetKeyDown(KeyCode.I))
+        if (isUnlocked && canUse && Input.GetKeyDown(KeyCode.Alpha1)) // press 1 to use
         {
             UseSkill();
         }
@@ -22,6 +23,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
         PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Ice);
         canUse = false;
         StartCoroutine(StartCoolDown());
+        StartCoroutine(SwitchBackToWaterForm());
     }
 
     IEnumerator StartCoolDown()
@@ -29,6 +31,13 @@ public class Skill_IceForm : MonoBehaviour, ISkill
         yield return new WaitForSeconds(coolDownTime);
         canUse = true;
     }
+    
+    IEnumerator SwitchBackToWaterForm()
+    {
+        yield return new WaitForSeconds(duration);
+        PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Drop);
+    }
+
 
     public void UnlockSkill()
     {
