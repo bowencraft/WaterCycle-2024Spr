@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolDownTime: 10
+  duration: 10
 --- !u!1 &2539567064073577365
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,8 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d434b05128daf4be4ad608c2157be81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpForce: 10
+  moveSpeed: 8
+  jumpForce: 8
   verticalSpeed: 0.9
   floatSpeed: 10
   isGravityEnabled: 1
