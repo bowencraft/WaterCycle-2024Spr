@@ -1480,13 +1480,23 @@ PrefabInstance:
       objectReference: {fileID: 2919535800737306626}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
-      propertyPath: m_YAxis.Value
-      value: 0.5
+      propertyPath: m_BindingMode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_XAxis.m_MaxValue
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_XAxis.m_MinValue
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1510,33 +1520,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
-      propertyPath: m_Orbits.Array.data[0].m_Height
-      value: 6.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_Orbits.Array.data[0].m_Radius
-      value: 7.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
       propertyPath: m_Orbits.Array.data[1].m_Height
-      value: 6.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_Orbits.Array.data[1].m_Radius
-      value: 14.05
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_Orbits.Array.data[2].m_Height
-      value: 5.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
-        type: 3}
-      propertyPath: m_Orbits.Array.data[2].m_Radius
-      value: 9.81
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6874639326078958583, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
@@ -1561,12 +1551,17 @@ PrefabInstance:
     - target: {fileID: 7869191011017519645, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_IgnoreTag
-      value: Untagged
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869191011017519645, guid: e245da8501e8f41b0ae70220580ee914,
+        type: 3}
+      propertyPath: m_MinimumOcclusionTime
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 7869191011017519645, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_TransparentLayers.m_Bits
-      value: 512
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

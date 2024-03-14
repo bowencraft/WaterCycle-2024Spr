@@ -24,10 +24,11 @@ public class HideCursor : MonoBehaviour
     void Update()
     {
         // 获取鼠标滚轮的滚动量
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        // 根据滚动方向调整相机的size属性
-        _camera.m_Lens.OrthographicSize -= scroll * zoomSpeed;
-        // 限制相机的size在最小值和最大值之间
-        _camera.m_Lens.OrthographicSize = Mathf.Clamp(Camera.main.orthographicSize, minSize, maxSize);
+        // float scroll = Input.GetAxis("Mouse ScrollWheel");
+        // // 根据滚动方向调整相机的size属性
+        // _camera.m_Lens.FieldOfView -= scroll * zoomSpeed;
+        // Debug.Log(_camera.m_Lens.FieldOfView);
+        // // 限制相机的size在最小值和最大值之间
+        // _camera.m_Lens.FieldOfView = Mathf.Clamp(_camera.m_Lens.FieldOfView, minSize, maxSize);
     }
 }
