@@ -8099,6 +8099,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4131853407035873693, guid: 54a552bccf60cdf4ab7b2730d20add23,
+        type: 3}
+      propertyPath: skillIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5876414164005293463, guid: 54a552bccf60cdf4ab7b2730d20add23,
         type: 3}
       propertyPath: m_Name
@@ -47726,12 +47731,12 @@ PrefabInstance:
     - target: {fileID: 9159641320719040593, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -2.2999382e-30
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 9159641320719040593, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.1523025e-31
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9208707386983483932, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
