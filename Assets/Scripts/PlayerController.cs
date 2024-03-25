@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float playerSpeed = 0;
 
+    [SerializeField] private Transform playerIndicatorTF;
     [SerializeField] private Transform dropTF, iceTF, waveTF, cloudTF;
 
     private Vector3 lastPosition;
@@ -33,16 +34,25 @@ public class PlayerController : MonoBehaviour
         lastPosition = ballRigidBody.transform.position;
     }
 
+    private void Update()
+    {
+        playerIndicatorTF.position = new Vector3(
+            GetCurrentTF().position.x,
+            playerIndicatorTF.position.y,
+            GetCurrentTF().position.z
+            );
+    }
+
     void FixedUpdate()
     {
-        float distanceMoved = Vector3.Distance(GetCurrentRigidBody().position, lastPosition);
+        float distanceMoved = Vector3.Distance(GetCurrentTF().position, lastPosition);
         
         playerSpeed = distanceMoved / Time.deltaTime;
         
         lastPosition = ballRigidBody.transform.position;
     }
 
-    private Transform GetCurrentRigidBody()
+    private Transform GetCurrentTF()
     {
         switch (playerForm)
         {
@@ -82,15 +92,23 @@ public class PlayerController : MonoBehaviour
         {
             case PlayerForm.Cloud:
                 export += "Cloud";
+                //playerIndicatorTF.parent = cloudTF;
+                //playerIndicatorTF.localPosition = new Vector3(0, 0, 0);
                 break;
             case PlayerForm.Drop:
                 export += "Drop";
+                //playerIndicatorTF.parent = dropTF;
+                //playerIndicatorTF.localPosition = new Vector3(0, 0, 0);
                 break;
             case PlayerForm.Ice:
                 export += "Ice";
+                //playerIndicatorTF.parent = iceTF;
+                //playerIndicatorTF.localPosition = new Vector3(0, 0, 0);
                 break;
             case PlayerForm.Wave:
                 export += "Wave";
+                //playerIndicatorTF.parent = waveTF;
+                //playerIndicatorTF.localPosition = new Vector3(0, 0, 0);
                 break;
         }
         print(export);
