@@ -1,4 +1,5 @@
-//  Written by Marcel Remmers © for Yuetility 10.06.22
+/*
+//  Written by Marcel Remmers ?for Yuetility 10.06.22
 using UnityEngine;
 using UnityEditor;
 using YuetilitySoftbody;
@@ -70,3 +71,5 @@ namespace YuetilitySoftbody
         }
     }
 }
+
+*/

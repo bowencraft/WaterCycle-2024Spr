@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Skill_IceForm : MonoBehaviour, ISkill
 {
-    private bool isUnlocked = false;
-    private bool canUse = false;
+    [SerializeField] private bool isUnlocked = false;
+    [SerializeField] private bool canUse = false;
     public float coolDownTime = 10f;
     public float duration = 10f;
 
