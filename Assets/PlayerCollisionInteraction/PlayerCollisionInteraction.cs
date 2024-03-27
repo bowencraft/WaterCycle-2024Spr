@@ -22,9 +22,10 @@ public class PlayerCollisionInteraction : MonoBehaviour
     [SerializeField] private int interactionAmountRequired = 1;
     [SerializeField] private bool unlimitedAmountInteraction = false;
     [SerializeField] private bool onStayInteraction = false;
-    
-    [Header("Trigger Related")]
+
+    [Header("Trigger Related")] 
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
+    [SerializeField] float rewardValue = 1f;
     //public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
 
     [Header("READ ONLY - DO NOT EDIT")] public bool hasTriggered = false;
@@ -41,6 +42,8 @@ public class PlayerCollisionInteraction : MonoBehaviour
             PlayerSoundManager.Instance.PlaySound(soundToPlay);
         }
         hasTriggered = true;
+        
+        LevelManager.i.GainExperience(rewardValue);
     }
 
     public PlayerController.PlayerForm CheckPlayerForm()
