@@ -35,15 +35,30 @@ public class WaterCharacterController : MonoBehaviour
         
         if (!isJumping && Input.GetKeyDown("space"))
         {
-            isJumping = true;
-            foreach (var rb in rbs)
-            {
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            }
-            Invoke("ResetJump", ResetJumpTime);
-            
-
+            Jump();
         }
+    }
+    
+    
+    void Jump()
+    {
+        isJumping = true;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + new Vector3(0,1,0), -Vector3.up, out hit, Mathf.Infinity, groundLayer))
+        {
+            Debug.Log("Jumped");
+            float heightAboveGround = hit.distance;
+            if (heightAboveGround < 4f)
+            {
+                foreach (var rb in rbs)
+                {
+                    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                }
+                Invoke("ResetJump", ResetJumpTime);
+            }
+        }
+        //
+        // isGrounded = false;
     }
     
     void ResetJump() {
@@ -52,7 +67,7 @@ public class WaterCharacterController : MonoBehaviour
 
     void Move()
     {
-        if (!isGrounded) return;
+        // if (!isGrounded) return;
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -119,19 +134,19 @@ public class WaterCharacterController : MonoBehaviour
         return false;
     }
     
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
-    
-    void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            isGrounded = false;
-        }
-    }
+    // void OnCollisionEnter(Collision other)
+    // {
+    //     if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+    //     {
+    //         isGrounded = true;
+    //     }
+    // }
+    //
+    // void OnCollisionExit(Collision other)
+    // {
+    //     if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+    //     {
+    //         isGrounded = false;
+    //     }
+    // }
 }
