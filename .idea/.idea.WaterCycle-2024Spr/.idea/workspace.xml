@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae416a5d-d5aa-4653-87bd-5ba523b82e73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WaterCycle-2024Spr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WaterCycle-2024Spr/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/Ices/GeneralController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/Ices/GeneralController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/New Water/WaterCharacter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/New Water/WaterCharacter.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/[Player &amp; Camera].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/[Player &amp; Camera].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +35,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "new-new-water-3c",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new-new-water-3c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
-      "/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
-      "/Users/bowenwang/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/bowenwang/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/MacOS/Unity" />
@@ -108,7 +104,8 @@
       <workItem from="1709056499850" duration="724000" />
       <workItem from="1709062536944" duration="19204000" />
       <workItem from="1709179953742" duration="1138000" />
-      <workItem from="1710732463367" duration="934000" />
+      <workItem from="1710732463367" duration="1587000" />
+      <workItem from="1710866470328" duration="21000" />
     </task>
     <servers />
   </component>
