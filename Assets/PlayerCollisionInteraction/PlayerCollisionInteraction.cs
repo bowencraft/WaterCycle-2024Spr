@@ -19,7 +19,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
     public float playerSpeedRequirement = 0f;
     
     [Header("Building Health Related")]
-    [SerializeField] private int interactionAmountRequired = 1;
+    [SerializeField] protected int interactionAmountRequired = 1;
     [SerializeField] private bool unlimitedAmountInteraction = false;
     [SerializeField] private bool onStayInteraction = false;
 
@@ -96,15 +96,14 @@ public class PlayerCollisionInteraction : MonoBehaviour
             }
             else
             {
-                print("here");
-                if (this is PCI_Explode)
-                {
-                    ((PCI_Explode)this).regularStateGO.transform.DOShakePosition(0.5f, new Vector3(.5f, 0, .5f),20);
-                }
-                //transform.DOShakeRotation(0.5f, new Vector3(0, 50, 0),20,90f,false);
-                //transform.DOShakePosition(0.5f, new Vector3(.5f,0,.5f));
+                InteractionButNotTriggered();
             }
         }
+    }
+
+    protected virtual void InteractionButNotTriggered()
+    {
+        
     }
 
     IEnumerator DelayBeforeAllowTrigger(float DelayTime)
