@@ -198,9 +198,9 @@ RectTransform:
   - {fileID: 3858222047853312565}
   m_Father: {fileID: 4910109928828161997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 156, y: 422}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -150, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2463851389288014023
@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d9444d3ab2f4aa7ac8eca8a5f79b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 0
+  canUse: 0
   coolDownTime: 10
   duration: 10
 --- !u!1 &2599228664328740781
