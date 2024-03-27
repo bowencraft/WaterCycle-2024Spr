@@ -292,25 +292,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 372263921482621440, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: cameraTransform
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5594377884168640590, guid: 94caca2221d4c422fac8e1a1b0ade5be,
         type: 3}
       propertyPath: m_Name
       value: bonedBall1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7293961637026449099, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: jumpForce
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7293961637026449099, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: ResetJumpTime
-      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7293961637026449099, guid: 94caca2221d4c422fac8e1a1b0ade5be,
         type: 3}
@@ -476,12 +461,12 @@ PrefabInstance:
     - target: {fileID: 366861943789816374, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001705351
+      value: 0.000000017053818
       objectReference: {fileID: 0}
     - target: {fileID: 366861943789816374, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000022862687
+      value: -0.0000000022863096
       objectReference: {fileID: 0}
     - target: {fileID: 414657905219584123, guid: e245da8501e8f41b0ae70220580ee914,
         type: 3}
