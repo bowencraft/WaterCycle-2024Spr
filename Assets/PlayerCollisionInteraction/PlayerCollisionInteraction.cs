@@ -96,6 +96,11 @@ public class PlayerCollisionInteraction : MonoBehaviour
             }
             else
             {
+                print("here");
+                if (this is PCI_Explode)
+                {
+                    ((PCI_Explode)this).regularStateGO.transform.DOShakePosition(0.5f, new Vector3(.5f, 0, .5f),20);
+                }
                 //transform.DOShakeRotation(0.5f, new Vector3(0, 50, 0),20,90f,false);
                 //transform.DOShakePosition(0.5f, new Vector3(.5f,0,.5f));
             }

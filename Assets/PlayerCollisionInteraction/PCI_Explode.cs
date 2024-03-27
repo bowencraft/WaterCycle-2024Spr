@@ -11,8 +11,8 @@ public class PCI_Explode : PlayerCollisionInteraction
 {
     // SERIALIZED VARIABLES
     [Header("Game Object and Mesh")]
-    [SerializeField] private GameObject regularStateGO  = null;
-    [SerializeField] private GameObject explosionStateGO = null;
+    [SerializeField] public GameObject regularStateGO  = null;
+    [SerializeField] public GameObject explosionStateGO = null;
     [SerializeField] private Transform explosionOrigion;
 
     [Header("Explosion Effect")]
