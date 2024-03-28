@@ -7,7 +7,7 @@ public class GeneralController : MonoBehaviour
     public float verticalSpeed = 2f; // 控制上升和下降的速度
     public float floatSpeed = 10f;
     
-    private Rigidbody[] rbs;
+    private Rigidbody rb;
     private bool isGrounded;
     [SerializeField]
     private bool isGravityEnabled = true; // 是否受重力影响的开关
@@ -18,7 +18,7 @@ public class GeneralController : MonoBehaviour
 
     void Start()
     {
-        rbs = GetComponentsInChildren<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
@@ -33,7 +33,45 @@ public class GeneralController : MonoBehaviour
                 Jump();
             }
         }
+        else
+        {
+            rb.AddForce(16.4f * Vector3.up);
+            CheckHoverHeight();
+            
+            if (Input.GetKey(KeyCode.Q))
+            {
+                VerticalMove(verticalSpeed); // 上升
+            }
+            else if (Input.GetKey(KeyCode.E))
+            {
+                VerticalMove(-verticalSpeed); // 下降
+            }
+        }
 
+        // 按G键切换重力影响
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            ToggleGravity();
+        }
+    }
+
+    void CheckHoverHeight()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, groundLayer))
+        {
+            float heightAboveGround = hit.distance;
+            if (heightAboveGround > hoverHeight + 0.1) // 如果高于指定高度
+            {
+                // 施加向下的力
+                rb.AddForce(-Vector3.up * floatSpeed * (heightAboveGround - hoverHeight)  * Time.deltaTime* 60);
+            }
+            else if (heightAboveGround < hoverHeight - 0.1) // 如果低于指定高度
+            {
+                // 施加向上的力
+                rb.AddForce(Vector3.up * floatSpeed * (hoverHeight - heightAboveGround)  * Time.deltaTime* 60);
+            }
+        }
     }
 
     void Move()
@@ -51,30 +89,36 @@ public class GeneralController : MonoBehaviour
 
         Vector3 movement = (camForward * moveVertical + camRight * moveHorizontal).normalized  * Time.deltaTime* 60;
 
-        foreach (Rigidbody rb in rbs)
-        {
-            rb.AddForce(movement * moveSpeed, ForceMode.Acceleration);
-        }
+        rb.AddForce(movement * moveSpeed, ForceMode.Acceleration);
     }
 
     void Jump()
     {
+        Debug.Log("Jumped");
         
         RaycastHit hit;
         if (Physics.Raycast(transform.position + new Vector3(0,1,0), -Vector3.up, out hit, Mathf.Infinity, groundLayer))
         {
-            Debug.Log("Jumped");
             float heightAboveGround = hit.distance;
             if (heightAboveGround < 2f)
             {
-                foreach (Rigidbody rb in rbs)
-                {
-                    rb.AddForce(Vector3.up * jumpForce * Time.deltaTime * 60, ForceMode.Impulse);
-                }
+                rb.AddForce(Vector3.up * jumpForce * Time.deltaTime * 60, ForceMode.Impulse);
             }
         }
         //
         // isGrounded = false;
+    }
+
+    void VerticalMove(float direction)
+    {
+        rb.velocity = new Vector3(rb.velocity.x, direction, rb.velocity.z)  * Time.deltaTime * 60;
+    }
+
+    void ToggleGravity()
+    {
+        isGravityEnabled = !isGravityEnabled;
+        // 注意：我们在这里不直接使用rb.useGravity来切换重力，
+        // 因为我们通过CheckHoverHeight来控制悬浮逻辑
     }
 
     void OnCollisionEnter(Collision other)
