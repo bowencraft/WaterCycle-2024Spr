@@ -44,8 +44,8 @@ public class CameraController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Linecast(target.position,transform.position,out hit, ~ignoreLayerMask))
         {
-            transform.position = hit.point;
-            // transform.position = Vector3.Lerp(transform.position, hit.point, 0.5f); // 当检测到遮挡时，将摄像机移向角色
+            // transform.position = hit.point;
+            transform.position = Vector3.Lerp(target.position, hit.point, 0.9f); // 当检测到遮挡时，将摄像机移向角色
         }
     }
 }

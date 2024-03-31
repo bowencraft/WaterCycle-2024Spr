@@ -35,7 +35,6 @@ public class WaterCharacterController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Input: Space pressed");
             Jump();
         }
     }
@@ -47,7 +46,7 @@ public class WaterCharacterController : MonoBehaviour
         if (!isJumping && Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity, groundLayer))
         {
             float heightAboveGround = hit.distance;
-            if (heightAboveGround < 1.36f)
+            if (heightAboveGround < 2f)
             {
                 Debug.Log("Jumped");
                 foreach (var rb in rbs)
