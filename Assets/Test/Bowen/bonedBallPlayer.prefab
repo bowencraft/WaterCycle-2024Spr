@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfa0a3e067e142b69d3fd69134ae9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 55
+  jumpForce: 45
   maxSpeed: 5
   acceleration: 2
   maxSlopeAngle: 45
@@ -496,7 +496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7968430483389371714
 Transform:
   m_ObjectHideFlags: 0
