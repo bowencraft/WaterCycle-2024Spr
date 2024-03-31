@@ -344,15 +344,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfa0a3e067e142b69d3fd69134ae9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 60
+  jumpForce: 55
   maxSpeed: 5
   acceleration: 2
   maxSlopeAngle: 45
-  ResetJumpTime: 0.4
+  ResetJumpTime: 0.2
   cameraTransform: {fileID: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 577
 --- !u!1 &5594377884168640590
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 812100301250887357}
   smoothSpeed: 4
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0.1, z: 0}
 --- !u!1 &6689398716183086442
 GameObject:
   m_ObjectHideFlags: 0
