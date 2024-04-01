@@ -64,8 +64,10 @@ public class PlayerCollisionInteraction : MonoBehaviour
     {
         //LevelManager.i.GainReward(interactionReward);
     }
+    
+    // ON TRIGGER
 
-    protected void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
         if (other.gameObject.CompareTag("Player"))
@@ -74,7 +76,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
         }
     }
     
-    protected void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(!onStayInteraction) return;
         if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
@@ -82,6 +84,27 @@ public class PlayerCollisionInteraction : MonoBehaviour
         {
             CheckTriggerInteraction();
         }
+    }
+
+    // ON COLLISION
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckTriggerInteraction();
+        }    
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if(!onStayInteraction) return;
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckTriggerInteraction();
+        }    
     }
 
     protected void CheckTriggerInteraction()
