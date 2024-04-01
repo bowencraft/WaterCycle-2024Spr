@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 3462242450677026213}
   - component: {fileID: 2806137863783862760}
   - component: {fileID: 5988538433891462361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud
   m_TagString: Cloud
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 6495396048435535603}
   - component: {fileID: 8349867746603557514}
   - component: {fileID: 2726234003700669294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
