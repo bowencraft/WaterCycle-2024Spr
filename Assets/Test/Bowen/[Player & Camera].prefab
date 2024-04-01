@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 646128692088296366}
   smoothSpeed: 4
-  offset: {x: 0, y: 0.1, z: 0}
+  offset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &2133457520109253026
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +979,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 855246761242489758}
+    - target: {fileID: 7651046848406283135, guid: 8cb438faa65a24b26b198970d9741cc6,
+        type: 3}
+      propertyPath: distanceMinMax.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8728045012202805258, guid: 8cb438faa65a24b26b198970d9741cc6,
         type: 3}
       propertyPath: m_LocalPosition.x
