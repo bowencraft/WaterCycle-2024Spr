@@ -605,11 +605,11 @@ MonoBehaviour:
   verticalSpeed: 2
   floatSpeed: 10
   isGravityEnabled: 1
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 4816751261863599169}
   hoverHeight: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65
 --- !u!65 &8789743853043657525
 BoxCollider:
   m_ObjectHideFlags: 0
