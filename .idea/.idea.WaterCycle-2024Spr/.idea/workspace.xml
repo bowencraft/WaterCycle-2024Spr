@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae416a5d-d5aa-4653-87bd-5ba523b82e73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WaterCycle-2024Spr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WaterCycle-2024Spr/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Obi/Samples/Softbody/SampleResources/Scripts/SoftbodyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Obi/Samples/Softbody/SampleResources/Scripts/SoftbodyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Ben/Cloud/CloudAppearance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Ben/Cloud/CloudAppearance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Ben/Cloud/CloudElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Ben/Cloud/CloudElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/Clouds/CloudCharacter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/Clouds/CloudCharacter.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/Clouds/CloudsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/Clouds/CloudsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/ControllerTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/ControllerTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/Ices/GeneralController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/Ices/GeneralController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Testing_Will/IslandTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Testing_Will/IslandTesting.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +20,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Nappin/PhysicsBasedCharacterController/Scripts/CharacterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/Bowen/Clouds/CloudsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/Bowen/Scripts/PlayerControllerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Helpers/CinemachineInputProvider.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,7 +39,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;3c&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new-new-water-3c&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -111,6 +104,8 @@
       <workItem from="1709056499850" duration="724000" />
       <workItem from="1709062536944" duration="19204000" />
       <workItem from="1709179953742" duration="1138000" />
+      <workItem from="1710732463367" duration="1587000" />
+      <workItem from="1710866470328" duration="21000" />
     </task>
     <servers />
   </component>

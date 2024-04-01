@@ -10,7 +10,7 @@ public class PlayerControllerManager : MonoBehaviour
 {
     [Header("Camera")]
     [SerializeField]
-    private CinemachineFreeLook cameraFreeLook;
+    private WaterTargetFollowing cameraFollower;
     
     [Header("Controllers")]
     [SerializeField]
@@ -162,8 +162,8 @@ public class PlayerControllerManager : MonoBehaviour
             PlayerController.i.ChangePlayerForm(form);
 
             // Set cameraFreeLook's follow target to the new controller's transform
-            cameraFreeLook.Follow = newController.transform;
-            cameraFreeLook.LookAt = newController.transform;
+            cameraFollower.target = newController.transform;
+            
         }
     }
 
