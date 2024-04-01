@@ -15,7 +15,6 @@ Material:
   - _MK_ARTISTIC_ANIMATION_STUTTER
   - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
   - _MK_DETAIL_BLEND_MIX
-  - _MK_DETAIL_MAP
   - _MK_ENVIRONMENT_REFLECTIONS_AMBIENT
   - _MK_LIGHT_BANDED
   - _MK_OUTLINE_HULL_CLIP
@@ -39,7 +38,7 @@ Material:
     m_TexEnvs:
     - _AlbedoMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -50,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMap:
-        m_Texture: {fileID: 2800000, guid: 99cad8e800b8fbc43b2179431aee771f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -206,7 +205,7 @@ Material:
     - _Contrast: 1
     - _Cutoff: 0.5
     - _DetailBlend: 0
-    - _DetailMix: 0
+    - _DetailMix: 1
     - _DetailNormalMapIntensity: 1
     - _DetailNormalMapScale: 1
     - _Diffuse: 0
