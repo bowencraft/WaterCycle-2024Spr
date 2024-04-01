@@ -47952,6 +47952,16 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 2149047927
       objectReference: {fileID: 0}
+    - target: {fileID: 1726832563537538091, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430612883245862335, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3190048508070103360, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_Layer
@@ -47966,6 +47976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: tuning.PositionProportional
       value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792362808882752927, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3908963298612046166, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
@@ -47986,6 +48001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: initialScale
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647123403772275797, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: jumpForce
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6310327464012219593, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
@@ -48021,6 +48041,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000000022351742
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482135428114793619, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683056954514205604, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7908360348163474381, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
@@ -48071,6 +48101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.000000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8680770062402267755, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8746999199255119393, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}

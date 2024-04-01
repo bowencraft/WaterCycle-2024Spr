@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 3462242450677026213}
   - component: {fileID: 2806137863783862760}
   - component: {fileID: 5988538433891462361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud
   m_TagString: Cloud
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 6495396048435535603}
   - component: {fileID: 8349867746603557514}
   - component: {fileID: 2726234003700669294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,101 +1319,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 840860692835641547, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 859572247474798141, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1133017980633432724, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320686295205695442, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2318757600686545469, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2853137118229800527, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 5594377884168640590, guid: 94caca2221d4c422fac8e1a1b0ade5be,
         type: 3}
       propertyPath: m_Name
       value: WaterDrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 5594377884168640590, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5818575636946741016, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6689398716183086442, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7172269033138260761, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7254980178854441091, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7293961637026449099, guid: 94caca2221d4c422fac8e1a1b0ade5be,
         type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 6945888280800590830}
-    - target: {fileID: 8156187393518278873, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8229800750698592614, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8422681736726921600, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933573108465205564, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8949183473793981224, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099374641573108668, guid: 94caca2221d4c422fac8e1a1b0ade5be,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
