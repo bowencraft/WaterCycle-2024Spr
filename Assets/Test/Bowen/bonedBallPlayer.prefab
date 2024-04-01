@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfa0a3e067e142b69d3fd69134ae9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 90
+  jumpForce: 80
   maxSpeed: 8
   acceleration: 2
   maxSlopeAngle: 45
