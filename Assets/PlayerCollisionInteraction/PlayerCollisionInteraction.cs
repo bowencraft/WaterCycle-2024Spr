@@ -107,18 +107,28 @@ public class PlayerCollisionInteraction : MonoBehaviour
         }    
     }
 
+    private void OnCollisionExit(Collision other)
+    {
+        StartCoroutine(DelayBeforeAllowTrigger(0.5f));
+    }
+
+
     protected void CheckTriggerInteraction()
     {
+        print("try 1");
         if (GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             interactionAmountRequired--;
             canTriggerNewInteractionCount = false;
             if (interactionAmountRequired == 0 || unlimitedAmountInteraction)
             {
+                print("try 2");
                 TriggerInteraction();
             }
             else
             {
+                print("try 3");
+
                 InteractionButNotTriggered();
             }
         }
