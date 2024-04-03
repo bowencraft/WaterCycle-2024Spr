@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 646128692088296366}
   smoothSpeed: 4
-  offset: {x: 0, y: 0.1, z: 0}
+  offset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &2133457520109253026
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 3462242450677026213}
   - component: {fileID: 2806137863783862760}
   - component: {fileID: 5988538433891462361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud
   m_TagString: Cloud
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 6495396048435535603}
   - component: {fileID: 8349867746603557514}
   - component: {fileID: 2726234003700669294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,11 +605,11 @@ MonoBehaviour:
   verticalSpeed: 2
   floatSpeed: 10
   isGravityEnabled: 1
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 4816751261863599169}
   hoverHeight: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65
 --- !u!65 &8789743853043657525
 BoxCollider:
   m_ObjectHideFlags: 0

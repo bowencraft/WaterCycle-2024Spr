@@ -132,6 +132,7 @@ public class PlayerControllerManager : MonoBehaviour
                 break;
             case PlayerController.PlayerForm.Cloud:
                 newController = cloudController;
+                CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
                 break;
         }
 
@@ -205,5 +206,16 @@ public class PlayerControllerManager : MonoBehaviour
         //     default: return null;
         // }
         return currentController;
+    }
+    
+    public void ChangeCurrentControllerActive(bool active)
+    {
+        GameObject currentController = GetActiveController();
+        if (currentController != null)
+        {
+            if (GetComponent<GeneralController>() != null) GetComponent<GeneralController>().enabled = active;
+            if (GetComponent<CloudController>() != null) GetComponent<CloudController>().enabled = active;
+            if (GetComponent<WaterCharacterController>() != null) GetComponent<WaterCharacterController>().enabled = active;
+        }
     }
 }
