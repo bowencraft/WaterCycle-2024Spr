@@ -50,8 +50,13 @@ public class PCI_Explode : PlayerCollisionInteraction
 
         foreach (Transform tf in regularStateGO.transform)
         {
+            //print("tf try: " + tf.gameObject.name);
             MeshRenderer mrTry = tf.gameObject.GetComponent<MeshRenderer>();
-            if(mrTry != null) meshRenderesForBreaking.Add(mrTry);
+            if (mrTry != null)
+            {
+                meshRenderesForBreaking.Add(mrTry);
+                //print("tf try added: " + tf.gameObject.name);
+            }
         }
 
         initialInteractionAmountRequired = interactionAmountRequired;
@@ -77,6 +82,7 @@ public class PCI_Explode : PlayerCollisionInteraction
         
         foreach (var VARIABLE in meshRenderesForBreaking)
         {
+            print("tf list " + VARIABLE.gameObject.name);
             /*
             print("start shit");
             //print(VARIABLE.material.GetTexture("_Detail").name);
@@ -89,7 +95,7 @@ public class PCI_Explode : PlayerCollisionInteraction
             print(toPrint);*/
             
             VARIABLE.material.SetTexture("_DetailMap", targetTexture);
-            VARIABLE.material.SetFloat("_DetailMix",1);
+            VARIABLE.material.SetFloat("_DetailMix", 1);
         }
     }
 
