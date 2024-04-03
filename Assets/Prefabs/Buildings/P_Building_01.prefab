@@ -2726,6 +2726,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 56852242586695116, guid: 62f1d4293e09fd6468579d9565405af2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 56852242586695117, guid: 62f1d4293e09fd6468579d9565405af2,
         type: 3}
       propertyPath: ShapeModule.radius.value
@@ -2809,6 +2814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 56852242586695116, guid: 62f1d4293e09fd6468579d9565405af2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 56852242586695117, guid: 62f1d4293e09fd6468579d9565405af2,
         type: 3}

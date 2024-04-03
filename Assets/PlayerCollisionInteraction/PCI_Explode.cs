@@ -82,7 +82,6 @@ public class PCI_Explode : PlayerCollisionInteraction
         
         foreach (var VARIABLE in meshRenderesForBreaking)
         {
-            print("tf list " + VARIABLE.gameObject.name);
             /*
             print("start shit");
             //print(VARIABLE.material.GetTexture("_Detail").name);
