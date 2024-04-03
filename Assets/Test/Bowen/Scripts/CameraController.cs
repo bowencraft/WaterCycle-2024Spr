@@ -10,10 +10,13 @@ public class CameraController : MonoBehaviour
 
     private float currentX = 0.0f;
     private float currentY = 0.0f;
-    private float sensitivityX = 4.0f;
-    private float sensitivityY = 1.0f;
+    [SerializeField]
+    private float sensitivityX = 2.0f;
+    [SerializeField]
+    private float sensitivityY = 2.0f;
 
     // 用于平滑旋转的变量
+    [SerializeField]
     private float smoothTime = 0.2f; // 调整这个值以改变平滑的速度
     private float velocityX = 0.0f; // X轴旋转的速度（内部使用）
     private float velocityY = 0.0f; // Y轴旋转的速度（内部使用）
