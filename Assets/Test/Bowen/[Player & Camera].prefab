@@ -183,7 +183,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7595610681779958047}
-  - {fileID: 4280887641218900493}
   - {fileID: 1655087557476033413}
   - {fileID: 13757727371527166}
   - {fileID: 855246761242489758}
@@ -208,7 +207,7 @@ MonoBehaviour:
   playerIndicatorTF: {fileID: 7326750000540704376}
   dropTF: {fileID: 646128692088296366}
   iceTF: {fileID: 7595610681779958047}
-  waveTF: {fileID: 4280887641218900493}
+  waveTF: {fileID: 0}
   cloudTF: {fileID: 1655087557476033413}
 --- !u!114 &5304679200300527713
 MonoBehaviour:
@@ -225,7 +224,7 @@ MonoBehaviour:
   cameraFollower: {fileID: 1473259362845402374}
   iceController: {fileID: 5123020735564193538}
   dropController: {fileID: 2606118961297099612}
-  waveController: {fileID: 8522515159117818493}
+  waveController: {fileID: 0}
   cloudController: {fileID: 3190048508070103360}
   size: 3
   scaleIncrement: 0.1
@@ -764,37 +763,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8522515159117818493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4280887641218900493}
-  m_Layer: 0
-  m_Name: Wave
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4280887641218900493
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8522515159117818493}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 115651511241026072}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8746999199255119393
 GameObject:
   m_ObjectHideFlags: 0

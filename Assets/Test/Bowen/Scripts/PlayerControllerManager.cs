@@ -206,4 +206,15 @@ public class PlayerControllerManager : MonoBehaviour
         // }
         return currentController;
     }
+
+    public void ChangeCurrentControllerActive(bool active)
+    {
+        GameObject currentController = GetActiveController();
+        if (currentController != null)
+        {
+            if (GetComponent<GeneralController>() != null) GetComponent<GeneralController>().enabled = active;
+            if (GetComponent<CloudController>() != null) GetComponent<CloudController>().enabled = active;
+            if (GetComponent<WaterCharacterController>() != null) GetComponent<WaterCharacterController>().enabled = active;
+        }
+    }
 }
