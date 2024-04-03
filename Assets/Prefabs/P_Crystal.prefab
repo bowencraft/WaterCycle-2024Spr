@@ -9881,6 +9881,8 @@ MonoBehaviour:
   unlimitedAmountInteraction: 0
   onStayInteraction: 0
   soundToPlay: 5
+  rewardValue: 1
+  interactionID: Crystal
   hasTriggered: 0
   canTriggerNewInteractionCount: 1
   collectibleGameObject: {fileID: 3722623058526734274}

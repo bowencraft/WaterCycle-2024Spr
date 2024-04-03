@@ -26,6 +26,8 @@ public class PlayerCollisionInteraction : MonoBehaviour
     [Header("Trigger Related")] 
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
     [SerializeField] float rewardValue = 1f;
+
+    [SerializeField] private string interactionID = "not set";
     //public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
 
     [Header("READ ONLY - DO NOT EDIT")] public bool hasTriggered = false;
@@ -44,6 +46,8 @@ public class PlayerCollisionInteraction : MonoBehaviour
         hasTriggered = true;
         
         LevelManager.i.GainExperience(rewardValue);
+        
+        if(!interactionID.Equals("not set")) QuestManager.i.PCIFinished.Invoke(interactionID);
     }
 
     public PlayerController.PlayerForm CheckPlayerForm()
