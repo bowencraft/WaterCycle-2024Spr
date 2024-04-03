@@ -979,11 +979,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 855246761242489758}
-    - target: {fileID: 7651046848406283135, guid: 8cb438faa65a24b26b198970d9741cc6,
-        type: 3}
-      propertyPath: distanceMinMax.x
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8728045012202805258, guid: 8cb438faa65a24b26b198970d9741cc6,
         type: 3}
       propertyPath: m_LocalPosition.x
