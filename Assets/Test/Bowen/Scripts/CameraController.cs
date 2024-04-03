@@ -22,6 +22,20 @@ public class CameraController : MonoBehaviour
     private float velocityY = 0.0f; // Y轴旋转的速度（内部使用）
     
     public LayerMask ignoreLayerMask;
+    
+    
+    static CameraController instance;
+    public static CameraController Instance
+    {
+        get
+        {
+            if(instance == null)
+            {
+                instance = FindObjectOfType<CameraController>();
+            }
+            return instance;
+        }
+    }
 
     private void Update()
     {

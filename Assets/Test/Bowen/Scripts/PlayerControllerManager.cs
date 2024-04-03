@@ -132,6 +132,7 @@ public class PlayerControllerManager : MonoBehaviour
                 break;
             case PlayerController.PlayerForm.Cloud:
                 newController = cloudController;
+                CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
                 break;
         }
 
