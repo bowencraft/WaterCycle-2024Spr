@@ -59,13 +59,13 @@ public class PlayerControllerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Drop);
-        } else if (Input.GetKeyDown(KeyCode.O))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Cloud);
-        }  
+        // if (Input.GetKeyDown(KeyCode.U))
+        // {
+        //     ChangePlayerForm(PlayerController.PlayerForm.Drop);
+        // } else if (Input.GetKeyDown(KeyCode.O))
+        // {
+        //     ChangePlayerForm(PlayerController.PlayerForm.Cloud);
+        // }  
         if (Input.GetKeyDown(KeyCode.LeftBracket)) // 按下"["
         {
             AdjustScale(-scaleIncrement); // 减小scale
@@ -133,6 +133,7 @@ public class PlayerControllerManager : MonoBehaviour
             case PlayerController.PlayerForm.Cloud:
                 newController = cloudController;
                 CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
+                StartCoroutine(SwitchBackToWaterForm());
                 break;
         }
 
@@ -184,6 +185,13 @@ public class PlayerControllerManager : MonoBehaviour
             float newScale = Mathf.Clamp(currentScale.x + increment, minScale, maxScale); // 计算新的scale值，确保它在限定范围内
             activeController.transform.localScale = new Vector3(newScale, newScale, newScale); // 应用新的scale
         }
+    }
+    
+    public float duration = 10f;
+    IEnumerator SwitchBackToWaterForm()
+    {
+        yield return new WaitForSeconds(duration);
+        PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Drop);
     }
 
     private GameObject GetActiveController()
