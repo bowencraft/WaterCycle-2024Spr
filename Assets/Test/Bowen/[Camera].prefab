@@ -246,8 +246,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   distance: 15
-  distanceMinMax: {x: 6, y: 30}
+  distanceMinMax: {x: 6, y: 40}
   yAngleMinMax: {x: 5, y: 80}
+  sensitivityX: 2
+  sensitivityY: 2
+  smoothTime: 0.2
   ignoreLayerMask:
     serializedVersion: 2
     m_Bits: 256
