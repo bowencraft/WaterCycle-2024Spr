@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LandingScreen.unity
+    guid: 25af146dfc0254ca58f6b8376f3920ed
+  - enabled: 1
     path: Assets/Test/Fletcher/LevelTesting.unity
     guid: 3f2d1a5c655f19346b6f91ea0901e4bb
   m_configObjects:
