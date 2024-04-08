@@ -888,6 +888,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 840860692835641547, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318757600686545469, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5594377884168640590, guid: 94caca2221d4c422fac8e1a1b0ade5be,
         type: 3}
       propertyPath: m_Name
@@ -901,7 +911,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2853137118229800527, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7600186538640845219}
+    - targetCorrespondingSourceObject: {fileID: 2853137118229800527, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2059816879864420824}
   m_SourcePrefab: {fileID: 100100000, guid: 94caca2221d4c422fac8e1a1b0ade5be, type: 3}
 --- !u!4 &13757727371527166 stripped
 Transform:
@@ -921,6 +939,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 266462745729674515}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7600186538640845219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606118961297099612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d3e1a372fe40f4c87f2b04c81e2961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 6781582829508751032, guid: afcc3f8454a0b664ba14b45c3b11a133,
+    type: 3}
+  spawnCooldown: 0.35
+  spawnPositionOffset: 0.6
+--- !u!135 &2059816879864420824
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606118961297099612}
+  m_Material: {fileID: 13400000, guid: 35846a0f0dde41b4ab6c576f7f0a6169, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.009
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4453222506436590463 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4503507483561219692, guid: 94caca2221d4c422fac8e1a1b0ade5be,

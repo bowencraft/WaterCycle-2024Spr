@@ -22,10 +22,11 @@ public class SpawnWaterTrail : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
+        //Debug.Log(other.name);
         // Check if cooldown has completed and if the collider is the Terrain
         if (other.tag == "Terrain" && timeSinceLastSpawn >= spawnCooldown)
         {
-            //Debug.Log("Spawning Object");
+            Debug.Log("Spawning Object");
             // Reset timer
             timeSinceLastSpawn = 0f;
 
