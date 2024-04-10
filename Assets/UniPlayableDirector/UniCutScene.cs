@@ -15,6 +15,7 @@ public class UniPlayableDirector : MonoBehaviour, IPerformableAction
         myPD = GetComponent<PlayableDirector>();
         myPD.stopped += OnPlayableDirectorStopped;
         myPD.Play();
+        PlayerControllerManager.Instance.ChangeCurrentControllerActive(false);
     }
 
     public bool IsAssigned()
@@ -24,7 +25,12 @@ public class UniPlayableDirector : MonoBehaviour, IPerformableAction
     
     void OnPlayableDirectorStopped(PlayableDirector myPlayableDirector)
     {
-        if(myPlayableDirector == myPD) onActionCompletes.Invoke();
+        if (myPlayableDirector == myPD)
+        {
+            onActionCompletes.Invoke();
+            PlayerControllerManager.Instance.ChangeCurrentControllerActive(true);
+
+        }
     }
 
     public UnityEvent onActionStarts

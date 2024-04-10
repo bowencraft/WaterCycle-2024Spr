@@ -10,7 +10,7 @@ public class PlayerControllerManager : MonoBehaviour
 {
     [Header("Camera")]
     [SerializeField]
-    private CinemachineFreeLook cameraFreeLook;
+    private WaterTargetFollowing cameraFollower;
     
     [Header("Controllers")]
     [SerializeField]
@@ -59,13 +59,13 @@ public class PlayerControllerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Drop);
-        } else if (Input.GetKeyDown(KeyCode.O))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Cloud);
-        }  
+        // if (Input.GetKeyDown(KeyCode.U))
+        // {
+        //     ChangePlayerForm(PlayerController.PlayerForm.Drop);
+        // } else if (Input.GetKeyDown(KeyCode.O))
+        // {
+        //     ChangePlayerForm(PlayerController.PlayerForm.Cloud);
+        // }  
         if (Input.GetKeyDown(KeyCode.LeftBracket)) // 按下"["
         {
             AdjustScale(-scaleIncrement); // 减小scale
@@ -132,6 +132,8 @@ public class PlayerControllerManager : MonoBehaviour
                 break;
             case PlayerController.PlayerForm.Cloud:
                 newController = cloudController;
+                CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
+                StartCoroutine(SwitchBackToWaterForm());
                 break;
         }
 
@@ -162,8 +164,8 @@ public class PlayerControllerManager : MonoBehaviour
             PlayerController.i.ChangePlayerForm(form);
 
             // Set cameraFreeLook's follow target to the new controller's transform
-            cameraFreeLook.Follow = newController.transform;
-            cameraFreeLook.LookAt = newController.transform;
+            cameraFollower.target = newController.transform;
+            
         }
     }
 
@@ -183,6 +185,13 @@ public class PlayerControllerManager : MonoBehaviour
             float newScale = Mathf.Clamp(currentScale.x + increment, minScale, maxScale); // 计算新的scale值，确保它在限定范围内
             activeController.transform.localScale = new Vector3(newScale, newScale, newScale); // 应用新的scale
         }
+    }
+    
+    public float duration = 10f;
+    IEnumerator SwitchBackToWaterForm()
+    {
+        yield return new WaitForSeconds(duration);
+        PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Drop);
     }
 
     private GameObject GetActiveController()
@@ -205,5 +214,16 @@ public class PlayerControllerManager : MonoBehaviour
         //     default: return null;
         // }
         return currentController;
+    }
+    
+    public void ChangeCurrentControllerActive(bool active)
+    {
+        GameObject currentController = GetActiveController();
+        if (currentController != null)
+        {
+            if (GetComponent<GeneralController>() != null) GetComponent<GeneralController>().enabled = active;
+            if (GetComponent<CloudController>() != null) GetComponent<CloudController>().enabled = active;
+            if (GetComponent<WaterCharacterController>() != null) GetComponent<WaterCharacterController>().enabled = active;
+        }
     }
 }

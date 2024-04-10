@@ -22,7 +22,10 @@ public class LevelManager : MonoBehaviour
     
     //public UnityEvent<int> OnCollectiblesAmountChange = new UnityEvent<int>();
     public List<Level> allLevels = new List<Level>();
-    
+
+    public float targetExperience = 10f;
+
+    public float currentExperience = 0f;
     /*
     public enum RewardType
     {
@@ -51,6 +54,12 @@ public class LevelManager : MonoBehaviour
                 allSkills.Add((ISkill)VARIABLE);
             }
         }*/
+    }
+
+    public void GainExperience(float gainAmount)
+    {
+        currentExperience += gainAmount;
+        UI_PlayerStats.i.UpdateExperienceDisplay(Mathf.Clamp(currentExperience/targetExperience,0,1));
     }
 
     private void Start()

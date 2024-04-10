@@ -38,7 +38,7 @@ Material:
     m_TexEnvs:
     - _AlbedoMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -205,7 +205,7 @@ Material:
     - _Contrast: 1
     - _Cutoff: 0.5
     - _DetailBlend: 0
-    - _DetailMix: 0.5
+    - _DetailMix: 1
     - _DetailNormalMapIntensity: 1
     - _DetailNormalMapScale: 1
     - _Diffuse: 0

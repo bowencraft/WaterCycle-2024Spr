@@ -19,12 +19,15 @@ public class PlayerCollisionInteraction : MonoBehaviour
     public float playerSpeedRequirement = 0f;
     
     [Header("Building Health Related")]
-    [SerializeField] private int interactionAmountRequired = 1;
+    [SerializeField] protected int interactionAmountRequired = 1;
     [SerializeField] private bool unlimitedAmountInteraction = false;
     [SerializeField] private bool onStayInteraction = false;
-    
-    [Header("Trigger Related")]
+
+    [Header("Trigger Related")] 
     public PlayerSoundManager.SoundType soundToPlay = PlayerSoundManager.SoundType.NO_SOUND;
+    [SerializeField] float rewardValue = 1f;
+
+    [SerializeField] private string interactionID = "not set";
     //public LevelManager.RewardType interactionReward = LevelManager.RewardType.InteractionPoint;
 
     [Header("READ ONLY - DO NOT EDIT")] public bool hasTriggered = false;
@@ -41,6 +44,10 @@ public class PlayerCollisionInteraction : MonoBehaviour
             PlayerSoundManager.Instance.PlaySound(soundToPlay);
         }
         hasTriggered = true;
+        
+        LevelManager.i.GainExperience(rewardValue);
+        
+        if(!interactionID.Equals("not set")) QuestManager.i.PCIFinished.Invoke(interactionID);
     }
 
     public PlayerController.PlayerForm CheckPlayerForm()
@@ -61,8 +68,10 @@ public class PlayerCollisionInteraction : MonoBehaviour
     {
         //LevelManager.i.GainReward(interactionReward);
     }
+    
+    // ON TRIGGER
 
-    protected void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
         if (other.gameObject.CompareTag("Player"))
@@ -71,7 +80,7 @@ public class PlayerCollisionInteraction : MonoBehaviour
         }
     }
     
-    protected void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(!onStayInteraction) return;
         if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
@@ -81,22 +90,57 @@ public class PlayerCollisionInteraction : MonoBehaviour
         }
     }
 
+    // ON COLLISION
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckTriggerInteraction();
+        }    
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if(!onStayInteraction) return;
+        if(!unlimitedAmountInteraction && !canTriggerNewInteractionCount) return;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckTriggerInteraction();
+        }    
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        StartCoroutine(DelayBeforeAllowTrigger(0.5f));
+    }
+
+
     protected void CheckTriggerInteraction()
     {
+        print("try 1");
         if (GetPlayerSpeed() >= playerSpeedRequirement && playerFormRequirement.Contains(CheckPlayerForm()))
         {
             interactionAmountRequired--;
             canTriggerNewInteractionCount = false;
             if (interactionAmountRequired == 0 || unlimitedAmountInteraction)
             {
+                print("try 2");
                 TriggerInteraction();
             }
             else
             {
-                //transform.DOShakeRotation(0.5f, new Vector3(0, 50, 0),20,90f,false);
-                //transform.DOShakePosition(0.5f, new Vector3(.5f,0,.5f));
+                print("try 3");
+
+                InteractionButNotTriggered();
             }
         }
+    }
+
+    protected virtual void InteractionButNotTriggered()
+    {
+        
     }
 
     IEnumerator DelayBeforeAllowTrigger(float DelayTime)

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6101309419321916677}
   - component: {fileID: 7049849861189290743}
   - component: {fileID: 1224964083931212280}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cloud Element
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2378902219116277235}
   - component: {fileID: 8440856357346911872}
   - component: {fileID: 1655661121299966245}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Rain Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4952,7 +4952,7 @@ GameObject:
   - component: {fileID: 3885623337683527968}
   - component: {fileID: 6897268203806925205}
   - component: {fileID: 662584821609136205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9800,7 +9800,7 @@ GameObject:
   - component: {fileID: 7827757972156217078}
   - component: {fileID: 3872347380143537920}
   - component: {fileID: 1900152479357000423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
