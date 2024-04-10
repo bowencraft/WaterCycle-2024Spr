@@ -13,6 +13,16 @@ public class SingleQuest : MonoBehaviour
     [SerializeField] private int requiredInteractionCount = 2;
     [SerializeField] private string questDescription = "Do this thing. ";
 
+    
+    
+    private int stage = -1;
+    private bool finished = false;
+    
+    public void SetUp(int stage)
+    {
+        this.stage = stage;
+    }
+    
     private void Start()
     {
         myTMP = GetComponent<TMP_Text>();
@@ -52,7 +62,8 @@ public class SingleQuest : MonoBehaviour
         }
         myTMP.color = Color.black;
 
-        
+        finished = true;
+        QuestManager.i.FinishedQuestOfStage(stage);
     }
 
 }
