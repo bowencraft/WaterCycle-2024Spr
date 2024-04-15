@@ -908,6 +908,26 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 4816751261863599169}
+    - target: {fileID: 9134047759325475954, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134047759325475954, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134047759325677222, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134047759325677222, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

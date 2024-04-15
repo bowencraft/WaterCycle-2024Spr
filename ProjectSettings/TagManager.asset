@@ -30,8 +30,6 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
-  - Cloud
-  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -39,21 +37,21 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - Player
   - Enemy
   - CompanionAI
   - Triggers
   - StopMove
-  - MiniMap
+  - PlayerWithoutCollide
   - HeadTrack
   - BodyPart
   - BlockAIRayCast
   - Pushable
   - CoverPoint
   - 
-  - Explodable
+  - 
   - 
   - 
   - 
