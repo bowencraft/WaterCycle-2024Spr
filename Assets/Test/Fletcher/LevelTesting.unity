@@ -48640,6 +48640,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: useSnapGround
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9089349217899515546, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48761,7 +48766,7 @@ PrefabInstance:
     - target: {fileID: 4154336678876588006, guid: b37c10cf149ac3946922714a3412eb6e,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4154336678876588006, guid: b37c10cf149ac3946922714a3412eb6e,
         type: 3}
