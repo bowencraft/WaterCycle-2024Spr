@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &855246761242489758
 Transform:
   m_ObjectHideFlags: 0
@@ -908,6 +908,26 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 4816751261863599169}
+    - target: {fileID: 9134047759325475954, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134047759325475954, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134047759325677222, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134047759325677222, guid: 94caca2221d4c422fac8e1a1b0ade5be,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1019,6 +1039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: '[Camera]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112853413626006221, guid: 8cb438faa65a24b26b198970d9741cc6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7046395081386728123, guid: 8cb438faa65a24b26b198970d9741cc6,
         type: 3}
