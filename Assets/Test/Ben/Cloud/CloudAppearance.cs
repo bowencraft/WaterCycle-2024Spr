@@ -36,6 +36,20 @@ public class CloudAppearance : MonoBehaviour
         }
     }
 
+    public void AddElement()
+    {
+        elementCount += 1;
+        Vector3 elementOffset = Random.insideUnitSphere;
+        elementOffset.x *= horizontalSpreadFactor * elementCount;
+        elementOffset.z *= horizontalSpreadFactor * elementCount;
+        elementOffset.y = Mathf.Abs(elementOffset.y) * verticalSpreadFactor * elementCount;
+
+        CloudElement newElement = Instantiate(elementPrefab, transform.position, Quaternion.identity);
+        newElement.transform.parent = transform;
+        newElement.Setup(this, controller.rb, elementOffset);
+        elements.Add(newElement);
+    }
+
     private void Update()
     {
         UpdateRain();
@@ -44,6 +58,7 @@ public class CloudAppearance : MonoBehaviour
     public void RemoveElement(CloudElement element)
     {
         elements.Remove(element);
+        // Destroy(element.gameObject);
         elementCount--;
 
         element.Death();
@@ -54,7 +69,7 @@ public class CloudAppearance : MonoBehaviour
             ;
     }
 
-    private void RemoveFurthestElement()
+    public void RemoveFurthestElement()
     {
         if (elements != null && elements.Count > 0)
         {

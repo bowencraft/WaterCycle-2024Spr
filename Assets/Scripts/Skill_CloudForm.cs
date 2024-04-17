@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill_IcCloudrm : MonoBehaviour, ISkill
+public class Skill_CloudForm : MonoBehaviour, ISkill
 {
     [SerializeField] private bool isUnlocked = false;
     [SerializeField] private bool canUse = false;
     public float coolDownTime = 10f;
     public float duration = 10f;
+    
+    public int enlargeCount = 30;
 
     private void Update()
     {
@@ -21,9 +23,10 @@ public class Skill_IcCloudrm : MonoBehaviour, ISkill
     public void UseSkill()
     {
         PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Cloud);
+        PlayerControllerManager.Instance.AdjustScale(enlargeCount);
         canUse = false;
         StartCoroutine(StartCoolDown());
-        // StartCoroutine(SwitchBackToWaterForm());
+        StartCoroutine(SwitchBackToWaterForm());
     }
 
     IEnumerator StartCoolDown()
@@ -34,7 +37,21 @@ public class Skill_IcCloudrm : MonoBehaviour, ISkill
     
     IEnumerator SwitchBackToWaterForm()
     {
-        yield return new WaitForSeconds(duration);
+        // yield return new WaitForSeconds(duration);
+        float count = enlargeCount;
+        
+        for (float timer = duration; timer >= 0; timer -= Time.deltaTime)
+        {
+            if (timer < count * (duration / (float)enlargeCount))
+            {
+                PlayerControllerManager.Instance.AdjustScale(-1);
+                print("reduce 1" );
+                count--;
+            }
+            // PlayerControllerManager.Instance.AdjustScale(- ((enlargeCount + 0.2f) / duration) * Time.deltaTime);
+            yield return null;
+        }
+        
         PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Drop);
     }
 

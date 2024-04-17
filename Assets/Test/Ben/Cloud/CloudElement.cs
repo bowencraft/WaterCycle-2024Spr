@@ -99,6 +99,6 @@ public class CloudElement : MonoBehaviour
         rainParticles.Stop();
 
         enabled = false;
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 1f);
     }
 }

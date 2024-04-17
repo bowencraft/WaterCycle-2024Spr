@@ -4438,6 +4438,7 @@ Transform:
   m_Children:
   - {fileID: 8444284205406208242}
   - {fileID: 4453901566090408580}
+  - {fileID: 3480700424976606280}
   m_Father: {fileID: 115651511241026072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485639628169419654
@@ -4635,6 +4636,7 @@ MonoBehaviour:
   canUse: 1
   coolDownTime: 10
   duration: 10
+  enlargeScale: 0.5
 --- !u!1 &2151709117923917676
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,6 +5974,7 @@ MonoBehaviour:
   allSkillsList:
   - {fileID: 4575403216055897183}
   - {fileID: 4934360022622398703}
+  - {fileID: 3136996901302208148}
 --- !u!1 &3190048508070103360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6041,7 +6044,7 @@ MonoBehaviour:
   controller: {fileID: 5324700269018624091}
   elementPrefab: {fileID: 6101309419321916677, guid: 2d5206c9eb9c4b24498b3a849d66c99c,
     type: 3}
-  elementCount: 30
+  elementCount: 10
   horizontalSpreadFactor: 0.1
   verticalSpreadFactor: 0.04
   elements: []
@@ -12277,6 +12280,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8048255167077872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7026537917538363173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3480700424976606280}
+  - component: {fileID: 3136996901302208148}
+  m_Layer: 0
+  m_Name: Skill - 2 - Cloud Form
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3480700424976606280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026537917538363173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3859549702812808683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3136996901302208148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026537917538363173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325c622efb4e34366805f52caca0db00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isUnlocked: 1
+  canUse: 1
+  coolDownTime: 10
+  duration: 10
+  enlargeCount: 30
 --- !u!1 &7114984705552821121
 GameObject:
   m_ObjectHideFlags: 0
@@ -24805,13 +24857,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9038727194096530200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61a5d2516d5dbbc40b1cfb5cbf17758a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   upDownAxis: {x: 1, y: 0, z: 0}
   strafeHeadWeight: 0.8
@@ -24937,7 +24989,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9038727194096530200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19ce6a4d1f67f494f8e871355031f21c, type: 3}
   m_Name: 

@@ -68,23 +68,23 @@ public class PlayerControllerManager : MonoBehaviour
 
     private void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.U))
-        // {
-        //     ChangePlayerForm(PlayerController.PlayerForm.Drop);
-        // } else if (Input.GetKeyDown(KeyCode.O))
-        // {
-        //     ChangePlayerForm(PlayerController.PlayerForm.Cloud);
-        // }  
-        if (Input.GetKeyDown(KeyCode.L)) // 按下"["
+        if (Input.GetKeyDown(KeyCode.U))
         {
-            print("Size down");
-            AdjustScale(-scaleIncrement); // 减小scale
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha0)) // 按下"]"
+            ChangePlayerForm(PlayerController.PlayerForm.Drop);
+        } else if (Input.GetKeyDown(KeyCode.O))
         {
-            print("Size up");
-            AdjustScale(scaleIncrement); // 增加scale
-        }
+            ChangePlayerForm(PlayerController.PlayerForm.Cloud);
+        }  
+        // if (Input.GetKeyDown(KeyCode.L)) // 按下"["
+        // {
+        //     print("Size down");
+        //     AdjustScale(-scaleIncrement); // 减小scale
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha0)) // 按下"]"
+        // {
+        //     print("Size up");
+        //     AdjustScale(scaleIncrement); // 增加scale
+        // }
 
         if (currentController.transform.localScale.x <= minScale)
         {
@@ -244,10 +244,32 @@ public class PlayerControllerManager : MonoBehaviour
         {
             maxScale = growingSizeMax;
         }
-        
+
         GameObject activeController = GetActiveController();
+            
         if(activeController != null)
         {
+            if (playerForm == PlayerController.PlayerForm.Cloud)
+            {
+                CloudAppearance cloud = activeController.GetComponent<CloudAppearance>();
+                if (increment > 0)
+                {
+                    for (int i = 0; i < increment; i++)
+                    {
+                        cloud.AddElement();
+                    }
+                }
+                else
+                {
+                    
+                    for (int i = 0; i < (increment); i++)
+                    {
+                        cloud.RemoveFurthestElement();
+                    }
+                }
+                return;
+            }
+            
             if(activeController.transform.localScale.x > maxScale) return;
             
             Vector3 currentScale = activeController.transform.localScale;

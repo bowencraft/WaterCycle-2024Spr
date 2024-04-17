@@ -9,6 +9,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
     [SerializeField] private bool canUse = false;
     public float coolDownTime = 10f;
     public float duration = 10f;
+    public float enlargeScale = 0.5f;
 
     private void Update()
     {
@@ -21,6 +22,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
     public void UseSkill()
     {
         PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Ice);
+        PlayerControllerManager.Instance.AdjustScale(enlargeScale);
         canUse = false;
         StartCoroutine(StartCoolDown());
         StartCoroutine(SwitchBackToWaterForm());
@@ -34,7 +36,14 @@ public class Skill_IceForm : MonoBehaviour, ISkill
     
     IEnumerator SwitchBackToWaterForm()
     {
-        yield return new WaitForSeconds(duration);
+        // yield return new WaitForSeconds(duration);
+        
+        for (float timer = duration; timer >= 0; timer -= Time.deltaTime)
+        {
+            PlayerControllerManager.Instance.AdjustScale(- ((enlargeScale + 0.2f) / duration) * Time.deltaTime);
+            yield return null;
+        }
+        
         PlayerControllerManager.Instance.ChangePlayerForm(PlayerController.PlayerForm.Drop);
     }
 
