@@ -5954,6 +5954,7 @@ MonoBehaviour:
   initialScale: 1.5
   minScale: 0.5
   maxScale: 3
+  vInput: {fileID: 9038727194090049488}
   playerForm: 0
   duration: 10
 --- !u!114 &2064661921497404448
