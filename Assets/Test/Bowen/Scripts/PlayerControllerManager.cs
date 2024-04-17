@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Invector.vCamera;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Random = System.Random;
@@ -10,7 +11,7 @@ public class PlayerControllerManager : MonoBehaviour
 {
     [Header("Camera")]
     [SerializeField]
-    private WaterTargetFollowing cameraFollower;
+    private vThirdPersonCamera vCamera;
     
     [Header("Controllers")]
     [SerializeField]
@@ -132,7 +133,7 @@ public class PlayerControllerManager : MonoBehaviour
                 break;
             case PlayerController.PlayerForm.Cloud:
                 newController = cloudController;
-                CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
+                // CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
                 StartCoroutine(SwitchBackToWaterForm());
                 break;
         }
@@ -150,6 +151,7 @@ public class PlayerControllerManager : MonoBehaviour
             cloudController.SetActive(false);
             
             newController.SetActive(true);
+            vCamera.SetMainTarget(newController.transform);
             newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
 
 
@@ -164,7 +166,7 @@ public class PlayerControllerManager : MonoBehaviour
             PlayerController.i.ChangePlayerForm(form);
 
             // Set cameraFreeLook's follow target to the new controller's transform
-            cameraFollower.target = newController.transform;
+            // cameraFollower.target = newController.transform;
             
         }
     }

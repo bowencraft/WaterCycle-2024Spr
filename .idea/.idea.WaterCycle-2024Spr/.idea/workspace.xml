@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ae416a5d-d5aa-4653-87bd-5ba523b82e73" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WaterCycle-2024Spr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WaterCycle-2024Spr/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController/Shooter/Prefabs/UI/vShooterDisplayWeapon_Standalone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController/Shooter/Prefabs/UI/vShooterDisplayWeapon_Standalone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/Scripts/PlayerControllerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/Scripts/PlayerControllerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/Bowen/[Player &amp; Camera].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Bowen/[Player &amp; Camera].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Test/Fletcher/LevelTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Test/Fletcher/LevelTesting.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,25 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;new-new-water-3c&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "new-general-3c",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/bowenwang/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/bowenwang/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/bowenwang/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/builds/build-sprint3/sprint4-build.app/Contents/MacOS/WaterCycle-2024Spr" />
