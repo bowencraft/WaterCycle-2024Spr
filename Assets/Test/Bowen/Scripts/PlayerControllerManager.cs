@@ -143,6 +143,22 @@ public class PlayerControllerManager : MonoBehaviour
             // Activate the new controller
             // Deactivate all controllers
             newController.transform.position = previousController.transform.position;
+            if (form == PlayerController.PlayerForm.Drop)
+            {
+                newController.transform.parent.position = previousController.transform.position;
+                newController.transform.localPosition = new Vector3(0, 0.551f, 0f);
+                vCamera.ChangeState("Strafing", true);
+            } else if (form == PlayerController.PlayerForm.Ice)
+            {
+                newController.transform.position = previousController.transform.position + new Vector3(0, 1f, 0f);
+                vCamera.ChangeState("Strafing", true);
+            } else if (form == PlayerController.PlayerForm.Cloud)
+            {
+                newController.transform.position = previousController.transform.position + new Vector3(0, 10f, 0f);
+                vCamera.ChangeState("Cloud", true);
+                
+            }
+            print(vCamera.currentState.Name);
             
             
             iceController.SetActive(false);
@@ -152,7 +168,7 @@ public class PlayerControllerManager : MonoBehaviour
             
             newController.SetActive(true);
             vCamera.SetMainTarget(newController.transform);
-            newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
+            // newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
 
 
             currentController = newController;
