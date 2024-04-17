@@ -75,12 +75,14 @@ public class PlayerControllerManager : MonoBehaviour
         // {
         //     ChangePlayerForm(PlayerController.PlayerForm.Cloud);
         // }  
-        if (Input.GetKeyDown(KeyCode.LeftBracket)) // 按下"["
+        if (Input.GetKeyDown(KeyCode.L)) // 按下"["
         {
+            print("Size down");
             AdjustScale(-scaleIncrement); // 减小scale
         }
-        else if (Input.GetKeyDown(KeyCode.RightBracket)) // 按下"]"
+        else if (Input.GetKeyDown(KeyCode.Alpha0)) // 按下"]"
         {
+            print("Size up");
             AdjustScale(scaleIncrement); // 增加scale
         }
 

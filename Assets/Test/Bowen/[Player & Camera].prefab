@@ -6813,7 +6813,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 301f5d8325bdc9548bc3371d71f8a43e, type: 2}
+  - {fileID: 2100000, guid: 89d6f6c6cf3cc5f4d88edb17f00048bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24155,7 +24155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 6
+  selectedToolbar: 0
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -24237,13 +24237,13 @@ MonoBehaviour:
   rotateByWorld: 0
   locomotionType: 1
   freeSpeed:
-    movementSmooth: 6
+    movementSmooth: 8
     animationSmooth: 0.2
     rotationSpeed: 10
     walkByDefault: 0
     rotateWithCamera: 0
-    walkSpeed: 3
-    runningSpeed: 4
+    walkSpeed: 4
+    runningSpeed: 6
     sprintSpeed: 6
     crouchSpeed: 2
   strafeSpeed:
@@ -24347,7 +24347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 1
+  selectedToolbar: 0
   unlockCursorOnStart: 0
   showCursorOnStart: 0
   toggleWalk: 301
@@ -24680,7 +24680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 6
+  selectedToolbar: 0
   canUseMeleeBlock_H: 1
   canUseMeleeWeakAttack_H: 1
   canUseMeleeStrongAttack_H: 1

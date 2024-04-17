@@ -191,7 +191,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LandLow
-  m_Speed: 1.25
+  m_Speed: 12.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8091663006977866065}
@@ -31716,7 +31716,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 48, y: 168, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 516, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 24, y: 48, z: 0}
+  m_ParentStateMachinePosition: {x: 20, y: 50, z: 0}
   m_DefaultState: {fileID: 1102116268223837838}
 --- !u!1107 &1107091477068150092
 AnimatorStateMachine:
@@ -31916,7 +31916,7 @@ AnimatorStateMachine:
     m_Position: {x: 288, y: 12, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107406283463902474}
-    m_Position: {x: 288, y: 60, z: 0}
+    m_Position: {x: 290, y: 60, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107025082286475526}
     m_Position: {x: 288, y: -36, z: 0}
@@ -31973,7 +31973,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours:
   - {fileID: 1002587676492275329}
   m_AnyStatePosition: {x: 84, y: -72, z: 0}
-  m_EntryPosition: {x: 84, y: -36, z: 0}
+  m_EntryPosition: {x: 90, y: -40, z: 0}
   m_ExitPosition: {x: 600, y: 108, z: 0}
   m_ParentStateMachinePosition: {x: 288, y: -84, z: 0}
   m_DefaultState: {fileID: 1102122713650255728}
@@ -32555,7 +32555,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 48, y: 168, z: 0}
+  m_AnyStatePosition: {x: 50, y: 170, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 516, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 24, y: 48, z: 0}
@@ -35545,12 +35545,12 @@ AnimatorStateMachine:
   m_StateMachineTransitions:
   - first: {fileID: 0}
     second: []
-  - first: {fileID: -3880727054361278919}
-    second:
-    - {fileID: 1862902184133670268}
   - first: {fileID: -1177333165354796831}
     second:
     - {fileID: -3248369054413934397}
+  - first: {fileID: -3880727054361278919}
+    second:
+    - {fileID: 1862902184133670268}
   m_StateMachineBehaviours:
   - {fileID: 3182357783232013835}
   m_AnyStatePosition: {x: -528, y: 60, z: 0}
@@ -36167,7 +36167,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LandHigh
-  m_Speed: 1
+  m_Speed: 10
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4029982278571079192}
