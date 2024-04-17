@@ -7090,12 +7090,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 235318214}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &328285678 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5418299467550941632, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 480383810148969412}
-  m_PrefabAsset: {fileID: 0}
 --- !u!54 &328285688 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 4745836610562490004, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
@@ -24436,12 +24430,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 552dfaa7809678f4dac01a0d60359583, type: 3}
---- !u!1 &1109242658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9038727194096530200, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 480383810148969412}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1109505999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1931797539660899114, guid: 552dfaa7809678f4dac01a0d60359583,
@@ -48610,11 +48598,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 962635781557523373, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
-      propertyPath: dropTF
-      value: 
-      objectReference: {fileID: 328285678}
-    - target: {fileID: 962635781557523373, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
-        type: 3}
       propertyPath: ballRigidBody
       value: 
       objectReference: {fileID: 328285688}
@@ -48628,11 +48611,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5304679200300527713, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+    - target: {fileID: 4575403216055897183, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
-      propertyPath: dropController
-      value: 
-      objectReference: {fileID: 1109242658}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: startSmooth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7911507017153928942, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: groundLayer.m_Bits

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Invector.vCamera;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Random = System.Random;
@@ -10,7 +11,7 @@ public class PlayerControllerManager : MonoBehaviour
 {
     [Header("Camera")]
     [SerializeField]
-    private WaterTargetFollowing cameraFollower;
+    private vThirdPersonCamera vCamera;
     
     [Header("Controllers")]
     [SerializeField]
@@ -132,7 +133,7 @@ public class PlayerControllerManager : MonoBehaviour
                 break;
             case PlayerController.PlayerForm.Cloud:
                 newController = cloudController;
-                CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
+                // CameraController.Instance.distance = CameraController.Instance.distanceMinMax.y;
                 StartCoroutine(SwitchBackToWaterForm());
                 break;
         }
@@ -142,6 +143,22 @@ public class PlayerControllerManager : MonoBehaviour
             // Activate the new controller
             // Deactivate all controllers
             newController.transform.position = previousController.transform.position;
+            if (form == PlayerController.PlayerForm.Drop)
+            {
+                newController.transform.parent.position = previousController.transform.position;
+                newController.transform.localPosition = new Vector3(0, 0.551f, 0f);
+                vCamera.ChangeState("Strafing", true);
+            } else if (form == PlayerController.PlayerForm.Ice)
+            {
+                newController.transform.position = previousController.transform.position + new Vector3(0, 1f, 0f);
+                vCamera.ChangeState("Strafing", true);
+            } else if (form == PlayerController.PlayerForm.Cloud)
+            {
+                newController.transform.position = previousController.transform.position + new Vector3(0, 10f, 0f);
+                vCamera.ChangeState("Cloud", true);
+                
+            }
+            print(vCamera.currentState.Name);
             
             
             iceController.SetActive(false);
@@ -150,7 +167,8 @@ public class PlayerControllerManager : MonoBehaviour
             cloudController.SetActive(false);
             
             newController.SetActive(true);
-            newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
+            vCamera.SetMainTarget(newController.transform);
+            // newController.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
 
 
             currentController = newController;
@@ -164,7 +182,7 @@ public class PlayerControllerManager : MonoBehaviour
             PlayerController.i.ChangePlayerForm(form);
 
             // Set cameraFreeLook's follow target to the new controller's transform
-            cameraFollower.target = newController.transform;
+            // cameraFollower.target = newController.transform;
             
         }
     }
