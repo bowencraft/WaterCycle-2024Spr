@@ -117,8 +117,8 @@ MonoBehaviour:
     maxDistance: 12
     minDistance: 0.5
     height: 1.62
-    smooth: 10
-    smoothDamp: 10
+    smooth: 20
+    smoothDamp: 20
     xMouseSensitivity: 2.5
     yMouseSensitivity: 2.5
     yMinLimit: -40
@@ -126,7 +126,7 @@ MonoBehaviour:
     xMinLimit: -360
     xMaxLimit: 360
     rotationOffSet: {x: 8, y: 0, z: 0}
-    cullingHeight: 1
+    cullingHeight: 2
     cullingMinDist: 0.1
     fov: 60
     useZoom: 1
