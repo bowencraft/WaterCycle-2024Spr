@@ -10,6 +10,7 @@ public class PCI_FatalWater : PlayerCollisionInteraction
     protected override void PlayEffect()
     {
         print("player death");
+        PlayerControllerManager.Instance.Respawn();
         base.PlayEffect();
     }
 

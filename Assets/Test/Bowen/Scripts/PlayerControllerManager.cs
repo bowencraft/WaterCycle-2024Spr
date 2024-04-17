@@ -23,6 +23,7 @@ public class PlayerControllerManager : MonoBehaviour
     private GameObject waveController;
     [SerializeField]
     private GameObject cloudController;
+    
 
     [Header("State & Size")]
     public int size;
@@ -35,6 +36,8 @@ public class PlayerControllerManager : MonoBehaviour
     
     [Header("vThirdPersonController")]
     [SerializeField] private vShooterMeleeInput vInput;
+
+    private Queue<Vector3> locationHistory;
 
     public Rigidbody getCurrentControllerRigidbody()
     {
@@ -58,7 +61,8 @@ public class PlayerControllerManager : MonoBehaviour
 
     private void Start()
     {
-        
+        locationHistory = new Queue<Vector3>();
+        StartCoroutine(TrackLocation());
         ChangePlayerForm(playerForm);
     }
 
@@ -95,6 +99,47 @@ public class PlayerControllerManager : MonoBehaviour
             
         }
     }
+
+    IEnumerator TrackLocation()
+    {
+        while (true)
+        {
+            Vector3 location = currentController == null ? new Vector3(0,0,0) : currentController.transform.parent.position;
+            locationHistory.Enqueue(location);
+            if (locationHistory.Count >= 50)
+            {
+                locationHistory.Dequeue();
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    public Vector3 GetPastLocation()
+    {
+        /*int dequeueAmount = 500 - (int)(pastSeconds / 0.1f);
+        while (dequeueAmount > 0)
+        {
+            if (locationHistory.Count == 1) return locationHistory.Dequeue();
+            else locationHistory.Dequeue();
+        }
+        return locationHistory.Dequeue();*/
+
+        /*
+        while (locationHistory.Count != 1)
+        {
+            locationHistory.Dequeue();
+        }*/
+
+        return locationHistory.Dequeue();
+    }
+
+    public void Respawn()
+    {
+        Vector3 toGo = GetPastLocation();
+        Debug.Log("respawn current pos is " + currentController.transform.parent.position + " 5 sec ago location is " + toGo);
+        currentController.transform.parent.position = toGo;
+    }
+    
 
 
     public void ChangePlayerForm(PlayerController.PlayerForm form)
