@@ -30,6 +30,8 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
+  - Cloud
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -50,7 +52,7 @@ TagManager:
   - BlockAIRayCast
   - Pushable
   - CoverPoint
-  - 
+  - Explodable
   - 
   - 
   - 

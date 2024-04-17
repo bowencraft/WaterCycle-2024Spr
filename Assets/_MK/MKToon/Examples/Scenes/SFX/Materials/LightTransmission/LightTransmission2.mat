@@ -2,25 +2,39 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LightTransmission2
   m_Shader: {fileID: 4800000, guid: df695d70c539c3d4c87b79de307ab7bb, type: 3}
-  m_ShaderKeywords: _FRESNELHIGHLIGHTS_ON _MK_ARTISTIC_ANIMATION_STUTTER _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
-    _MK_FRESNEL_HIGHLIGHTS _MK_LIGHT_CEL _MK_LIGHT_TRANSMISSION_SUB_SURFACE_SCATTERING
-    _MK_OUTLINE_DATA_UV7 _MK_OUTLINE_HULL_CLIP _MK_RECEIVE_SHADOWS _MK_SPECULAR_ISOTROPIC
-    _RECEIVESHADOWS_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
+  - _MK_FRESNEL_HIGHLIGHTS
+  - _MK_LIGHT_CEL
+  - _MK_LIGHT_TRANSMISSION_SUB_SURFACE_SCATTERING
+  - _MK_RECEIVE_SHADOWS
+  - _MK_SPECULAR_ISOTROPIC
+  - _MK_SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords:
+  - _FRESNELHIGHLIGHTS_ON
+  - _MK_OUTLINE_DATA_UV7
+  - _MK_OUTLINE_HULL_CLIP
+  - _RECEIVESHADOWS_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    IGNOREPROJECTOR: False
-    RenderType: Opaque
-  disabledShaderPasses: []
+    IGNOREPROJECTOR: true
+    RenderType: Transparent
+  disabledShaderPasses:
+  - SHADOWCASTER
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -180,6 +194,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AdvancedTab: 1
     - _AlbedoMapIntensity: 1
@@ -192,9 +207,11 @@ Material:
     - _ArtisticProjection: 0
     - _ArtisticStyle: 0
     - _Blend: 0
-    - _BlendDst: 0
+    - _BlendDst: 10
+    - _BlendDstAlpha: 10
     - _BlendMode: 0
-    - _BlendSrc: 1
+    - _BlendSrc: 5
+    - _BlendSrcAlpha: 1
     - _Brightness: 1
     - _BumpScale: 1
     - _CSBMode: 0
@@ -298,7 +315,7 @@ Material:
     - _StencilWriteMask: 255
     - _StencilZFail: 0
     - _StylizeTab: 1
-    - _Surface: 0
+    - _Surface: 1
     - _SurfaceType: 0
     - _ThresholdMapScale: 3.64
     - _VertexAnimation: 0
@@ -308,11 +325,11 @@ Material:
     - _WorkflowMode: 1
     - _WrappedLighting: 0
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
-    - _AlbedoColor: {r: 0.07058818, g: 0.3568627, b: 0.31372544, a: 1}
+    - _AlbedoColor: {r: 0.070588164, g: 0.35686266, b: 0.3137254, a: 0.44705883}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.070588164, g: 0.35686266, b: 0.3137254, a: 1}
+    - _Color: {r: 0.07058815, g: 0.35686263, b: 0.31372538, a: 0.44705883}
     - _DetailColor: {r: 1, g: 0.6024932, b: 0, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveColor: {r: 1, g: 1, b: 1, a: 0.5}
