@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Invector.vCamera;
+using Invector.vCharacterController;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Random = System.Random;
@@ -31,6 +32,9 @@ public class PlayerControllerManager : MonoBehaviour
     [SerializeField] private float maxScale = 3f; // 最大Scale值
 
     private GameObject currentController;
+    
+    [Header("vThirdPersonController")]
+    [SerializeField] private vShooterMeleeInput vInput;
 
     public Rigidbody getCurrentControllerRigidbody()
     {
@@ -147,15 +151,15 @@ public class PlayerControllerManager : MonoBehaviour
             {
                 newController.transform.parent.position = previousController.transform.position;
                 newController.transform.localPosition = new Vector3(0, 0.551f, 0f);
-                vCamera.ChangeState("Strafing", true);
+                vInput.ChangeCameraState("Strafing", true);
             } else if (form == PlayerController.PlayerForm.Ice)
             {
                 newController.transform.position = previousController.transform.position + new Vector3(0, 1f, 0f);
-                vCamera.ChangeState("Strafing", true);
+                vInput.ChangeCameraState("Strafing", true);
             } else if (form == PlayerController.PlayerForm.Cloud)
             {
                 newController.transform.position = previousController.transform.position + new Vector3(0, 10f, 0f);
-                vCamera.ChangeState("Cloud", true);
+                vInput.ChangeCameraState("Cloud", true);
                 
             }
             print(vCamera.currentState.Name);
