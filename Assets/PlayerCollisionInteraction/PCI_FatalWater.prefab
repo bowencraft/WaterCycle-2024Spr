@@ -121,7 +121,7 @@ MonoBehaviour:
   playerFormRequirement: 03000000000000000100000002000000
   playerSpeedRequirement: 0
   interactionAmountRequired: 1
-  unlimitedAmountInteraction: 0
+  unlimitedAmountInteraction: 1
   onStayInteraction: 0
   soundToPlay: 0
   rewardValue: 1
