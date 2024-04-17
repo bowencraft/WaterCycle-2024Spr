@@ -781,7 +781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 5
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -891,7 +891,7 @@ MonoBehaviour:
   useContinuousSprint: 1
   sprintOnlyFree: 1
   customFixedTimeStep: 2
-  jumpWithRigidbodyForce: 1
+  jumpWithRigidbodyForce: 0
   jumpAndRotate: 1
   jumpTimer: 0.4
   jumpStandingDelay: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
     m_Bits: 1
   groundCheckMethod: 1
   groundDetectionDistance: 10
-  useSnapGround: 1
+  useSnapGround: 0
   snapPower: 0.5
   groundMinDistance: 0.1
   groundMaxDistance: 0.5
@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a6e29aa7f269ea44973293e4f139d58, type: 3}
   m_Name: 
@@ -4722,7 +4722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &414848
 Transform:
   m_ObjectHideFlags: 0
@@ -7571,7 +7571,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89d6f6c6cf3cc5f4d88edb17f00048bc, type: 2}
+  - {fileID: 2100000, guid: 301f5d8325bdc9548bc3371d71f8a43e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8521,7 +8521,7 @@ Transform:
   m_GameObject: {fileID: 8814877166630180100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.564, z: 0}
   m_LocalScale: {x: 75, y: 75, z: 75}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -9167,7 +9167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4909563269784334, guid: 322f523885a65e746816ed5774b95d38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 4909563269784334, guid: 322f523885a65e746816ed5774b95d38, type: 3}
       propertyPath: m_LocalPosition.z
