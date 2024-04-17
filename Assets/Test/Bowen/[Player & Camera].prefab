@@ -3999,6 +3999,8 @@ GameObject:
   - component: {fileID: 3230722476785534111}
   - component: {fileID: 5932623208464530953}
   - component: {fileID: 6977829223804632847}
+  - component: {fileID: 3581548471857943985}
+  - component: {fileID: 7377438531147811390}
   m_Layer: 13
   m_Name: Ball Bone
   m_TagString: Player
@@ -4256,6 +4258,43 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3581548471857943985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514745620011506570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d3e1a372fe40f4c87f2b04c81e2961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 6781582829508751032, guid: afcc3f8454a0b664ba14b45c3b11a133,
+    type: 3}
+  spawnCooldown: 1
+  spawnPositionOffset: -0.7
+--- !u!135 &7377438531147811390
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514745620011506570}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.01
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &724416569467679528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4593,7 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnlocked: 1
-  canUse: 0
+  canUse: 1
   coolDownTime: 10
   duration: 10
 --- !u!1 &2151709117923917676
@@ -6601,7 +6640,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4933863011312969625}
   - component: {fileID: 1717426473175005713}
-  - component: {fileID: 4971691433946040835}
   - component: {fileID: 5672694705517969270}
   m_Layer: 8
   m_Name: Camera
@@ -6676,14 +6714,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4971691433946040835
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4869612908253344432}
-  m_Enabled: 1
 --- !u!114 &5672694705517969270
 MonoBehaviour:
   m_ObjectHideFlags: 0

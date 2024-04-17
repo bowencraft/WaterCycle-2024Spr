@@ -32,7 +32,7 @@ public class SpawnWaterTrail : MonoBehaviour
 
             // Calculate spawn position
             //Vector3 spawnPosition = transform.position - new Vector3(0, GetComponent<Renderer>().bounds.extents.y / 2, 0);
-            Vector3 spawnPosition = transform.position - new Vector3(0, spawnPositionOffset, 0);
+            Vector3 spawnPosition = transform.position + new Vector3(0, spawnPositionOffset, 0);
             // Instantiate the object
             Instantiate(objectToSpawn, spawnPosition, transform.rotation);
         }
