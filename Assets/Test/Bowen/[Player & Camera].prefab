@@ -6521,14 +6521,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4526831626662252241}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14350492, y: -0.04477796, z: 0.038331736, w: 0.98789275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 1.954, z: -1.792}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4933863011312969625}
   m_Father: {fileID: 1896868030980721250}
-  m_LocalEulerAnglesHint: {x: 16.677, y: -4.6390004, z: 3.7640002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7037927091353073002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,7 +6898,7 @@ GameObject:
   - component: {fileID: 5157846337862602648}
   - component: {fileID: 7911507017153928942}
   - component: {fileID: 8789743853043657525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17573,7 +17573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4280887641218900493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
