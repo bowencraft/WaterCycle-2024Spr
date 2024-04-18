@@ -4632,8 +4632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d9444d3ab2f4aa7ac8eca8a5f79b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUnlocked: 1
-  canUse: 1
+  isUnlocked: 0
+  canUse: 0
   coolDownTime: 10
   duration: 10
   enlargeScale: 0.5
@@ -12324,8 +12324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325c622efb4e34366805f52caca0db00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUnlocked: 1
-  canUse: 1
+  isUnlocked: 0
+  canUse: 0
   coolDownTime: 10
   duration: 10
   enlargeCount: 30
