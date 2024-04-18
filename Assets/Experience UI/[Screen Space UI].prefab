@@ -916,6 +916,7 @@ MonoBehaviour:
   canUse: 0
   coolDownTime: 10
   duration: 10
+  enlargeScale: 0.5
 --- !u!1 &2599228664328740781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5207367387892681389
 RectTransform:
   m_ObjectHideFlags: 0
