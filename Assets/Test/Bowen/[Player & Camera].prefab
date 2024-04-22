@@ -3989,6 +3989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5418299467550941632}
+  - component: {fileID: 3581548471857943985}
   - component: {fileID: 4745836610562490004}
   - component: {fileID: 1844846649479074876}
   - component: {fileID: 2004331945136240534}
@@ -3999,7 +4000,6 @@ GameObject:
   - component: {fileID: 3230722476785534111}
   - component: {fileID: 5932623208464530953}
   - component: {fileID: 6977829223804632847}
-  - component: {fileID: 3581548471857943985}
   - component: {fileID: 7377438531147811390}
   m_Layer: 13
   m_Name: Ball Bone
@@ -4030,6 +4030,37 @@ Transform:
   - {fileID: 8586115283621417395}
   m_Father: {fileID: 9038727194096953588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3581548471857943985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514745620011506570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d3e1a372fe40f4c87f2b04c81e2961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 6781582829508751032, guid: afcc3f8454a0b664ba14b45c3b11a133,
+    type: 3}
+  spawnCooldown: 1
+  spawnPositionOffset: -0.7
+  playSoundAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerSoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Move_Cloud
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &4745836610562490004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4258,22 +4289,6 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &3581548471857943985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514745620011506570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4d3e1a372fe40f4c87f2b04c81e2961, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 6781582829508751032, guid: afcc3f8454a0b664ba14b45c3b11a133,
-    type: 3}
-  spawnCooldown: 1
-  spawnPositionOffset: -0.7
 --- !u!135 &7377438531147811390
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24207,7 +24222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 8
+  selectedToolbar: 4
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -24267,16 +24282,16 @@ MonoBehaviour:
   OnJump:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 106114, guid: dfea19d1d34dd174d87195f78cb44ae7, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerSoundManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Move_Cloud
           m_BoolArgument: 0
         m_CallState: 2
   OnStartSprinting:
@@ -24306,10 +24321,10 @@ MonoBehaviour:
     rotationSpeed: 10
     walkByDefault: 0
     rotateWithCamera: 0
-    walkSpeed: 5
-    runningSpeed: 8
-    sprintSpeed: 6
-    crouchSpeed: 2
+    walkSpeed: 8
+    runningSpeed: 10
+    sprintSpeed: 10
+    crouchSpeed: 6
   strafeSpeed:
     movementSmooth: 6
     animationSmooth: 0.2
@@ -24333,7 +24348,7 @@ MonoBehaviour:
   jumpAndRotate: 1
   jumpTimer: 0.4
   jumpStandingDelay: 0
-  jumpHeight: 4
+  jumpHeight: 8
   airSpeed: 6
   airSmooth: 6
   extraGravity: -10
@@ -24411,7 +24426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 2
   unlockCursorOnStart: 0
   showCursorOnStart: 0
   toggleWalk: 301
@@ -25008,7 +25023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSurface: {fileID: 11400000, guid: 710c74baecce50746bd56b9711c851e7, type: 2}
   customSurfaces: []
-  animationType: 0
+  animationType: 1
   debugTextureName: 0
   _volume: 1
   _spawnParticle: 1

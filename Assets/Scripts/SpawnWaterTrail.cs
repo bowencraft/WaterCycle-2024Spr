@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnWaterTrail : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SpawnWaterTrail : MonoBehaviour
     private float timeSinceLastSpawn = 0f; // Timer to track cooldown
 
     public float spawnPositionOffset = 1f;
+
+    public UnityEvent playSoundAction;
 
     void Update()
     {
@@ -35,6 +38,8 @@ public class SpawnWaterTrail : MonoBehaviour
             Vector3 spawnPosition = transform.position + new Vector3(0, spawnPositionOffset, 0);
             // Instantiate the object
             Instantiate(objectToSpawn, spawnPosition, transform.rotation);
+            
+            playSoundAction?.Invoke();
         }
     }
 }
