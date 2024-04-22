@@ -113,10 +113,10 @@ TextureImporter:
       name: Wave_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 241
-        width: 240
-        height: 180
+        x: 0
+        y: 361
+        width: 406
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30fb6c3982a8349c79366fb48fd532f6
-      internalID: 1004850876
+      spriteID: c7246dd5a76314844a6c8c03448ccb26
+      internalID: -2032298730
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: Wave_1
       rect:
         serializedVersion: 2
-        x: 275
-        y: 243
-        width: 240
-        height: 179
+        x: 457
+        y: 364
+        width: 406
+        height: 271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9808a177d3d764bbd8156a074472ae47
-      internalID: -1268830939
+      spriteID: 80915a1b8b2204c99916873833a8e78e
+      internalID: -1422020666
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: Wave_2
       rect:
         serializedVersion: 2
-        x: 549
-        y: 241
-        width: 240
-        height: 180
+        x: 917
+        y: 361
+        width: 404
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 602b4c740b1f6450696b3960c2faa42a
-      internalID: -439291492
+      spriteID: 474a55518fa7a439e81392bbb98ec9cc
+      internalID: -1074763807
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: Wave_3
       rect:
         serializedVersion: 2
-        x: 823
-        y: 242
-        width: 240
-        height: 179
+        x: 1374
+        y: 363
+        width: 405
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd00d468c007242b4bb3a513ccca0360
-      internalID: 855923831
+      spriteID: 2891808406f3d42b8a1dadf4d5b40873
+      internalID: -1033368049
       vertices: []
       indices: 
       edges: []
@@ -197,10 +197,10 @@ TextureImporter:
       name: Wave_4
       rect:
         serializedVersion: 2
-        x: 1097
-        y: 241
-        width: 240
-        height: 180
+        x: 1825
+        y: 361
+        width: 412
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a81033f7dc9c047339b967667c850d34
-      internalID: -760631401
+      spriteID: e30c98d9440084207910902bb68d9c35
+      internalID: 387039074
       vertices: []
       indices: 
       edges: []
@@ -218,10 +218,10 @@ TextureImporter:
       name: Wave_5
       rect:
         serializedVersion: 2
-        x: 1367
-        y: 241
-        width: 240
-        height: 180
+        x: 2284
+        y: 361
+        width: 404
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d6a68ed95774b4fb3cf0f9c3c4b653
-      internalID: 1882069831
+      spriteID: 4eb1dab3606814e92b31c533c2a8e06c
+      internalID: 87547860
       vertices: []
       indices: 
       edges: []
@@ -240,9 +240,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 240
-        height: 179
+        y: 0
+        width: 404
+        height: 275
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f73799973a46e4fcf8b8de74640dc296
-      internalID: -2141955371
+      spriteID: 5bac9dd3d1f7c46b18baae0ef92e7f70
+      internalID: 10419206
       vertices: []
       indices: 
       edges: []
@@ -260,10 +260,10 @@ TextureImporter:
       name: Wave_7
       rect:
         serializedVersion: 2
-        x: 274
+        x: 456
         y: 0
-        width: 240
-        height: 180
+        width: 406
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1e461c5f73704868a9fa47c87bc217a
-      internalID: -151999979
+      spriteID: 09ff5bd05a7dc4762b70cbeb1dbd56ab
+      internalID: -1099449034
       vertices: []
       indices: 
       edges: []
@@ -281,10 +281,10 @@ TextureImporter:
       name: Wave_8
       rect:
         serializedVersion: 2
-        x: 548
-        y: 1
-        width: 240
-        height: 179
+        x: 914
+        y: 0
+        width: 406
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78cbc2383580d4ab4bfc85016e29d23f
-      internalID: 806137290
+      spriteID: 214f5cb74322844429575cb73a4a525a
+      internalID: 1506703463
       vertices: []
       indices: 
       edges: []
@@ -302,10 +302,10 @@ TextureImporter:
       name: Wave_9
       rect:
         serializedVersion: 2
-        x: 822
+        x: 1372
         y: 0
-        width: 240
-        height: 180
+        width: 406
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3f6fe66eec3495bb03b17be212ff7a
-      internalID: 1730953428
+      spriteID: 3be45f33b72fa4aae82cdd1b7bedd81d
+      internalID: 1611144829
       vertices: []
       indices: 
       edges: []
@@ -323,10 +323,10 @@ TextureImporter:
       name: Wave_10
       rect:
         serializedVersion: 2
-        x: 1092
+        x: 1825
         y: 0
-        width: 240
-        height: 180
+        width: 404
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,8 +334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31426ec31fde540f08f6f9b058eb0d8b
-      internalID: 644416115
+      spriteID: e276e0bb9d8144e53a60089705407a0a
+      internalID: 1854942640
       vertices: []
       indices: 
       edges: []
@@ -344,10 +344,10 @@ TextureImporter:
       name: Wave_11
       rect:
         serializedVersion: 2
-        x: 1367
+        x: 2284
         y: 0
-        width: 240
-        height: 180
+        width: 404
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87a51aa4e876e4307800c36235a9d1cc
-      internalID: -1389769834
+      spriteID: 41255734ae951499e8b20009447c6529
+      internalID: 1132890876
       vertices: []
       indices: 
       edges: []
@@ -364,7 +364,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b6df9b60d5af64db3be7276b5692ae22
     internalID: 0
     vertices: []
     indices: 
@@ -372,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wave_0: 1004850876
-      Wave_1: -1268830939
-      Wave_10: 644416115
-      Wave_11: -1389769834
-      Wave_2: -439291492
-      Wave_3: 855923831
-      Wave_4: -760631401
-      Wave_5: 1882069831
-      Wave_6: -2141955371
-      Wave_7: -151999979
-      Wave_8: 806137290
-      Wave_9: 1730953428
+      Wave_0: -2032298730
+      Wave_1: -1422020666
+      Wave_10: 1854942640
+      Wave_11: 1132890876
+      Wave_2: -1074763807
+      Wave_3: -1033368049
+      Wave_4: 387039074
+      Wave_5: 87547860
+      Wave_6: 10419206
+      Wave_7: -1099449034
+      Wave_8: 1506703463
+      Wave_9: 1611144829
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
