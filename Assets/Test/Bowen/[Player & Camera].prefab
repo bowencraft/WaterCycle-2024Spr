@@ -24207,7 +24207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 1
+  selectedToolbar: 8
   _isDead: 0
   _currentHealth: 0
   isImmortal: 0
@@ -24266,7 +24266,19 @@ MonoBehaviour:
       m_Calls: []
   OnJump:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 106114, guid: dfea19d1d34dd174d87195f78cb44ae7, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStartSprinting:
     m_PersistentCalls:
       m_Calls: []

@@ -28258,6 +28258,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3b20c472f93c94cb7ecba92f877dcc, type: 3}
+--- !u!1 &945671401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7685485350782401091, guid: 3766d653837c44d56821b13216429aef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071792869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &945946783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44901,6 +44907,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2212437157589263416, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485229021769123155, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1050
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485229021769123155, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4910109928828161997, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
         type: 3}
       propertyPath: m_Pivot.x
@@ -45001,6 +45022,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7295967829822035251, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e75856812dc04e048981e16b64c564a,
+        type: 3}
     - target: {fileID: 8204470162401449327, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
         type: 3}
       propertyPath: m_Name
@@ -64911,6 +64938,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: '[Player & Camera]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: OnJump.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: OnJump.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 945671401}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: OnJump.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: OnJump.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerSoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: OnJump.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Move_Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: OnJump.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9038727194096611556, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}

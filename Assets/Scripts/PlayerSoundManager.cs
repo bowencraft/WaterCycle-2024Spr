@@ -24,6 +24,7 @@ public class Sound
 
 public class PlayerSoundManager : MonoBehaviour
 {
+    [Serializable]
     public enum SoundType
     {
         NO_SOUND,
@@ -91,6 +92,12 @@ public class PlayerSoundManager : MonoBehaviour
             soundList[(int)(UnityEngine.Random.value * soundList.Count - 0.001f)].source.Play();
         }
     }
+
+    /*
+    public void PlaySound(String soundName)
+    {
+        PlaySound((SoundType)Enum.Parse(typeof(SoundType), soundName));
+    }*/
 
     public void StopSound(SoundType soundType)
     {
