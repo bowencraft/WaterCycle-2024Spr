@@ -815,7 +815,7 @@ PrefabInstance:
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: soundToPlay
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
@@ -835,7 +835,7 @@ PrefabInstance:
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: interactionAmountRequired
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}

@@ -5,8 +5,7 @@ using UnityEngine;
 using Random = System.Random;
 
 [System.Serializable]
-public class Sound
-{
+public class Sound {
     public enum SoundType
     {
         SingleShot,
@@ -86,10 +85,17 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void PlaySound(SoundType soundType)
     {
+        print(soundType);
         if (soundMap.TryGetValue(soundType, out List<Sound> soundList))
         {
             soundList[(int)(UnityEngine.Random.value * soundList.Count - 0.001f)].source.Play();
         }
+    }
+
+    
+    public void PlaySound(String soundName)
+    {
+        PlaySound((SoundType)Enum.Parse(typeof(SoundType), soundName, true));
     }
 
     public void StopSound(SoundType soundType)

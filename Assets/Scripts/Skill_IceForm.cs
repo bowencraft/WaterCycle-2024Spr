@@ -13,7 +13,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
 
     private void Update()
     {
-        if (isUnlocked && canUse && Input.GetKeyDown(KeyCode.Alpha1)) // press 1 to use
+        if (isUnlocked && canUse && Input.GetKeyDown(KeyCode.Q)) // press 1 to use
         {
             UseSkill();
         }
