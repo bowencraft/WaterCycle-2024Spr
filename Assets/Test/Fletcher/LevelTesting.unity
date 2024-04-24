@@ -69573,7 +69573,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
       propertyPath: selectedToolbar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: speedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: freeSpeed.walkSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: strafeSpeed.walkSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: strafeSpeed.sprintSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: strafeSpeed.runningSpeed
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
