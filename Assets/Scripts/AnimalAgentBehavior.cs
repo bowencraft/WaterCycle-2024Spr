@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class AnimalAgentBehaavior : MonoBehaviour
 {
     [HideInInspector]
     public float moveSpeed = 1f;
-
-    public BoxCollider hangOutArea;
-    
     [HideInInspector]
     public Vector3 hangOutAreaMin; // 挂出区域的最小边界
 
@@ -26,17 +24,12 @@ public class AnimalAgentBehaavior : MonoBehaviour
     
     private void Awake()
     {
+        navMeshAgent = GetComponent<NavMeshAgent>();
         if (navMeshAgent == null) navMeshAgent = gameObject.AddComponent<NavMeshAgent>();
     }
 
     void Start()
     {
-        
-        if (hangOutArea != null) {
-            hangOutArea.enabled = true;
-            hangOutAreaMin = hangOutArea.bounds.min; 
-            hangOutAreaMax = hangOutArea.bounds.max;
-        }
         
         SelectRandomTargetPosition(20);
         StartHangingOut();
