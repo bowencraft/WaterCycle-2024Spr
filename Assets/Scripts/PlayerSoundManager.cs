@@ -36,6 +36,8 @@ public class PlayerSoundManager : MonoBehaviour
         PCI_Explosion_Large,
         Skill_Super_Jump,
         Skill_Spray,
+        Character_Water_Jump,
+        Character_Water_Land
     }
 
     public static PlayerSoundManager Instance { get; private set; }
