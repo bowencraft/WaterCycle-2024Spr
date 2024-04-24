@@ -6,6 +6,22 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused = false;
 
+    [SerializeField] private GameObject oldInstruction;
+    [SerializeField] private GameObject newInstruction;
+    
+    static PauseMenu instance;
+    public static PauseMenu i
+    {
+        get
+        {
+            if(instance == null)
+            {
+                instance = FindObjectOfType<PauseMenu>();
+            }
+            return instance;
+        }
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -19,6 +35,12 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+    }
+
+    public void UpdateInstruction()
+    {
+        oldInstruction.SetActive(false);
+        newInstruction.SetActive(true);
     }
 
     public void Resume()
