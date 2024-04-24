@@ -60,15 +60,17 @@ namespace Lovatto.MiniMap
 
             IEnumerator Fade()
             {
+                /*
                 rootAlpha.alpha = 0;
                 yield return new WaitForSeconds(delay);
                 while (rootAlpha.alpha < Minimap.overallOpacity)
                 {
                     rootAlpha.alpha += Time.deltaTime;
                     yield return null;
-                }
+                }*/
                 rootAlpha.alpha = Minimap.overallOpacity;
                 callback?.Invoke();
+                yield return null;
             }
         }
 

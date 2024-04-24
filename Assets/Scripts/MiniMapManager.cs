@@ -7,16 +7,27 @@ public class MiniMapManager : MonoBehaviour
 {
     [SerializeField] private GameObject miniMapGO;
     [SerializeField] private KeyCode triggerKeyCode;
-
-    private void Update()
+    
+    static MiniMapManager instance;
+    public static MiniMapManager i
     {
-        
-        if (Input.GetKeyDown(triggerKeyCode))
+        get
         {
-            miniMapGO.SetActive(true);
-        }else if (Input.GetKeyUp(triggerKeyCode))
-        {
-            miniMapGO.SetActive(false);
+            if(instance == null)
+            {
+                instance = FindObjectOfType<MiniMapManager>();
+            }
+            return instance;
         }
+    }
+    
+    public void OpenMiniMap()
+    {
+        miniMapGO.SetActive(true);
+    }
+
+    public void CloseMiniMap()
+    {
+        miniMapGO.SetActive(false);
     }
 }
