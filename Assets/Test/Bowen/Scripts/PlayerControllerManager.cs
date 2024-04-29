@@ -106,7 +106,15 @@ public class PlayerControllerManager : MonoBehaviour
     {
         while (true)
         {
-            Vector3 location = currentController == null ? new Vector3(0,0,0) : currentController.transform.parent.position;
+            Vector3 location = new Vector3(0, 0, 0);
+            if (currentController == null)
+            {
+                
+            }
+            else
+            { 
+                location = currentController == dropController ? currentController.transform.parent.position:currentController.transform.position;
+            }
             locationHistory.Enqueue(location);
             if (locationHistory.Count >= 50)
             {
@@ -139,7 +147,8 @@ public class PlayerControllerManager : MonoBehaviour
     {
         Vector3 toGo = GetPastLocation();
         Debug.Log("respawn current pos is " + currentController.transform.parent.position + " 5 sec ago location is " + toGo);
-        currentController.transform.parent.position = toGo;
+        if(currentController == dropController) currentController.transform.parent.position = toGo;
+        else currentController.transform.position = toGo;
     }
     
 
