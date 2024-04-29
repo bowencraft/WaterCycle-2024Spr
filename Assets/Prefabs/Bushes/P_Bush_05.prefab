@@ -62,7 +62,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dd786367392cd8f4b8235705672721ed, type: 2}
+      objectReference: {fileID: 2100000, guid: 27833afa83045144f8185cef23fb4483, type: 2}
     - target: {fileID: 919132149155446097, guid: 849d0ae0b8f3cc04f9b116e60b251870,
         type: 3}
       propertyPath: m_Name
@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 5338854386682789673, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6868421759685953421, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
@@ -196,6 +196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: animationDuration
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6868421759685953421, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
+        type: 3}
+      propertyPath: playerFormRequirement.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7947152151245914011, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
