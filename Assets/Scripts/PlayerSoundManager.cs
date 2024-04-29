@@ -38,7 +38,11 @@ public class PlayerSoundManager : MonoBehaviour
         Skill_Spray,
         Character_Water_Jump,
         Character_Water_Land,
-        Character_Water_Move
+        Character_Water_Move,
+        Animal_Sound_01,
+        Animal_Sound_02,
+        Animal_Sound_03,
+        Animal_Sound_04
     }
 
     public static PlayerSoundManager Instance { get; private set; }

@@ -1804,7 +1804,7 @@ PrefabInstance:
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: playerFormRequirement.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}

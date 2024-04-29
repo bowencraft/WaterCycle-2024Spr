@@ -101,7 +101,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -207,7 +207,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -313,7 +313,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -593,7 +593,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -699,7 +699,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -785,32 +785,32 @@ PrefabInstance:
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.9816043
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.52294594
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.7113112
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.03844872
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.2398602
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.021323264
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
@@ -834,18 +834,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
-      propertyPath: playerSpeedRequirement
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
-        type: 3}
       propertyPath: interactionAmountRequired
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: playerFormRequirement.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
