@@ -785,32 +785,32 @@ PrefabInstance:
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.010507
+      value: 0.9816043
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.1907773
+      value: 0.52294594
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Size.z
-      value: 2.5856447
+      value: 0.7113112
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.023034811
+      value: -0.03844872
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Center.y
-      value: 1.0737765
+      value: 0.2398602
       objectReference: {fileID: 0}
     - target: {fileID: 2920805342786101758, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.026194394
+      value: 0.021323264
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
@@ -831,6 +831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fragmentDisappearTime
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
+        type: 3}
+      propertyPath: playerSpeedRequirement
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4176823441126457116, guid: cf35c14ee43ec4d9f82419c85601901d,
         type: 3}
