@@ -23,7 +23,7 @@ namespace YuetilitySoftbody
             if (counter < 0)
                 counter = 0;
 
-            if (Input.GetKeyDown(KeyCode.Space) && counter <= 0)
+            if (Input.GetButton("Jump") && counter <= 0)
             {
                 rigid.AddForce(Vector3.up * JumpFactor);
                 counter = 1f;
