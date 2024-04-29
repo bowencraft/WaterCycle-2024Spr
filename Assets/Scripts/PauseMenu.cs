@@ -6,6 +6,22 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused = false;
 
+    [SerializeField] private GameObject oldInstruction;
+    [SerializeField] private GameObject newInstruction;
+    
+    static PauseMenu instance;
+    public static PauseMenu i
+    {
+        get
+        {
+            if(instance == null)
+            {
+                instance = FindObjectOfType<PauseMenu>();
+            }
+            return instance;
+        }
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -21,8 +37,15 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void UpdateInstruction()
+    {
+        oldInstruction.SetActive(false);
+        newInstruction.SetActive(true);
+    }
+
     public void Resume()
     {
+        MiniMapManager.i.CloseMiniMap();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -32,6 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        MiniMapManager.i.OpenMiniMap();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;

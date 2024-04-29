@@ -1,4 +1,4 @@
-//  Written by Marcel Remmers ï¿½ for Yuetility 10.06.22
+//  Written by Marcel Remmers © for Yuetility 10.06.22
 
 using System.Collections;
 using System.Collections.Generic;
@@ -44,7 +44,7 @@ namespace YuetilitySoftbody
         [HideInInspector]
         public bool UseMeshCollider = false;
         [HideInInspector]
-        public int softbodyLayer = 8;
+        public int softbodyLayer = 30;
         [HideInInspector]
         public float physicsVertexRadius = 0.05f;
 
@@ -97,7 +97,6 @@ namespace YuetilitySoftbody
 
             // Create OffsetTransform
             Offset = new GameObject("SoftbodyPhysics").transform;
-            Offset.gameObject.layer = LayerMask.NameToLayer("Player");
 
             Offset.parent = transform;
             Offset.position = transform.position;
@@ -296,13 +295,11 @@ namespace YuetilitySoftbody
             target.transform.position = Position;
             target.transform.rotation = Quaternion.Euler(0, 0, 0);
             target.transform.parent = Offset;
-            target.gameObject.layer = LayerMask.NameToLayer("Player");
 
             GameObject phyVertex = new GameObject("PhysicsVertex");
 
             // Position
             phyVertex.transform.position = Position;
-            // phyVertex.gameObject.layer = LayerMask.NameToLayer("Player");;
             phyVertex.transform.rotation = Quaternion.Euler(0, 0, 0);
             phyVertex.transform.parent = Offset;
 

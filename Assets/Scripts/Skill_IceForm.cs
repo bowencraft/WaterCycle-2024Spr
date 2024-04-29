@@ -52,6 +52,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
     {
         isUnlocked = true;
         canUse = true;
+        PauseMenu.i.UpdateInstruction();
     }
     
     public bool IsSkillCanUse()
