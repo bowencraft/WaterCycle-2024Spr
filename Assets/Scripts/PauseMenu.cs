@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        MiniMapManager.i.CloseMiniMap();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -54,6 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        MiniMapManager.i.OpenMiniMap();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
