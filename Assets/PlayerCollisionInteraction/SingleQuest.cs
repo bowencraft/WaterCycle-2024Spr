@@ -52,15 +52,16 @@ public class SingleQuest : MonoBehaviour
 
     IEnumerator FinishEffect()
     {
+        Color completeTextColor = new Color(7f/255, 91f/255, 140f/255);
         float timeLasted = 0f;
         float timeRequired = 0.5f;
         while (timeLasted < timeRequired)
         {
             timeLasted += Time.deltaTime;
-            myTMP.color = Color.Lerp(Color.white, Color.black, timeLasted / timeRequired);
+            myTMP.color = Color.Lerp(Color.white, completeTextColor , timeLasted / timeRequired);
             yield return new WaitForSeconds(0);
         }
-        myTMP.color = Color.black;
+        myTMP.color = completeTextColor;
 
         finished = true;
         QuestManager.i.FinishedQuestOfStage(stage);
