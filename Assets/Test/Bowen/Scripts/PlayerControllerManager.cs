@@ -106,22 +106,48 @@ public class PlayerControllerManager : MonoBehaviour
     {
         while (true)
         {
-            Vector3 location = new Vector3(0, 0, 0);
-            if (currentController == null)
+            if (isOnGround())
             {
+                Vector3 location = new Vector3(0, 0, 0);
+                if (currentController == null)
+                {
                 
+                }
+                else
+                { 
+                    location = currentController == dropController ? currentController.transform.parent.position:currentController.transform.position;
+                }
+                locationHistory.Enqueue(location);
+                if (locationHistory.Count >= 50)
+                {
+                    locationHistory.Dequeue();
+                }
             }
-            else
-            { 
-                location = currentController == dropController ? currentController.transform.parent.position:currentController.transform.position;
-            }
-            locationHistory.Enqueue(location);
-            if (locationHistory.Count >= 50)
-            {
-                locationHistory.Dequeue();
-            }
+            
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    bool isOnGround()
+    {
+        RaycastHit hit; // Variable to store the hit info
+        float distanceToGround = 0.0f; // Variable to store the distance to ground
+
+        if (currentController == null) return false;
+        
+        // Cast a ray downward from the player's position
+        if (Physics.Raycast(currentController.transform.position, -Vector3.up, out hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
+        {
+            distanceToGround = hit.distance; // Get the distance from the raycast hit
+            return distanceToGround <= 5;
+            //print("Distance to Ground: " + distanceToGround); // Log the distance
+        }
+        else
+        {
+            //print("No hit"); // Log the distance
+        }
+
+        return false;
     }
 
     public Vector3 GetPastLocation()
