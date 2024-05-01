@@ -164,8 +164,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1202800845159669661, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202800845159669661, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202800845159669661, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
+        type: 3}
       propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202800845159669662, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
+        type: 3}
+      propertyPath: CollisionModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202800845159669662, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202800845159669662, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1202800845159669664, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
@@ -180,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 2493466489220503377, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2493466489220503377, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
@@ -190,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 2493466489220503377, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2493466489220503377, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
@@ -290,7 +315,7 @@ PrefabInstance:
     - target: {fileID: 6868421759685953421, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
       propertyPath: interactionID
-      value: Water Tree
+      value: Animal
       objectReference: {fileID: 0}
     - target: {fileID: 6868421759685953421, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
@@ -300,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 6868421759685953421, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
       propertyPath: particleSystemDelayDestroy
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6868421759685953421, guid: 1e895f322c9cd4c33ad89a1837f5a52e,
         type: 3}
