@@ -70334,6 +70334,17 @@ PrefabInstance:
       propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6019501663749357183, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
+        type: 3}
+    - target: {fileID: 6019501663749357183, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Character_Water_Jump
+      objectReference: {fileID: 0}
     - target: {fileID: 8746999199255119393, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_Name
@@ -70367,7 +70378,7 @@ PrefabInstance:
     - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: selectedToolbar
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9038727194090132094, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
