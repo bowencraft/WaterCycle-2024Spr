@@ -3688,7 +3688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allLevels: []
-  targetExperience: 10
+  targetExperience: 40
   currentExperience: 0
 --- !u!114 &659093310770617617
 MonoBehaviour:
