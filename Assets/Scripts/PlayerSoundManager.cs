@@ -93,9 +93,12 @@ public class PlayerSoundManager : MonoBehaviour
     public void PlaySound(SoundType soundType)
     {
         print(soundType);
-        if (soundMap.TryGetValue(soundType, out List<Sound> soundList))
+        if (soundMap != null && soundMap.TryGetValue(soundType, out List<Sound> soundList))
         {
             soundList[(int)(UnityEngine.Random.value * soundList.Count - 0.001f)].source.Play();
+        }
+        else
+        {
         }
     }
 
