@@ -68,13 +68,13 @@ public class PlayerControllerManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Drop);
-        } else if (Input.GetKeyDown(KeyCode.O))
-        {
-            ChangePlayerForm(PlayerController.PlayerForm.Cloud);
-        }  
+        // if (Input.GetKeyDown(KeyCode.U))
+        // {
+        //     ChangePlayerForm(PlayerController.PlayerForm.Drop);
+        // } else if (Input.GetKeyDown(KeyCode.O))
+        // {
+        //     ChangePlayerForm(PlayerController.PlayerForm.Cloud);
+        // }  
         // if (Input.GetKeyDown(KeyCode.L)) // 按下"["
         // {
         //     print("Size down");
