@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class SpawnWaterTrail : MonoBehaviour
 
     public UnityEvent playSoundAction;
 
+    private bool grounded = false;
+
     void Update()
     {
         // Update the timer every frame
@@ -27,19 +30,37 @@ public class SpawnWaterTrail : MonoBehaviour
     {
         //Debug.Log(other.name);
         // Check if cooldown has completed and if the collider is the Terrain
-        if (other.tag == "Terrain" && timeSinceLastSpawn >= spawnCooldown)
+        if (other.tag == "Terrain" )
         {
-            Debug.Log("Spawning Object");
-            // Reset timer
-            timeSinceLastSpawn = 0f;
+            if (timeSinceLastSpawn >= spawnCooldown)
+            {
+                // Reset timer
+                timeSinceLastSpawn = 0f;
 
-            // Calculate spawn position
-            //Vector3 spawnPosition = transform.position - new Vector3(0, GetComponent<Renderer>().bounds.extents.y / 2, 0);
-            Vector3 spawnPosition = transform.position + new Vector3(0, spawnPositionOffset, 0);
-            // Instantiate the object
-            Instantiate(objectToSpawn, spawnPosition, transform.rotation);
+                // Calculate spawn position
+                //Vector3 spawnPosition = transform.position - new Vector3(0, GetComponent<Renderer>().bounds.extents.y / 2, 0);
+                Vector3 spawnPosition = transform.position + new Vector3(0, spawnPositionOffset, 0);
+                // Instantiate the object
+                Instantiate(objectToSpawn, spawnPosition, transform.rotation);
+
+            }
             
-            playSoundAction?.Invoke();
+            
+            if (!grounded)
+            {
+                print("Grounded!");
+                grounded = true;
+                playSoundAction.Invoke();
+            }
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Terrain")
+        {
+            grounded = false;
         }
     }
 }
