@@ -70588,6 +70588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
+      propertyPath: scrollSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
       propertyPath: startSmooth
       value: 0
       objectReference: {fileID: 0}

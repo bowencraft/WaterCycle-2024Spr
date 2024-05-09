@@ -120,7 +120,7 @@ public class PlayerControllerManager : MonoBehaviour
                     location = currentController == dropController ? currentController.transform.parent.position:currentController.transform.position;
                 }
                 locationHistory.Enqueue(location);
-                if (locationHistory.Count >= 50)
+                if (locationHistory.Count >= 20)
                 {
                     locationHistory.Dequeue();
                 }
