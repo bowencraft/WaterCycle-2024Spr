@@ -70525,6 +70525,51 @@ PrefabInstance:
       propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25260437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8906364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4860314
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7663299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.64241874
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0046479106
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.003895998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 79.947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332693322943361428, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.695
+      objectReference: {fileID: 0}
     - target: {fileID: 6019501663749357183, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -70539,12 +70584,27 @@ PrefabInstance:
     - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: indexList
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: startSmooth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: clipPlaneMargin
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: cullingLayer.m_Bits
       value: 33554433
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: startUsingTargetRotation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8746999199255119393, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}

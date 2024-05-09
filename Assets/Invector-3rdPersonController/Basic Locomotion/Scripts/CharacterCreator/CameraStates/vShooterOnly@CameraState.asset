@@ -17,7 +17,7 @@ MonoBehaviour:
   - Name: Default
     forward: -1
     right: 0.25
-    defaultDistance: 4
+    defaultDistance: 6.14
     maxDistance: 8
     minDistance: 0.6
     height: 1.5
@@ -113,14 +113,14 @@ MonoBehaviour:
   - Name: Strafing
     forward: -1
     right: 0
-    defaultDistance: 10
-    maxDistance: 10
-    minDistance: 1
+    defaultDistance: 6
+    maxDistance: 12
+    minDistance: 3
     height: 1
-    smooth: 100
-    smoothDamp: 100
-    xMouseSensitivity: 2.5
-    yMouseSensitivity: 2.5
+    smooth: 20
+    smoothDamp: 20
+    xMouseSensitivity: 1
+    yMouseSensitivity: 1
     yMinLimit: -40
     yMaxLimit: 80
     xMinLimit: -360
