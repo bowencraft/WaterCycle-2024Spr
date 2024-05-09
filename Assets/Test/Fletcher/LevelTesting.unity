@@ -8818,6 +8818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4577158209451005077, guid: 9964ad9638fe9e249810ee864ce70eee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8924541509631073539, guid: 9964ad9638fe9e249810ee864ce70eee,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18822,6 +18827,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3294064707223509845, guid: 37983dead5c6c00498279a584affb48e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5843568854075917873, guid: 37983dead5c6c00498279a584affb48e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -22749,6 +22759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294064707223509845, guid: 37983dead5c6c00498279a584affb48e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5843568854075917873, guid: 37983dead5c6c00498279a584affb48e,
         type: 3}
@@ -28619,6 +28634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747660771679659982, guid: 89cf74c47762d5c4eba9e364eb5dc47a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3157774382735588241, guid: 89cf74c47762d5c4eba9e364eb5dc47a,
         type: 3}
@@ -35420,7 +35440,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[12].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 259773be63f6345e8ac651df5780ad61, type: 3}
+      objectReference: {fileID: 8300000, guid: 535fbcc2b488e4a358f822a9a78712b5, type: 3}
     - target: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
         type: 3}
       propertyPath: sounds.Array.data[13].clip
@@ -35455,7 +35475,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sounds.Array.data[19].clip
       value: 
-      objectReference: {fileID: 8300000, guid: c870f84ce1737ff499d1dc4bf88f46d2, type: 3}
+      objectReference: {fileID: 8300000, guid: 259773be63f6345e8ac651df5780ad61, type: 3}
     - target: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
         type: 3}
       propertyPath: sounds.Array.data[20].clip
@@ -35504,7 +35524,7 @@ PrefabInstance:
     - target: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
         type: 3}
       propertyPath: sounds.Array.data[19].volume
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
         type: 3}
@@ -35554,7 +35574,7 @@ PrefabInstance:
     - target: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
         type: 3}
       propertyPath: sounds.Array.data[19].soundType
-      value: 19
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
         type: 3}
@@ -70609,8 +70629,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 477780337669452507, guid: 3766d653837c44d56821b13216429aef,
-        type: 3}
+      objectReference: {fileID: 1071792870}
     - target: {fileID: 6019501663749357183, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
