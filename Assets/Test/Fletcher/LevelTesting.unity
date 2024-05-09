@@ -48722,10 +48722,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1256896335876514766, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Water trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518125542419613910, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Interact with the animals
+      objectReference: {fileID: 0}
     - target: {fileID: 2212437157589263416, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843413067852673113, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Destroy Houses
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859390566971963960, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Interact with the campfire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968665867825846018, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Destroy factories
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229417200938411079, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Traverse the rock pillars
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703053748780932665, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
+        type: 3}
+      propertyPath: questDescription
+      value: Collect the crystal
       objectReference: {fileID: 0}
     - target: {fileID: 3917366350344779290, guid: 3df49c6e0717c42f9b26d1951bbcbd95,
         type: 3}
