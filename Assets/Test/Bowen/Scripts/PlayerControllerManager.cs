@@ -46,6 +46,8 @@ public class PlayerControllerManager : MonoBehaviour
     
     [SerializeField] private PlayerController.PlayerForm playerForm = PlayerController.PlayerForm.Drop;
 
+    public PlayerController.PlayerForm PlayerForm => playerForm;
+
     static PlayerControllerManager instance;
     public static PlayerControllerManager Instance
     {

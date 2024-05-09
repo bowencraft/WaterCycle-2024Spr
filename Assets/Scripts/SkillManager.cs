@@ -46,4 +46,16 @@ public class SkillManager : MonoBehaviour
             }
         }
     }
+
+    public bool GetSkillUnlocked(int targetIndex)
+    {
+        if (targetIndex > allSkillsList.Count)
+        {
+            return false;
+        }
+        else 
+        {
+            return ((ISkill)allSkillsList[targetIndex]).IsSkillUnlocked() ;
+        }
+    }
 }

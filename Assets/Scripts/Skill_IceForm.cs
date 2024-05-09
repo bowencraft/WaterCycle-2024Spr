@@ -40,7 +40,7 @@ public class Skill_IceForm : MonoBehaviour, ISkill
         
         for (float timer = duration; timer >= 0; timer -= Time.deltaTime)
         {
-            PlayerControllerManager.Instance.AdjustScale(- ((enlargeScale + 0.2f) / duration) * Time.deltaTime);
+            PlayerControllerManager.Instance.AdjustScale(- ((enlargeScale + 0.3f) / duration) * Time.deltaTime);
             yield return null;
         }
         
