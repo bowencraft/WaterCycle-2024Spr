@@ -70536,6 +70536,16 @@ PrefabInstance:
       propertyPath: playSoundAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Character_Water_Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: indexList
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037927091353073002, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
+        type: 3}
+      propertyPath: cullingLayer.m_Bits
+      value: 33554433
+      objectReference: {fileID: 0}
     - target: {fileID: 8746999199255119393, guid: cc71c1c8c956d4faa8e9fef5130d39c3,
         type: 3}
       propertyPath: m_Name

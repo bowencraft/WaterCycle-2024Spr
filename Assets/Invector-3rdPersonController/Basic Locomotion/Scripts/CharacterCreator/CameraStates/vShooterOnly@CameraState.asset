@@ -113,12 +113,12 @@ MonoBehaviour:
   - Name: Strafing
     forward: -1
     right: 0
-    defaultDistance: 5
-    maxDistance: 8
+    defaultDistance: 10
+    maxDistance: 10
     minDistance: 1
     height: 1
-    smooth: 20
-    smoothDamp: 20
+    smooth: 100
+    smoothDamp: 100
     xMouseSensitivity: 2.5
     yMouseSensitivity: 2.5
     yMinLimit: -40
@@ -140,10 +140,10 @@ MonoBehaviour:
   - Name: Cloud
     forward: -1
     right: 0
-    defaultDistance: 15
-    maxDistance: 20
+    defaultDistance: 20
+    maxDistance: 24
     minDistance: 10
-    height: 0
+    height: -2
     smooth: 20
     smoothDamp: 20
     xMouseSensitivity: 2.5
